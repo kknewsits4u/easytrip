@@ -56,9 +56,9 @@ const BookFlightAds = () => {
               </Select>
             </FormControl>
           </div>
-          <h1  className='text-sm xl:text-xl' >Price : <span className=' text-blue-500'  >$ 30.00</span></h1>
-          <h1   className='text-sm xl:text-xl' >Departure : <span  className=' text-blue-500'  >07:00 AM</span></h1>
-          <h1  className='text-sm xl:text-xl' >Arrival : <span className=' text-blue-500'   >09:00 AM</span></h1>
+          <h1  className='text-sm xl:text-lg' >Price : <span className=' text-blue-500'  >$ 30.00</span></h1>
+          <h1   className='text-sm xl:text-lg' >Departure : <span  className=' text-blue-500'  >07:00 AM</span></h1>
+          <h1  className='text-sm xl:text-lg' >Arrival : <span className=' text-blue-500'   >09:00 AM</span></h1>
           <Button  variant='contained' >Book Now</Button>
 
 
