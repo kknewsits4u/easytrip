@@ -7,18 +7,13 @@ import Select from "@mui/material/Select";
 
 const HeroSection = () => {
   const [city, setCity] = React.useState("");
-  const [hotel, setHotel] = React.useState("");
 
   const handleChangeCity = (event) => {
     setCity(event.target.value);
   };
 
-  const handleChangeHotel = (event) => {
-    setHotel(event.target.value);
-  };
-
   return (
-    <div className="relative flex items-center justify-center w-[100vw] h-120 xl:h-150 bg-white mt-15 lg:mt-20 overflow-visible">
+    <div className="relative flex items-center justify-center w-[100vw] h-120 xl:h-150 bg-white  overflow-visible">
       <img
         src="https://img.freepik.com/premium-photo/luxury-modern-house-cottagepunk_921860-167382.jpg?w=1380"
         alt="image"
@@ -47,20 +42,6 @@ const HeroSection = () => {
               <MenuItem value={"delhi"}>Delhi</MenuItem>
               <MenuItem value={"noida"}>Noida</MenuItem>
               <MenuItem value={"bangluru"}>Bangluru</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl fullWidth className="w-1/3">
-            <InputLabel id="demo-simple-select-label">Choose Hotel</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={hotel}
-              label="Choose Hotel"
-              onChange={handleChangeHotel}
-            >
-              <MenuItem value={"skr"}>Shri Krishna Residency</MenuItem>
-              <MenuItem value={"tns"}>The Night Stay</MenuItem>
-              <MenuItem value={"rrgh"}>Radha Rani Guest House</MenuItem>
             </Select>
           </FormControl>
           <div className="w-full lg:w-1/3 flex items-center justify-center h-full ">
