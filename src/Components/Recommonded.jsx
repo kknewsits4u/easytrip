@@ -5,7 +5,7 @@ import { hotelData } from "./Store/HotelsData";
 const Recommonded = () => {
   return (
     <div className="flex flex-col  items-center justify-between gap-5 w-full  h-fit bg-white shadow-md rounded-sm  shadow-gray-200 p-5 mt-15 lg:mt-5 ">
-      <h1 className=" text-2xl font-semibold w-full text-left py-2 border-b-2 border-blue-500">
+      <h1 className=" text-2xl font-semibold w-full text-left py-2 ">
         Recommonded Hotels{" "}
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-2 w-full h-fit gap-5">

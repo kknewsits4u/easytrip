@@ -9,7 +9,7 @@ const MostFamous = () => {
   return (
     <div className='flex flex-col  items-center justify-between gap-5 w-full  h-fit bg-white shadow-md rounded-sm  shadow-gray-300  p-5' >
 
-      <h1 className="text-md lg:text-2xl font-semibold w-full text-left py-2 border-b-2 border-blue-500"  >Most Famous Hotels</h1>
+      <h1 className="text-md lg:text-2xl font-semibold w-full text-left py-2 "  >Most Famous Hotels</h1>
       <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full h-fit gap-5' >
 
         {
