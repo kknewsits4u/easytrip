@@ -13,7 +13,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-      <div className='flex flex-col h-full items-center justify-start w-full gap-5'  >
+      <div className='flex flex-col h-full items-center justify-start w-full'  >
       <Navbar/>
       <HeroSection/>
       <ExploreSection/>

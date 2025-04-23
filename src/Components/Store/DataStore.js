@@ -67,6 +67,7 @@
 
 
 export const citiesData = [
+  { value: "Choose City", cityName: "Choose City", image:"https://i.pinimg.com/474x/05/3c/30/053c307c9d887899adb15eee1a75bc2e.jpg" },
   { value: "delhi", cityName: "Delhi", image:"https://i.pinimg.com/474x/05/3c/30/053c307c9d887899adb15eee1a75bc2e.jpg" },
   { value: "mumbai", cityName: "Mumbai", image:"https://i.pinimg.com/474x/da/58/dd/da58dd17c6b347b5acfcdd8556ba8dae.jpg" },
   { value: "bangalore", cityName: "Bangalore",  image:"https://i.pinimg.com/474x/67/63/b2/6763b2e72da8e4f263b5e3e8ef93386d.jpg" },
@@ -175,159 +176,509 @@ export const citiesData = [
 ];
 
 
-
 export const vendorsData = [
     {
-      url:"",
-      name:"Photographers"
+      category:"Photographers",
+      p:[
+        {
+          type:"Photographers"
+        },
+      ]
     },
     {
-      url:"",
-      name:"Invitation Cards"
+      category:"Makeup",
+      p:[
+        {
+          type:"Bridal Makeup"
+        },
+        {
+          type:"Family Makeup"
+        },
+      ]      
     },
     {
-      url:"",
-      name:"Band/Baaja/Ghodiwala"
+      category:"Pandits",
+      p:[
+        {
+          type:"Wedding Pandits"
+        },
+      ]      
     },
     {
-      url:"",
-      name:"Experiences"
+      category:"Mehndi",
+      p:[
+        {
+          type:"Mehndi Artist"
+        },
+      ]      
     },
     {
-      url:"",
-      name:"Makeup Artists"
+      category:"Pre Wedding Shoot",
+      p:[
+        {
+          type:"Pre Wedding Shoot Location"
+        },
+        {
+          type:"Pre Wedding Photographers"
+        },
+      ]      
     },
     {
-      url:"",
-      name:"DJs"
-    },
-    {
-      url:"",
-      name:"Priest/Pandit"
-    },
-    {
-      url:"",
-      name:"Tailoring"
-    },
-    {
-      url:"",
-      name:"Mehandi Artists"
-    },
-    {
-      url:"",
-      name:"Transport"
-    },
-    {
-      url:"",
-      name:"Enterainers"
-    },
-    {
-      url:"",
-      name:"Gifting"
-    },
-    {
-      url:"",
-      name:"Decorators"
-    },
-    {
-      url:"",
-      name:"Anchor/MC"
-    },
-    {
-      url:"",
-      name:"Wedding Planners"
-    },
-    {
-      url:"",
-      name:"Jwellery"
-    },
-    {
-      url:"",
-      name:"Caterers"
-    },
-    {
-      url:"",
-      name:"Choreographers"
-    },
-    {
-      url:"",
-      name:"Rentals"
+      category:"Planning and Decor",
+      p:[
+        {
+          type:"Wedding Planner"
+        },
+        {
+          type:"Decorators"
+        },
+      ]      
     },
 
+    {
+      category:"Music & Dance ",
+      p:[
+        {
+          type:"Djs"
+        },
+        {
+          type:"Sangeet CoreoGrapher"
+        },
+        {
+          type:" Wedding Entertainment"
+        },
+      ]      
+    },
 
+    {
+      category:"Groom Wear",
+      p:[
+        {
+          type:"Sherwani"
+        },
+        {
+          type:"Wedding Suits/Tuxes"
+        },
+        {
+          type:"Sherwani On Rent"
+        },
+        {
+          type:"View All Groom Wear"
+        },
+      ]      
+    },
+    {
+      category:"Jewellery & Accessories ",
+      p:[
+        {
+          type:"Jewellery"
+        },
+        {
+          type:"Flower Jewellery"
+        },
+        {
+          type:"Bridal Jewellery on Rent"
+        },
+        {
+          type:"Accessories"
+        },
+        {
+          type:"View All Jewellery & Accessories "
+        },
+      ]      
+    },
+    {
+      category:"Invites & Gifts ",
+      p:[
+        {
+          type:"Invitations"
+        },
+        {
+          type:"Favors"
+        },
+        {
+          type:"Trousseau Packers"
+        },
+        {
+          type:"Invitaton Gifts"
+        },
+        {
+          type:"Mehndi Favors"
+        },
+        {
+          type:"View All Invites & Gifts"
+        },
+      ]      
+    },
+
+    {
+      category:"Food",
+      p:[
+        {
+          type:"Catering Services"
+        },
+        {
+          type:"Cake"
+        },
+        {
+          type:"Chaat & Food Stalls"
+        },
+        {
+          type:"Bartenders"
+        },
+        {
+          type:"View All Food"
+        },
+        {
+          category:"Bridal Wear",
+          p:[
+            {
+              type:"Bridal Lehengas"
+            },
+            {
+              type:"Knajeevaram/Silk Sarees"
+            },
+            {
+              type:"Cocktail  Growns"
+            },
+            {
+              type:"Trousseau Sarees"
+            },
+            {
+              type:"Bridal Lehenga on Rent"
+            },
+            {
+              type:"View All Bridal Wear"
+            },
+          ]      
+        },
+        {
+          category:"Bridal Grooming",
+          p:[
+            {
+              type:"Beauty and Wellness"
+            },
+          ]      
+        },
+
+      ]      
+    },
+   
 ]
 
+export const vanueData = [
+  {
+    category:"By Type",
+    p:[
+      {
+        type:"Banquet Halls"
+      },
+      {
+        type:"Marriage Garden / Lawns"
+      },
+      {
+        type:"Wedding Resorts"
+      },
+      {
+        type:"Small Function / Party Halls"
+      },
+      {
+        type:"Destination Wedding Venues"
+      },
+      {
+        type:"Kalyana Mandapams"
+      },
+      {
+        type:"4 Star & Above Wedding Hotels"
+      },
+      {
+        type:"View all Venues"
+      },
+    ]
+  },
+  {
+    category:"By City",
+    p:[
+      {
+        type:"Mumbai"
+      },
+      {
+        type:"Banglore"
+      },
+      {
+        type:"Pune"
+      },
+      {
+        type:"Kolkata"
+      },
+      {
+        type:"Jaipur"
+      },
+      {
+        type:"Lukhnow"
+      },
+      {
+        type:"Hyderabad"
+      },
+      {
+        type:"More"
+      },
+   
+    ]      
+  }
 
+ 
+]
 export const RealWedding = [
   {
-    url:"",
-    name:"Destination Weddings"
+    category:"By City",
+    p:[
+      {
+        type:"Mumbai"
+      },
+      {
+        type:"Delhi"
+      },
+      {
+        type:"Gurugram"
+      },
+      {
+        type:"Banglore"
+      },
+      {
+        type:"Guwahati"
+      },
+      {
+        type:"Chennai"
+      },
+      {
+        type:"Kolkata"
+      },
+     
+    ]
   },
   {
-    url:"",
-    name:"Hindu Weddings"
+    category:"By Culture",
+    p:[
+      {
+        type:"Maharastrian"
+      },
+      {
+        type:"Punjabi/Sikh"
+      },
+      {
+        type:"Bengali"
+      },
+      {
+        type:"Gujrati"
+      },
+      {
+        type:"Marwari"
+      },
+      
+      {
+        type:"Telugu"
+      },
+      
+      {
+        type:"More"
+      },
+    ]      
   },
   {
-    url:"",
-    name:"Beach Weddings"
+    category:"By Theme",
+    p:[
+      {
+        type:"Destination"
+      },
+      {
+        type:"Grand & Luxurios"
+      },
+      {
+        type:"Pocket riendly Stunners"
+      },
+      {
+        type:"Intimate & Minimalist"
+      },
+      {
+        type:"Modern & Stylish"
+      },
+      
+      {
+        type:"International"
+      },
+      
+      {
+        type:"Others"
+      },
+    ]      
+  }
+]
+
+export const photoData = [
+  {
+    category:"Outfit",
+    p:[
+      {
+        type:"Bridal Lehenga"
+      },
+      {
+        type:"Wedding Sarees"
+      },
+      {
+        type:"Engagement "
+      },
+      {
+        type:"Mehandi"
+      },
+      {
+        type:"Blouse Designs"
+      },
+      {
+        type:"More"
+      },
+    ]
   },
   {
-    url:"",
-    name:"Christian Weddings"
+    category:"Jewellery & Accessories",
+    p:[
+      {
+        type:"Bridal  Jewellery"
+      },
+      {
+        type:"Engagement Rings"
+      },
+      {
+        type:"Flower Jewellery"
+      },
+      {
+        type:"More"
+      },
+    ]      
   },
   {
-    url:"",
-    name:"Palace Weddings"
+    category:"Mehndi",
+    p:[
+      {
+        type:"Arabic"
+      },
+      {
+        type:"Simple"
+      },
+      {
+        type:"Unique"
+      },
+      {
+        type:"Mehndi Designs"
+      },
+      {
+        type:"More"
+      },
+    ]      
   },
   {
-    url:"",
-    name:"Sikh Weddings"
+    category:"Decor & Ideas",
+    p:[
+      {
+        type:"Wedding Decor"
+      },
+      {
+        type:"Bridal Entry "
+      },
+      {
+        type:"Groom Entry"
+      },
+      {
+        type:"Wedding Games"
+      },
+      {
+        type:"More"
+      },
+    ]      
   },
   {
-    url:"",
-    name:"South Indian Weddings"
+    category:"Wedding Card Designs",
+    p:[
+      {
+        type:"Designs"
+      },
+      {
+        type:"Wedding Gifts"
+      },
+      {
+        type:"Wedding Invitations"
+      },
+      {
+        type:"More"
+      },
+    ]      
   },
   {
-    url:"",
-    name:"Muslim Weddings"
+    category:"Wedding Photography",
+    p:[
+      {
+        type:"Pre Wedding Shoot"
+      },
+      {
+        type:"Wedding"
+      },
+      {
+        type:"Wedding Photoshoot & Poses"
+      },
+      {
+        type:"More"
+      },
+    ]      
   },
+
+  {
+    category:"Groom Wear ",
+    p:[
+      {
+        type:"Sherwani for Groom"
+      },
+      {
+        type:"Wedding Suits for Groom"
+      },
+      {
+        type:"More"
+      },
+    ]      
+  },
+
+  {
+    category:"Bridal Makeup & Hair",
+    p:[
+      {
+        type:"Bridal Makeup"
+      },
+      {
+        type:"Bridal Hairstyles"
+      },
+      {
+        type:"Engagement"
+      },
+      {
+        type:"Mehndi"
+      },
+      {
+        type:"More"
+      },
+    ]      
+  }
 ]
 
 
-export const photosData=[
-  {
-    url:"",
-    name:"Ideas Home"
-  },
-  {
-    url:"",
-    name:"Decor"
-  },
-  {
-    url:"",
-    name:"Photography"
-  },
-  {
-    url:"",
-    name:"Make-up"
-  },
-  {
-    url:"",
-    name:"Mehendi"
-  },
-  {
-    url:"",
-    name:"Bridal Lehenga"
-  },
-  {
-    url:"",
-    name:"Bridal Jwellery"
-  },
-  {
-    url:"",
-    name:"Destination Wedding"
-  },
+export const vendorTypes = [
+ { type:"Choose Vendor Type"},
+  {type:"All Categories"},
+ { type:"Bridal Makeup Artist"},
+  {type:"Wedding Decorators "},
+  {type:"Family Makeup "},
+  {type:"Wedding Planner "},
+  {type:"Sangeet Coreographers "},
 ]
+
 
        // src="https://i.pinimg.com/736x/2c/da/d6/2cdad69c0d2114a8330ad9f351396ccf.jpg"
         // src="https://i.pinimg.com/736x/a3/0f/5f/a30f5f73d6e99c603c989396bd1be690.jpg"

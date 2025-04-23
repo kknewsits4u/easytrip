@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import HomeIcon from "@mui/icons-material/Home";
@@ -10,10 +10,20 @@ import { Button, Select } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import { vendorsData, RealWedding, photosData, citiesData } from "../Store/DataStore";
+import {
+  vendorsData,
+  RealWedding,
+  citiesData,
+  vanueData,
+  photoData,
+} from "../Store/DataStore";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
+
+
   const [open, setOpen] = React.useState(false);
   const [city, setCity] = React.useState("Noida");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,23 +46,52 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const iconData = [
-    { icon: <HomeIcon />, name: "Home" },
-    { icon: <HotelIcon />, name: "Hotels" },
-    { icon: <FlightIcon />, name: "Flights" },
-    { icon: <LocalTaxiIcon />, name: "Cabs" },
-    { icon: <LoginIcon />, name: "Login" },
-  ];
+
+  const [open1, setOpen1] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen1(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
-      <div
-        className=" flex flex-wrap w-full 2xl:px-20 h-fit xl:h-20 bg-transparent items-center justify-between fixed top-0 left-0 p-5  z-50 "
-        style={{
-          backgroundColor: isScrolled ? "rgba(0, 0, 0, 0.7)" : "transparent",
-        }}
-      >
-        <div className="order-1 flex items-center justify-center text-blue-500 font-bold z-50 gap-5 ">
+      <div className="  flex items-center justify-start h-fit px-2 2xl:px-10   bg-[rgb(180,36,93)] w-full  z-50 p-1 gap-5">
+        <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
+          Plan your wedding with India's Largest Plateform
+        </h1>
+
+        
+        <div ref={dropdownRef} className="relative">
+          <div className="relative flex items-center justify-between w-50 h-8 p-2 font-semibold bg-[rgb(255,255,255)] rounded">
+            <p className=" opacity-70">All Cities </p>
+            <ArrowDropDownIcon
+              sx={{ borderRadius: "10px", fontSize: "30px" }}
+            />
+          </div>
+
+        {  open1 &&  (
+          <div className="flex items-start justify-start w-[60vw] h-100 bg-white shadow absolute top-10 -left-20 z-50 rounded p-5">
+            <input
+              type="text"
+              placeholder="Search city, States"
+              className=" border border-gray-300 w-full p-3 rounded  focus:outline-0 text-gray-600 text-md "
+            />
+          </div>
+         )}
+        </div>
+      </div>
+      <div className=" flex flex-wrap w-full 2xl:px-10 h-15  items-center justify-between  z-40 bg-[rgb(231,46,119)]   ">
+        <div className="order-1 flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
             className=" flex  text-[rgb(239,74,107)]  font-extrabold items-center justify-center h-fit w-fit "
@@ -66,113 +105,437 @@ const Navbar = () => {
             Aarambh
           </h1>
         </div>
-        <div className="order-2 xl:order-3 hidden sm:flex items-center justify-center h-fit w-fit shadow-sm shadow-white rounded   ">
-          <Button
-            fullWidth
-            variant=" outlined "
-            sx={{ border: "1px solid rgb(255,255,255)", color: "white" }}
+        <div className="order-2 xl:order-3 hidden sm:flex items-center justify-center rounded  gap-5 ">
+          <div
+            className=" flex items-center justify-center rounded-full h-10 w-10  border-2 border-[rgb(255,255,255)] text-[rgb(255,255,255)]"
+            style={{ boxShadow: "2px 2px 5px rgb(255,255,255)" }}
           >
-            List Your Business
+            <SearchIcon />
+          </div>
+          <Button
+            variant=" outlined "
+            sx={{
+              border: "1px solid rgb(255,255,255)",
+              color: "white",
+              boxShadow: "2px 2px 5px rgb(255,255,255)",
+            }}
+          >
+            Login
+          </Button>
+          <Button
+            variant=" outlined "
+            sx={{
+              border: "1px solid rgb(255,255,255)",
+              color: "white",
+              textWrap: "nowrap",
+              boxShadow: "2px 2px 5px rgb(255,255,255)",
+            }}
+          >
+            Join Us
           </Button>
         </div>
-        <div className="hidden md:flex w-full xl:w-2/3  order-3 xl:order-2 items-center justify-start xl:justify-center mt-2 gap-5 ">
-          <ul className="flex  items-center text-white justify-between gap-7 text-sm lg:text-md xl:text-lg font-semibold">
-            <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
-              Home
-            </li>
-            <li className="group relative overflow-visible cursor-pointer hover:text-[rgb(239,74,107)]  ">
-              Vendors{" "}
-              <span>
-                <ExpandMoreIcon sx={{ fontWeight: "700", fontSize: "30px" }} />
-              </span>
+
+        <div className="hidden relative md:flex w-full xl:w-2/3 order-3 xl:order-2 items-start justify-start  gap-5 h-full  ">
+          <ul
+            className="flex h-full  items-center text-[rgb(255,255,255)] justify-between gap-10 text-sm lg:text-md    "
+            style={{ fontWeight: "500" }}
+          >
+            <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
+              Vendors
               <div
-                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-8 -left-20
+                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50"
-                style={{ backgroundColor: "rgba(55,55,55,0.756)" }}
+               transition-all duration-300 ease-in-out z-50 p-5 shadow-md"
+                style={{ backgroundColor: "rgb(255,255,255)" }}
               >
-                {vendorsData.map((d, idx) => (
-                  <div
-                    key={d.idx}
-                    className="border-b  border-gray-600 flex items-center justify-start px-2 text-white text-sm  p-2 w-1/4  hover:bg-gray-500  rounded-md "
-                  >
-                    {" "}
-                    <p>{d.name}</p>{" "}
+                <div className=" w-full flex h-fit items-start justify-between">
+                  <div className=" w-1/3 flex flex-col h-fit gap-3">
+                    {vendorsData.slice(0, 5).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-1 text-md"
+                      >
+                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
                   </div>
-                ))}
-                <div className="flex items-center justify-start w-full p-2  hover:bg-gray-500 ">
-                  <p className="text-white text-sm ">
-                    All Wedding Vendors{" "}
-                    <span>
-                      <DoubleArrowIcon />{" "}
-                    </span>{" "}
-                  </p>
+                  <div className=" w-1/3  flex flex-col h-fit gap-3">
+                    {vendorsData.slice(5, 8).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold "
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/3 flex flex-col h-fit gap-3">
+                    {vendorsData.slice(9, 11).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold"
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </li>
-            <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
-              Banquet Halls
-            </li>
-            <li className="group relative cursor-pointer hover:text-[rgb(239,74,107)]">
-              Real Wedding{" "}
-              <span>
-                <ExpandMoreIcon sx={{ fontWeight: "700", fontSize: "30px" }} />
-              </span>
+
+            <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
+              Vanues
               <div
-                className="flex flex-wrap items-start justify-start w-[25vw] h-fit rounded-md absolute top-8 -left-20
+                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50"
-                style={{ backgroundColor: "rgba(55,55,55,0.756)" }}
+               transition-all duration-300 ease-in-out z-50 p-5 shadow-md"
+                style={{ backgroundColor: "rgb(255,255,255)" }}
               >
-                {RealWedding.map((d, idx) => (
-                  <div
-                    key={d.idx}
-                    className="border-b border-gray-600 flex items-center justify-start rounded-md px-2 text-white text-sm  p-2 w-1/2 hover:bg-gray-500"
-                  >
-                    {" "}
-                    <p>{d.name}</p>{" "}
+                <div className=" w-full flex h-fit items-start justify-between gap-5">
+                  <div className=" w-1/4 flex flex-col h-fit gap-3">
+                    {vanueData.slice(0, 1).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md text-left"
+                      >
+                        <h1 className="text-[rgb(231,46,119)] font-bold text-lg">
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p
+                            className="text-gray-600 "
+                            style={{
+                              fontWeight:
+                                index === data.p.length - 1 ? "700" : "500",
+                            }}
+                          >
+                            {d.type}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
                   </div>
-                ))}
-                <div className="flex items-center justify-start w-full p-2  hover:bg-gray-500">
-                  <p className="text-white text-sm ">
-                    All Real Weddings{" "}
-                    <span>
-                      <DoubleArrowIcon />{" "}
-                    </span>{" "}
-                  </p>
+
+                  <div className=" w-1/4  flex flex-col h-fit gap-3">
+                    {vanueData.slice(1, 2).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1 className="text-[rgb(231,46,119)] font-bold text-lg">
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p
+                            className="text-gray-600 "
+                            style={{
+                              fontWeight:
+                                index === data.p.length - 1 ? "700" : "500",
+                            }}
+                          >
+                            {d.type}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className=" w-1/2 flex flex-col h-fit gap-3 items-start">
+                    <h1 className="text-[rgb(231,46,119)] font-bold text-lg ">
+                      Destination Wedding Venues
+                    </h1>
+                    <div className=" w-full grid grid-cols-3 items-center justify-center h-fit gap-5">
+                      {[1, 1, 1, 1, 1, 1].map((idx) => (
+                        <div key={idx} className=" h-30 w-30">
+                          <div className=" w-full h-25  rounded flex items-center justify-center ">
+                            <img
+                              src="https://i.pinimg.com/736x/e3/0e/fe/e30efee2ae10f6fed8f95d870d2b4c9b.jpg"
+                              alt="vanues img"
+                              className=" object-fit  w-full h-full object-cover rounded  "
+                            />
+                          </div>
+                          <p className="text-gray-600">Goa</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
-            <li className="relative group cursor-pointer hover:text-[rgb(239,74,107)]">
-              Photos{" "}
-              <span>
-                <ExpandMoreIcon sx={{ fontWeight: "700", fontSize: "30px" }} />
-              </span>
+
+            <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
+              Real Wedding
               <div
-                className="flex flex-wrap items-start justify-start w-[10vw] h-fit rounded-md absolute top-8 -left-10
+                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50"
-                style={{ backgroundColor: "rgba(55,55,55,0.756)" }}
+               transition-all duration-300 ease-in-out z-50 p-5"
+                style={{ backgroundColor: "rgb(255,255,255)" }}
               >
-                {photosData.map((d, idx) => (
-                  <div
-                    key={d.idx}
-                    className="border-b border-gray-600 flex items-center justify-start px-2 rounded-md text-white text-sm  p-2 w-full hover:bg-gray-500"
-                  >
-                    {" "}
-                    <p>{d.name}</p>{" "}
+                <div className=" w-full flex h-fit items-start justify-between">
+                  <div className=" w-1/4 flex flex-col h-fit gap-3">
+                    {RealWedding.slice(0, 1).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md"
+                      >
+                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
                   </div>
-                ))}
-                <div className="flex items-center justify-start w-full p-2  hover:bg-gray-500">
-                  <p className="text-white text-sm ">All </p>
+                  <div className=" w-1/4  flex flex-col h-fit gap-3">
+                    {RealWedding.slice(1, 2).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold "
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/4 flex flex-col h-fit gap-3">
+                    {RealWedding.slice(2, 3).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold"
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/4 flex flex-col h-fit gap-3">
+                    <h1 className="text-[rgb(231,46,119)] font-bold text-left">
+                      Latest Real Wedding
+                    </h1>
+                    <div className=" w-full flex flex-col h-fit items-center justify-between gap-2 ">
+                      <div className=" flex flex-col items-center justify-start w-full h-45  border-black gap-2">
+                        <div className=" flex  items-center justify-center w-full h-40">
+                          <img
+                            src="https://i.pinimg.com/474x/9b/ca/dc/9bcadcb4b1eca2962d8343e5cd1826a0.jpg"
+                            alt="image"
+                            className=" w-full h-full object-center object-cover rounded"
+                          />
+                        </div>
+                        <p className=" text-md text-gray-700">Ayesha & Aman</p>
+                      </div>
+                      <div className=" flex flex-col items-center justify-start w-full h-45  border-black gap-2 ">
+                        <div className=" flex  items-center justify-center w-full h-40">
+                          <img
+                            src="https://i.pinimg.com/474x/9b/ca/dc/9bcadcb4b1eca2962d8343e5cd1826a0.jpg"
+                            alt="image"
+                            className=" w-full h-full object-center object-cover rounded"
+                          />
+                        </div>
+                        <p className=" text-md text-gray-700">
+                          Priyanka & Ansh
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
-            <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
-              Testimonials
+            <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
+              Blog
+              <div
+                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
+               opacity-0 translate-y-5 pointer-events-none
+               group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+               transition-all duration-300 ease-in-out z-50 p-5"
+                style={{ backgroundColor: "rgb(255,255,255)" }}
+              >
+                <div className=" w-full flex h-fit items-start justify-between">
+                  <div className=" w-1/4 flex flex-col h-fit gap-3">
+                    {RealWedding.slice(0, 1).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md"
+                      >
+                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/4  flex flex-col h-fit gap-3">
+                    {RealWedding.slice(1, 2).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold "
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/4 flex flex-col h-fit gap-3">
+                    {RealWedding.slice(2, 3).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold"
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-600 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/4 flex flex-col h-fit gap-3">
+                    <h1 className="text-[rgb(231,46,119)] font-bold text-left">
+                      Top Blogs
+                    </h1>
+                    <div className=" w-full flex flex-col h-fit items-center justify-between gap-2 ">
+                      <div className=" flex flex-col items-center justify-start w-full h-45  border-black gap-2">
+                        <div className=" flex  items-center justify-center w-full h-40">
+                          <img
+                            src="https://i.pinimg.com/736x/f8/ac/d6/f8acd6e5cc75a5edfeaa44e47b3007ac.jpg"
+                            alt="image"
+                            className=" w-full h-full object-center object-cover rounded"
+                          />
+                        </div>
+                        <p className=" text-md text-gray-700">
+                          Bridal Mehdi Design
+                        </p>
+                      </div>
+                      <div className=" flex flex-col items-center justify-start w-full h-45  border-black gap-2 ">
+                        <div className=" flex  items-center justify-center w-full h-40">
+                          <img
+                            src="https://i.pinimg.com/474x/2f/47/78/2f4778b05e77c352e1e26774dfab884b.jpg"
+                            alt="image"
+                            className=" w-full h-full object-center object-cover rounded"
+                          />
+                        </div>
+                        <p className=" text-md text-gray-700">USA Trip</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
+              Photos
+              <div
+                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-15 left-0
+               opacity-0 translate-y-5 pointer-events-none
+               group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+               transition-all duration-300 ease-in-out z-50 p-5 shadow-md"
+                style={{ backgroundColor: "rgb(255,255,255)" }}
+              >
+                <div className=" w-full flex h-fit items-start justify-between">
+                  <div className=" w-1/3 flex flex-col h-fit gap-3">
+                    {photoData.slice(0, 3).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-1 text-md"
+                      >
+                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-500 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/3  flex flex-col h-fit gap-3">
+                    {photoData.slice(3, 6).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold "
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-500 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div className=" w-1/3 flex flex-col h-fit gap-3">
+                    {photoData.slice(6, 8).map((data, idx) => (
+                      <div
+                        key={idx}
+                        className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
+                      >
+                        <h1
+                          className="text-[rgb(231,46,119)] font-bold"
+                          style={{ fontSize: "16px" }}
+                        >
+                          {data.category}
+                        </h1>
+                        {data.p.map((d, index) => (
+                          <p className="text-gray-500 ">{d.type}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
