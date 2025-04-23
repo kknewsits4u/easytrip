@@ -6,12 +6,12 @@ import FlightIcon from "@mui/icons-material/Flight";
 import HotelIcon from "@mui/icons-material/Hotel";
 import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
 import LoginIcon from "@mui/icons-material/Login";
-import { Button, Divider, Select } from "@mui/material";
-
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
+import { Button, Select } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import { vendorsData, RealWedding, photosData, citiesData } from "../Store/DataStore";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -25,7 +25,6 @@ const Navbar = () => {
   const handleChange = (event) => {
     setCity(event.target.value);
   };
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,17 +44,15 @@ const Navbar = () => {
     { icon: <LoginIcon />, name: "Login" },
   ];
 
-
-
   return (
     <>
       <div
-        className=" flex w-full 2xl:px-20 h-15 lg:h-20 bg-transparent items-center justify-between fixed top-0 left-0 p-5  z-50 "
+        className=" flex flex-wrap w-full 2xl:px-20 h-fit xl:h-20 bg-transparent items-center justify-between fixed top-0 left-0 p-5  z-50 "
         style={{
           backgroundColor: isScrolled ? "rgba(0, 0, 0, 0.7)" : "transparent",
         }}
       >
-        <div className=" flex items-center justify-center text-blue-500 font-bold z-50 gap-5 ">
+        <div className="order-1 flex items-center justify-center text-blue-500 font-bold z-50 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
             className=" flex  text-[rgb(239,74,107)]  font-extrabold items-center justify-center h-fit w-fit "
@@ -65,42 +62,119 @@ const Navbar = () => {
             />
           </div>
 
-          <h1
-            className="text-xl lg:text-3xl flex items-center justify-center  text-white "
-       
-          >
+          <h1 className="text-xl lg:text-3xl flex items-center justify-center  text-white ">
             Aarambh
           </h1>
         </div>
-        <div className="hidden md:flex items-center justify-between  gap-5 ">
-          <ul className="flex  items-center text-white justify-between gap-7 text-md xl:text-lg font-semibold">
+        <div className="order-2 xl:order-3 hidden sm:flex items-center justify-center h-fit w-fit shadow-sm shadow-white rounded   ">
+          <Button
+            fullWidth
+            variant=" outlined "
+            sx={{ border: "1px solid rgb(255,255,255)", color: "white" }}
+          >
+            List Your Business
+          </Button>
+        </div>
+        <div className="hidden md:flex w-full xl:w-2/3  order-3 xl:order-2 items-center justify-start xl:justify-center mt-2 gap-5 ">
+          <ul className="flex  items-center text-white justify-between gap-7 text-sm lg:text-md xl:text-lg font-semibold">
             <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
               Home
             </li>
-            <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
-              Vendors
+            <li className="group relative overflow-visible cursor-pointer hover:text-[rgb(239,74,107)]  ">
+              Vendors{" "}
+              <span>
+                <ExpandMoreIcon sx={{ fontWeight: "700", fontSize: "30px" }} />
+              </span>
+              <div
+                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-8 -left-20
+               opacity-0 translate-y-5 pointer-events-none
+               group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+               transition-all duration-300 ease-in-out z-50"
+                style={{ backgroundColor: "rgba(55,55,55,0.756)" }}
+              >
+                {vendorsData.map((d, idx) => (
+                  <div
+                    key={d.idx}
+                    className="border-b  border-gray-600 flex items-center justify-start px-2 text-white text-sm  p-2 w-1/4  hover:bg-gray-500  rounded-md "
+                  >
+                    {" "}
+                    <p>{d.name}</p>{" "}
+                  </div>
+                ))}
+                <div className="flex items-center justify-start w-full p-2  hover:bg-gray-500 ">
+                  <p className="text-white text-sm ">
+                    All Wedding Vendors{" "}
+                    <span>
+                      <DoubleArrowIcon />{" "}
+                    </span>{" "}
+                  </p>
+                </div>
+              </div>
             </li>
             <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
               Banquet Halls
             </li>
-            <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
-              Real Wedding
+            <li className="group relative cursor-pointer hover:text-[rgb(239,74,107)]">
+              Real Wedding{" "}
+              <span>
+                <ExpandMoreIcon sx={{ fontWeight: "700", fontSize: "30px" }} />
+              </span>
+              <div
+                className="flex flex-wrap items-start justify-start w-[25vw] h-fit rounded-md absolute top-8 -left-20
+               opacity-0 translate-y-5 pointer-events-none
+               group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+               transition-all duration-300 ease-in-out z-50"
+                style={{ backgroundColor: "rgba(55,55,55,0.756)" }}
+              >
+                {RealWedding.map((d, idx) => (
+                  <div
+                    key={d.idx}
+                    className="border-b border-gray-600 flex items-center justify-start rounded-md px-2 text-white text-sm  p-2 w-1/2 hover:bg-gray-500"
+                  >
+                    {" "}
+                    <p>{d.name}</p>{" "}
+                  </div>
+                ))}
+                <div className="flex items-center justify-start w-full p-2  hover:bg-gray-500">
+                  <p className="text-white text-sm ">
+                    All Real Weddings{" "}
+                    <span>
+                      <DoubleArrowIcon />{" "}
+                    </span>{" "}
+                  </p>
+                </div>
+              </div>
             </li>
-            <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
-              Photos
+            <li className="relative group cursor-pointer hover:text-[rgb(239,74,107)]">
+              Photos{" "}
+              <span>
+                <ExpandMoreIcon sx={{ fontWeight: "700", fontSize: "30px" }} />
+              </span>
+              <div
+                className="flex flex-wrap items-start justify-start w-[10vw] h-fit rounded-md absolute top-8 -left-10
+               opacity-0 translate-y-5 pointer-events-none
+               group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+               transition-all duration-300 ease-in-out z-50"
+                style={{ backgroundColor: "rgba(55,55,55,0.756)" }}
+              >
+                {photosData.map((d, idx) => (
+                  <div
+                    key={d.idx}
+                    className="border-b border-gray-600 flex items-center justify-start px-2 rounded-md text-white text-sm  p-2 w-full hover:bg-gray-500"
+                  >
+                    {" "}
+                    <p>{d.name}</p>{" "}
+                  </div>
+                ))}
+                <div className="flex items-center justify-start w-full p-2  hover:bg-gray-500">
+                  <p className="text-white text-sm ">All </p>
+                </div>
+              </div>
             </li>
             <li className=" cursor-pointer hover:text-[rgb(239,74,107)]">
               Testimonials
             </li>
           </ul>
-
-          <div  className=" flex items-center justify-center h-fit w-fit shadow-sm shadow-white rounded  hover:scale(105) " >
-            <Button fullWidth  variant=" outlined " sx={{  border:"1px solid rgb(255,255,255)" , color:"white"  }} >
-
-                 List Your Business 
-            </Button></div>
-
-
         </div>
 
         <Drawer
@@ -112,7 +186,6 @@ const Navbar = () => {
               backgroundColor: "rgba(255, 255, 255,0.76)",
               backdropFilter: "blur(20px)",
               width: 250,
-
               height: "calc(100%)",
             },
           }}
@@ -144,97 +217,105 @@ const Navbar = () => {
                 </h1>
               </div>
             </div>
-            <div  className="flex w-full items-center justify-between px-5" >
-              <h1 className=" text-xl "  >City :</h1>
-              <div  className=" flex items-center justify-center  " >
-                <FormControl sx={{ m: 1, minWidth: 120  }}>
+            <div className="flex w-full items-center justify-between px-5">
+              <h1 className=" text-xl ">City :</h1>
+              <div className=" flex items-center justify-center  ">
+                <FormControl sx={{ m: 1, minWidth: 120 }}>
                   <Select
                     value={city}
                     onChange={handleChange}
                     displayEmpty
                     inputProps={{ "aria-label": "Without label" }}
-                    sx={{  height:35 }}
+                    sx={{ height: 35 }}
                     MenuProps={{
                       PaperProps: {
                         sx: {
                           maxHeight: 400,
-                          overflowY: 'auto',
-                        
-                          '&::-webkit-scrollbar': {
-                            width: '8px',
+                          overflowY: "auto",
+
+                          "&::-webkit-scrollbar": {
+                            width: "8px",
                           },
-                          '&::-webkit-scrollbar-thumb': {
-                            backgroundColor: '#666', 
-                            borderRadius: '4px',
+                          "&::-webkit-scrollbar-thumb": {
+                            backgroundColor: "#666",
+                            borderRadius: "4px",
                           },
-                          '&::-webkit-scrollbar-thumb:hover': {
-                            backgroundColor: '#555', 
+                          "&::-webkit-scrollbar-thumb:hover": {
+                            backgroundColor: "#555",
                           },
-                       
                         },
                       },
                     }}
                   >
-                    <MenuItem value="Noida">
-                         Noida
-                    </MenuItem>
-                    <MenuItem value={10}>Delhi</MenuItem>
-                    <MenuItem value={20}>Dehradune</MenuItem>
-                    <MenuItem value={30}>Udaypur</MenuItem>
-                    <MenuItem value={30}>Agra</MenuItem>
-                    <MenuItem value={30}>Laddakh</MenuItem>
-                    <MenuItem value={30}>Manali</MenuItem>
-                    <MenuItem value={30}>Goa</MenuItem>
-                    <MenuItem value={30}>Surat</MenuItem>
-                    <MenuItem value={30}>Gurugram</MenuItem>
-                    <MenuItem value={30}>Jamashedpur</MenuItem>
-                    <MenuItem value={30}>Mathura</MenuItem>
-                    <MenuItem value={30}>Mansoori</MenuItem>
-                    <MenuItem value={30}>Bangluru</MenuItem>
-                   
-                 
+                    {citiesData?.map((data, i) => (
+                      <MenuItem key={i} value={data.value}>
+                        {data.cityName}
+                      </MenuItem>
+                    ))}
                   </Select>
-          
                 </FormControl>
               </div>
             </div>
 
-            <div className=" flex w-full border-t-2 py-2 border-gray-500 h-fit " >
-               <ul  className=" flex flex-col w-full" >
-                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2" >Home</li>
-                <li  className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2" >Vendors</li>
-                <li  className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2"  >Banquet Halls</li>
-                <li  className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2"  >Real Wedding</li>
-                <li  className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2"  >Blogs</li>
-                <li  className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2"  >Photos</li>
-               </ul>
-            </div>
-            <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 "  >
-            <ul  className=" flex flex-col w-full" >
-                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2" >Deals</li>
-                <li  className="w-full relative  cursor-pointer hover:bg-gray-300 px-5 p-2" >Aarambh Assured
-
-                <div  className=" flex items-center justify-center px-3  rounded bg-orange-600 absolute top-1 right-3 text-white  text-sm" >
-                  New
-                </div>
+            <div className=" flex w-full border-t-2 py-2 border-gray-500 h-fit ">
+              <ul className=" flex flex-col w-full">
+                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Home
                 </li>
-            
-              
-               </ul>
-            </div>
-
-            <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 "  >
-            <ul  className=" flex flex-col w-full" >
-                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2" >Testimonials</li>
-                <li  className="w-full relative  cursor-pointer hover:bg-gray-300 px-5 p-2" >Why choose Aarambh
+                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Vendors
                 </li>
-               </ul>
+                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Banquet Halls
+                </li>
+                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Real Wedding
+                </li>
+                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Blogs
+                </li>
+                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Photos
+                </li>
+              </ul>
             </div>
-            <div  className=" flex items-center justify-center  w-full border-t-2 border-gray-500 h-fit px-5 py-2  ">
-              <Button fullWidth variant="outlined " sx={{ border:"1px solid orange", color:"orange", marginTop:"5px"  }} >List Your Business</Button>
+            <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 ">
+              <ul className=" flex flex-col w-full">
+                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Deals
+                </li>
+                <li className="w-full relative  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Aarambh Assured
+                  <div className=" flex items-center justify-center px-3  rounded bg-orange-600 absolute top-1 right-3 text-white  text-sm">
+                    New
+                  </div>
+                </li>
+              </ul>
             </div>
 
-           
+            <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 ">
+              <ul className=" flex flex-col w-full">
+                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Testimonials
+                </li>
+                <li className="w-full relative  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                  Why choose Aarambh
+                </li>
+              </ul>
+            </div>
+            <div className=" flex items-center justify-center  w-full border-t-2 border-gray-500 h-fit px-5 py-2  ">
+              <Button
+                fullWidth
+                variant="outlined "
+                sx={{
+                  border: "1px solid orange",
+                  color: "orange",
+                  marginTop: "5px",
+                }}
+              >
+                List Your Business
+              </Button>
+            </div>
           </div>
         </Drawer>
       </div>
