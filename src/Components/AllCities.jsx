@@ -6,7 +6,7 @@ const AllCities = () => {
   return (
     <div className="flex flex-col  items-center justify-between gap-5 w-full  h-fit bg-white shadow-md rounded-sm  shadow-gray-200 p-5 mt-15 lg:mt-5 ">
       <h1 className="text-2xl  lg:text-3xl font-bold w-full text-left py-2 ">
-        Explore Famous Cities
+        Other Popular Cities
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 w-full h-fit gap-5">
         {citiesData?.map((data, idx) => (
