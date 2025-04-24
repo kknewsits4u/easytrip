@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className=" hidden md:flex items-center justify-start h-fit px-2 2xl:px-10   bg-[rgb(180,36,93)] w-full  z-50 p-1 gap-5">
+      <div className=" hidden md:flex items-center justify-start h-fit px-2 2xl:px-10   bg-[rgb(180,36,93,0.78)] w-full  z-50 p-1 gap-5">
         <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
           Plan your wedding with India's Largest Plateform
         </h1>
@@ -159,7 +159,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className=" flex  w-full px-5 2xl:px-10 h-15  items-center justify-between  z-40 bg-[rgb(231,46,119)]   ">
+      <div className=" flex  w-full px-5 2xl:px-10 h-15  items-center justify-between  z-40 bg-[rgb(231,46,119,0.78)]   ">
         <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
             onClick={toggleDrawer(true)}

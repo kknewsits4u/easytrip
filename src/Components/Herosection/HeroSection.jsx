@@ -126,7 +126,7 @@ const HeroSection = () => {
          </FormControl>
         </div>
           <div className="w-full md:w-[20%] h-full" >
-             <Button  fullWidth variant="conatined" sx={{ backgroundColor:"rgb(231,46,119)" , color:"rgb(255,255,255)", height:"100%",   }}  >Search</Button>
+             <Button  fullWidth variant="conatined" sx={{ backgroundColor:"rgb(231,46,119,0.78)" , color:"rgb(255,255,255)", height:"100%",   }}  >Search</Button>
            </div>
         </div>
       </div>     
