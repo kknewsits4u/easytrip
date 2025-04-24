@@ -10,10 +10,11 @@ function PopularVenues() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const responsive = {
-    0: { items: 1 },
-    768: { items: 3 },
-    1024: { items: 4 },
-    1280: { items: 5 },
+    0: { items: 2.75 },
+    650: { items: 4.5 },
+    768: { items: 4.25 },
+    968: { items: 5.5 },
+    1280: { items: 6.5 },
   };
 
   const slidePrev = () => {
@@ -30,11 +31,12 @@ function PopularVenues() {
 
   const items = citiesData.slice(1,10).map((data, i) => (
     <div key={i} className="w-full px-2">
-      <div className= " bg-white border border-gray-300 shadow-md rounded-lg gap-5 h-50 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
+      <div className= " bg-white border border-gray-300 shadow-md rounded-lg gap-5 h-25 md:h-30 lg:h-40 p-2 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
           <div  className=" flex items-center justify-center h-1/2 w-full overflow-hidden" >
-              <img src="https://i.pinimg.com/474x/20/70/94/2070943ede3c4756187fd657b1a051e8.jpg" alt="image" className=" h-full w-auto object-cover object-center transform hover:scale(110) " />
+              <img  src={i%2 == 0 ? "b1.jpg":"b2.jpg" }  alt="image" className=" h-full w-auto object-cover object-center transform hover:scale(110) " />
+              {/* src="https://i.pinimg.com/474x/20/70/94/2070943ede3c4756187fd657b1a051e8.jpg" */}
           </div>
-          <h1>{data.cityName}</h1>
+          <h1 className=" text-sm lg:text-lg"  >{data.cityName}</h1>
       </div>
     </div>
   ));

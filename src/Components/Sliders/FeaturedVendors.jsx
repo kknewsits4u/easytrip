@@ -33,7 +33,7 @@ function PopularSearch() {
 
   const items = businessData.map((data, i) => (
     <div key={i} className="w-full p-2  ">
-      <div className= " rounded-lg gap-2 shadow-md h-fit flex flex-col items-start justify-center text-md font-semibold  ">
+      <div className= " rounded-lg gap-2 shadow-md h-fit flex flex-col items-start justify-center text-md font-semibold cursor-pointer hover:bg-gray-200 ">
           <div  className=" flex items-center justify-center h-70 w-full" >
               <img src={data.image} alt="image" className=" h-full w-full object-cover object-center rounded" />
           </div>

@@ -4,7 +4,7 @@ import EmailIcon from "@mui/icons-material/Email";
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col  items-center justify-between bg-white h-fit shadow-md shadow-gray-300 rounded-sm">
+    <div className="w-full flex flex-col  items-center justify-between bg-white h-fit shadow-md shadow-gray-300 rounded-sm ">
       <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full bg-black h-fit min-h-60  border-b border-gray-500 gap-5  p-5"  >
         <div className=" flex flex-col h-60  w-full text-gray-400 text-md gap-3"  >
           <h1 className=" text-white text-xl mb-2 "  >Delhi</h1>

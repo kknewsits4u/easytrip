@@ -30,7 +30,7 @@ function PopularSearch() {
 
   const items = popularSearch.slice(1,10).map((data, i) => (
     <div key={i} className="w-full p-2 ">
-      <div className= " rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md">
+      <div className= " rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 ">
           <div  className=" flex items-center justify-center h-70 w-full" >
               <img src={data.image} alt="image" className=" h-full w-full object-cover object-center rounded" />
           </div>

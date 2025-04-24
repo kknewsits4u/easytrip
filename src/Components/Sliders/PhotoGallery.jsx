@@ -32,17 +32,11 @@ function PopularSearch() {
 
   const items = photoCollection.slice(0,8).map((data, i) => (
     <div key={i} className="w-full p-2 flex flex-col gap-5">
-      <div className= " rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md">
+      <div className= " rounded-lg gap-3 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md  hover:tranform  transition-all hover:-translate-y-2 cursor-pointer ">
           <div  className=" flex items-center justify-center h-90 w-full" >
-              <img src={data.image1} alt="image" className=" h-full w-full object-cover object-center rounded" />
+              <img src={data.image} alt="image" className=" h-full w-full object-cover object-center rounded" />
           </div>
         
-      </div>
-      <div className= " rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md">
-          <div  className=" flex items-center justify-center h-90 w-full" >
-              <img src={data.image2} alt="image" className=" h-full w-full object-cover object-center rounded" />
-          </div>
-
       </div>
     </div>
   ));

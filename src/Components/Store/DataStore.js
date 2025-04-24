@@ -805,125 +805,213 @@ export const businessData =
   },
 ]
 
-
-
 export const blogData = 
 [
   {
     "image": "https://i.pinimg.com/736x/25/05/4c/25054c0ee05d8de072e7cc588df0ce7c.jpg",
     "heading": "Top 10 Bridal Mehndi Designs for 2025",
-    "description": "Explore the most trending and elegant mehndi designs perfect for your big day. From traditional to contemporary, we’ve got them all!"
+    "description": "Explore the most trending and elegant mehndi designs perfect for your big day. From traditional to contemporary, we’ve got them all!",
+    "date": "April 15, 2025"
   },
   {
     "image": "https://i.pinimg.com/474x/12/c1/b9/12c1b948bc286797729d807cf4ee86c3.jpg",
     "heading": "How to Choose the Right Wedding Photographer",
-    "description": "A guide to help you select a photographer who will capture every special moment just the way you want."
+    "description": "A guide to help you select a photographer who will capture every special moment just the way you want.",
+    "date": "April 10, 2025"
   },
   {
     "image": "https://images.pexels.com/photos/2747255/pexels-photo-2747255.jpeg?auto=compress&cs=tinysrgb&w=600",
     "heading": "Latest Bridal Hairstyle Trends",
-    "description": "From buns to braids, discover the latest bridal hairstyles that are making waves this wedding season."
+    "description": "From buns to braids, discover the latest bridal hairstyles that are making waves this wedding season.",
+    "date": "March 30, 2025"
   },
   {
     "image": "https://images.pexels.com/photos/5829427/pexels-photo-5829427.jpeg?auto=compress&cs=tinysrgb&w=600",
     "heading": "Tips for Planning a Budget-Friendly Wedding",
-    "description": "Get expert tips on how to plan the wedding of your dreams without breaking the bank."
+    "description": "Get expert tips on how to plan the wedding of your dreams without breaking the bank.",
+    "date": "March 22, 2025"
   },
   {
     "image": "https://media.istockphoto.com/id/972734600/photo/colorful-stage-decoration-for-bride-and-groom-in-sangeet-night-of-indian-wedding.jpg?s=612x612&w=0&k=20&c=Nfg0iA61eXVAEfl7_UhGBvEp8fJihuG2bAAxEoZJHFg=",
     "heading": "Unique Wedding Decor Ideas for Every Theme",
-    "description": "Elevate your venue with creative decor inspirations that suit any wedding theme."
+    "description": "Elevate your venue with creative decor inspirations that suit any wedding theme.",
+    "date": "March 15, 2025"
   },
   {
     "image": "https://media.istockphoto.com/id/1190043570/photo/happy-wedding-photography-of-bride-and-groom-at-wedding-ceremony-wedding-tradition-sprinkled.jpg?s=612x612&w=0&k=20&c=_aCIW5-iOIiaDdqin_50kvBcbFbIxSULHHamPUILE0c=",
     "heading": "Must-Have Shots in Your Wedding Album",
-    "description": "Don’t miss these essential moments that make your wedding album complete and memorable."
+    "description": "Don’t miss these essential moments that make your wedding album complete and memorable.",
+    "date": "March 5, 2025"
   }
 ]
 
+
 export const photoCollection =[
   {
-    image1:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
-    image2:"https://i.pinimg.com/474x/89/91/33/899133fb2cd0b5579a5f3a45bf710baa.jpg",
+    image:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
+  
   },
   {
-    image1:"https://i.pinimg.com/474x/eb/41/37/eb4137cb8762513a55c08541aedb6db0.jpg",
-    image2:"https://i.pinimg.com/474x/6d/0f/29/6d0f29ef29c49931893919dd29545ff8.jpg",
+    image:"https://i.pinimg.com/474x/89/91/33/899133fb2cd0b5579a5f3a45bf710baa.jpg",
   },
   {
-    image1:"https://i.pinimg.com/474x/96/1e/a2/961ea23f28e6b49872dfaa78a67a0371.jpg",
-    image2:"https://i.pinimg.com/474x/d7/e7/e9/d7e7e93b52eef32c4e06c568c6e42025.jpg",
+    image:"https://i.pinimg.com/474x/eb/41/37/eb4137cb8762513a55c08541aedb6db0.jpg",
   },
   {
-    image1:"https://i.pinimg.com/474x/d4/b6/9b/d4b69bfcb6d6d5101d67217b3f596419.jpg",
-    image2:"https://i.pinimg.com/474x/a8/c2/97/a8c29720bc68ee5c8e2546409d55f2df.jpg",
+    image:"https://i.pinimg.com/474x/6d/0f/29/6d0f29ef29c49931893919dd29545ff8.jpg",
   },
   {
-    image1:"https://i.pinimg.com/474x/23/75/fb/2375fb849bc80127f8990d10208d6073.jpg",
-    image2:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
+    image:"https://i.pinimg.com/474x/96/1e/a2/961ea23f28e6b49872dfaa78a67a0371.jpg",
+ 
   },
   {
-    image1:"https://i.pinimg.com/474x/10/ab/02/10ab02102aff31c321fda67684612f01.jpg",
-    image2:"https://i.pinimg.com/474x/33/73/33/337333cdfaa7907a84f5215bcc639ed3.jpg",
+    image:"https://i.pinimg.com/474x/d7/e7/e9/d7e7e93b52eef32c4e06c568c6e42025.jpg",
   },
   {
-    image1:"https://i.pinimg.com/474x/fb/e2/62/fbe2626ea9e132ab1dde4e5adf588b88.jpg",
-    image2:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
+    image:"https://i.pinimg.com/474x/d4/b6/9b/d4b69bfcb6d6d5101d67217b3f596419.jpg",
+   
+  },{
+    image:"https://i.pinimg.com/474x/a8/c2/97/a8c29720bc68ee5c8e2546409d55f2df.jpg",
   },
   {
-    image1:"https://i.pinimg.com/474x/b4/4a/1d/b44a1d11ddb584faca27c3b81cdba92c.jpg",
-    image2:"https://i.pinimg.com/474x/01/b6/69/01b669a002ef7e6972c14a000d546ef9.jpg",
+    image:"https://i.pinimg.com/474x/23/75/fb/2375fb849bc80127f8990d10208d6073.jpg",
+
   },
   {
-    image1:"https://i.pinimg.com/474x/85/9d/ba/859dba2b063baf9923d40e68e8ce51b8.jpg",
-    image2:"https://i.pinimg.com/474x/f8/b5/26/f8b52605927d8b8c4a1789d649b4a652.jpg",
+    image:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
   },
   {
-    image1:"https://i.pinimg.com/474x/a6/40/2e/a6402e1aa2c88b1218f54a574f837d76.jpg",
-    image2:"https://i.pinimg.com/474x/3d/66/24/3d6624fe540abb566f3ae9bde1586ff6.jpg",
+    image:"https://i.pinimg.com/474x/10/ab/02/10ab02102aff31c321fda67684612f01.jpg",
+
   },
   {
-    image1:"https://i.pinimg.com/474x/b8/de/8f/b8de8f57457efddffef76072c88926f0.jpg",
-    image2:"https://i.pinimg.com/474x/22/7e/63/227e631e1b5b97fb6c810ad0d616d642.jpg",
+    image:"https://i.pinimg.com/474x/33/73/33/337333cdfaa7907a84f5215bcc639ed3.jpg",
   },
+  {
+    image:"https://i.pinimg.com/474x/fb/e2/62/fbe2626ea9e132ab1dde4e5adf588b88.jpg",
+  },{
+    image:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
+  },
+  {
+    image:"https://i.pinimg.com/474x/b4/4a/1d/b44a1d11ddb584faca27c3b81cdba92c.jpg",
+  },
+  {
+    image:"https://i.pinimg.com/474x/01/b6/69/01b669a002ef7e6972c14a000d546ef9.jpg",
+  },
+  {
+    image:"https://i.pinimg.com/474x/85/9d/ba/859dba2b063baf9923d40e68e8ce51b8.jpg",
+
+  },
+  {
+    image:"https://i.pinimg.com/474x/f8/b5/26/f8b52605927d8b8c4a1789d649b4a652.jpg",
+  },
+  {
+    image:"https://i.pinimg.com/474x/a6/40/2e/a6402e1aa2c88b1218f54a574f837d76.jpg",
+ 
+  },
+  {
+    image:"https://i.pinimg.com/474x/3d/66/24/3d6624fe540abb566f3ae9bde1586ff6.jpg",
+  },
+  {
+    image:"https://i.pinimg.com/474x/b8/de/8f/b8de8f57457efddffef76072c88926f0.jpg",
+
+  },
+  {
+    image:"https://i.pinimg.com/474x/22/7e/63/227e631e1b5b97fb6c810ad0d616d642.jpg",
+  }
 
 
 
 
 ]
+
 
 export const venueDetails = 
 [
   {
     "venueName": "The Royal Palace",
-    "image": "https://i.pinimg.com/736x/b4/a6/b1/b4a6b1c1fd3911f5651af39c9cf61094.jpg"
+    "image": "https://i.pinimg.com/736x/b4/a6/b1/b4a6b1c1fd3911f5651af39c9cf61094.jpg",
+    "rating": 4.8,
+    "startingPrice": "₹2,50,000",
+    "verified": true,
+    "location": "Near Amer Fort, Delhi Road, Jaipur, Rajasthan 302002"
   },
   {
     "venueName": "Heaven Garden Banquet",
-    "image": "https://i.pinimg.com/474x/0c/f0/29/0cf02931db5916d5b1e5d381336c9c8f.jpg"
+    "image": "https://i.pinimg.com/474x/0c/f0/29/0cf02931db5916d5b1e5d381336c9c8f.jpg",
+    "rating": 4.5,
+    "startingPrice": "₹1,80,000",
+    "verified": true,
+    "location": "Opp. Fun Republic Mall, Lucknow, Uttar Pradesh 226010"
   },
   {
     "venueName": "Lavnya Dreams Hall",
-    "image": "https://i.pinimg.com/474x/43/b5/82/43b58283e1070bead65e0fb8abf817c0.jpg"
+    "image": "https://i.pinimg.com/474x/43/b5/82/43b58283e1070bead65e0fb8abf817c0.jpg",
+    "rating": 4.2,
+    "startingPrice": "₹1,20,000",
+    "verified": false,
+    "location": "Plot No. 14, Sector 63, Noida, Delhi NCR 201301"
   },
   {
     "venueName": "Golden Orchid Resort",
-    "image": "https://i.pinimg.com/474x/e9/b4/b5/e9b4b5293bf6e68c0c5d33e9db430269.jpg"
+    "image": "https://i.pinimg.com/474x/e9/b4/b5/e9b4b5293bf6e68c0c5d33e9db430269.jpg",
+    "rating": 4.9,
+    "startingPrice": "₹3,00,000",
+    "verified": true,
+    "location": "Candolim Beach Road, North Goa, Goa 403515"
   },
   {
     "venueName": "Sunset Lawn & Banquet",
-    "image": "https://i.pinimg.com/474x/76/6d/6c/766d6c1b6283ab2751809537fba49b32.jpg"
+    "image": "https://i.pinimg.com/474x/76/6d/6c/766d6c1b6283ab2751809537fba49b32.jpg",
+    "rating": 4.4,
+    "startingPrice": "₹2,00,000",
+    "verified": true,
+    "location": "Fatehsagar Lake Road, Rani Road, Udaipur, Rajasthan 313001"
   },
   {
     "venueName": "Grand Celebration Hall",
-    "image": "https://i.pinimg.com/474x/0c/96/bd/0c96bd781be32d186e2a9b407b60bd22.jpg"
+    "image": "https://i.pinimg.com/474x/0c/96/bd/0c96bd781be32d186e2a9b407b60bd22.jpg",
+    "rating": 4.1,
+    "startingPrice": "₹1,50,000",
+    "verified": false,
+    "location": "Near Western Express Highway, Andheri East, Mumbai, Maharashtra 400069"
   },
   {
     "venueName": "Royal Heritage Villa",
-    "image": "https://i.pinimg.com/474x/ea/36/11/ea3611fb4ffd0f0ad18554141563e4f7.jpg"
+    "image": "https://i.pinimg.com/474x/ea/36/11/ea3611fb4ffd0f0ad18554141563e4f7.jpg",
+    "rating": 4.7,
+    "startingPrice": "₹2,75,000",
+    "verified": true,
+    "location": "Mandore Road, Near Kaylana Lake, Jodhpur, Rajasthan 342007"
   },
   {
     "venueName": "Emerald Bliss Banquet",
-    "image": "https://i.pinimg.com/474x/c7/5d/b6/c75db6093bb24cc5fa87c9825143fd3a.jpg"
+    "image": "https://i.pinimg.com/474x/c7/5d/b6/c75db6093bb24cc5fa87c9825143fd3a.jpg",
+    "rating": 4.3,
+    "startingPrice": "₹1,60,000",
+    "verified": true,
+    "location": "Sector 35C, Dakshin Marg, Near Piccadily Square Mall, Chandigarh 160022"
   }
 ]
+
+
+export const MainCarouselData =[
+
+  {
+   image:"https://image.wedmegood.com/resized/1900X/uploads/city_bg_image/1/delhi_bg.jpeg" ,
+   path:"/women/clothing/lenga_choli"
+  },
+  {
+   image:  "https://i.pinimg.com/474x/31/f7/c8/31f7c8126462f0a4cd13c085f898e981.jpg",
+   path:"/women/clothing/women_saree"
+  },
+  {
+   image:  "https://image.wedmegood.com/resized/1900X/uploads/city_bg_image/1/delhi_bg.jpeg",
+   path:"/women/clothing/women_saree"
+  },
+  {
+   image: "https://images.pexels.com/photos/2102765/pexels-photo-2102765.jpeg?auto=compress&cs=tinysrgb&w=600" ,
+   path:"/women/clothing/women_dress"
+  }
+ 
+ ]

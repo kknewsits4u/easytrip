@@ -6,7 +6,7 @@
   line-height: 1.5;
   font-weight: 400;
   /* color-scheme: light dark; */
-  background-color: "rgb(255,255,255)";
+  background-color: "rgb(240,240,240)";
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,8 +21,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   height: fit-content;
-  /* padding: 2px; */
-  padding-bottom: 5vw;
 }
 
-
+body::-webkit-scrollbar{
+  display: none;
+}
