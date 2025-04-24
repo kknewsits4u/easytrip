@@ -5,14 +5,14 @@ import { blogData, citiesData } from "./Store/DataStore";
 const Recommonded = () => {
   return (
     <div className="flex flex-col w-full max-w-7xl mx-auto px-4 my-5">
-      <h1 className="text-md lg:text-lg xl:text-2xl text-left font-extrabold text-gray-800 my-3">
+      <h1 className="text-md lg:text-xl xl:text-3xl text-left font-extrabold text-gray-800 mb-5 lg:mb-10">
         Latest Top Blogs
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 w-full h-fit gap-5">
         {blogData?.map((data, idx) => (
          
             <div className="flexflex-col items-center justify-center w-full h-fit  border-gray-300 bg-white cursor-pointer shadow-sm shadow-gray-300 rounded">
-             <div className="flex items-center justify-center w-full h-50 lg:h-60  rounded"  > <img
+             <div className="flex items-center justify-center w-full h-60  rounded"  > <img
                 src={data.image}
                 alt="image"
                 className=" w-full  h-full object-cover object-center  rounded-md"

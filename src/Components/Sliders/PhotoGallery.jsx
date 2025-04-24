@@ -50,7 +50,7 @@ function PopularSearch() {
   return (
     <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-10">
        <div className=" flex items-center justify-between px-2 my-1"  >
-      <h2 className="text-md lg:text-lg xl:text-2xl text-left font-extrabold text-gray-800 mb-2">
+      <h2 className="text-md lg:text-xl xl:text-3xl text-left font-extrabold text-gray-800 mb-5 lg:mb-10">
         Best Photo Collection 
       </h2>
      </div>
