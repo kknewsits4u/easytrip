@@ -4,16 +4,16 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Button from "@mui/material/Button";
-import { venueDetails, popularSearch } from "../Store/DataStore";
+import { citiesData } from "../Store/DataStore";
 
-function PopularSearch() {
+function PopularVenues() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const responsive = {
     0: { items: 1 },
     768: { items: 3 },
     1024: { items: 4 },
-    // 1280: { items: 5 },
+    1280: { items: 5 },
   };
 
   const slidePrev = () => {
@@ -28,26 +28,26 @@ function PopularSearch() {
 
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
-  const items = venueDetails.slice(1,10).map((data, i) => (
-    <div key={i} className="w-full p-2 ">
-      <div className= " rounded-lg gap-3 pb-2 h-fit flex flex-col items-start justify-center text-lg font-semibold text-gray-600 shadow-md ">
-          <div  className=" flex items-center justify-center h-70 w-full" >
-              <img src={data.image} alt="image" className=" h-full w-full object-cover object-center rounded" />
+  const items = citiesData.slice(1,10).map((data, i) => (
+    <div key={i} className="w-full px-2">
+      <div className= " bg-white border border-gray-300 shadow-md rounded-lg gap-5 h-50 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
+          <div  className=" flex items-center justify-center h-1/2 w-full overflow-hidden" >
+              <img src="https://i.pinimg.com/474x/20/70/94/2070943ede3c4756187fd657b1a051e8.jpg" alt="image" className=" h-full w-auto object-cover object-center transform hover:scale(110) " />
           </div>
-          <h1 className=" ml-2" >{data.venueName}</h1>
+          <h1>{data.cityName}</h1>
       </div>
     </div>
   ));
 
   return (
-    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-10">
-       <div className=" flex items-center justify-between px-2 my-1"  >
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 pt-25 lg:py-5 border border-white">
+        <div className=" flex items-center justify-between px-2 my-1"  >
       <h2 className="text-md lg:text-xl xl:text-3xl text-left font-extrabold text-gray-800 mb-5 lg:mb-10">
-        Popular Venue
+        Popular Venues City
       </h2>
      </div>
 
-      <div className="relative  "   style={{  gap:"5px"  }} >
+      <div className="relative">
         <AliceCarousel
           key={activeIndex}
           items={items}
@@ -56,7 +56,7 @@ function PopularSearch() {
           responsive={responsive}
           activeIndex={activeIndex}
           onSlideChanged={syncActiveIndex}
-
+          mouseTracking
         />
 
         {/* Prev Button */}
@@ -105,4 +105,4 @@ function PopularSearch() {
   );
 }
 
-export default PopularSearch;
+export default PopularVenues;

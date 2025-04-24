@@ -5,6 +5,7 @@ import ExploreSection from './Components/ExploreSection'
 import Footer from './Components/Footer/Footer'
 import Navbar from './Components/Navigation/Navbar'
 import HeroSection from './Components/Herosection/HeroSection'
+import PopularVenuesCities from './Components/Sliders/PopularVenuesCities'
 import PopularVenues from './Components/Sliders/PopularVenues'
 import PopularSearch from './Components/Sliders/PopularSearch'
 import FeaturedVendors from './Components/Sliders/FeaturedVendors'
@@ -18,6 +19,7 @@ function App() {
       <div className='flex flex-col h-full items-center justify-start w-full'  >
       <Navbar/>
       <HeroSection/>
+      <PopularVenuesCities/>
       <PopularVenues/>
       <PopularSearch/>
       <ExploreSection/>

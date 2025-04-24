@@ -891,3 +891,39 @@ export const photoCollection =[
 
 
 ]
+
+export const venueDetails = 
+[
+  {
+    "venueName": "The Royal Palace",
+    "image": "https://i.pinimg.com/736x/b4/a6/b1/b4a6b1c1fd3911f5651af39c9cf61094.jpg"
+  },
+  {
+    "venueName": "Heaven Garden Banquet",
+    "image": "https://i.pinimg.com/474x/0c/f0/29/0cf02931db5916d5b1e5d381336c9c8f.jpg"
+  },
+  {
+    "venueName": "Lavnya Dreams Hall",
+    "image": "https://i.pinimg.com/474x/43/b5/82/43b58283e1070bead65e0fb8abf817c0.jpg"
+  },
+  {
+    "venueName": "Golden Orchid Resort",
+    "image": "https://i.pinimg.com/474x/e9/b4/b5/e9b4b5293bf6e68c0c5d33e9db430269.jpg"
+  },
+  {
+    "venueName": "Sunset Lawn & Banquet",
+    "image": "https://i.pinimg.com/474x/76/6d/6c/766d6c1b6283ab2751809537fba49b32.jpg"
+  },
+  {
+    "venueName": "Grand Celebration Hall",
+    "image": "https://i.pinimg.com/474x/0c/96/bd/0c96bd781be32d186e2a9b407b60bd22.jpg"
+  },
+  {
+    "venueName": "Royal Heritage Villa",
+    "image": "https://i.pinimg.com/474x/ea/36/11/ea3611fb4ffd0f0ad18554141563e4f7.jpg"
+  },
+  {
+    "venueName": "Emerald Bliss Banquet",
+    "image": "https://i.pinimg.com/474x/c7/5d/b6/c75db6093bb24cc5fa87c9825143fd3a.jpg"
+  }
+]
