@@ -40,7 +40,7 @@ function PopularVenues() {
   ));
 
   return (
-    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 pt-25 lg:py-5">
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 pt-25 lg:py-5 border border-white">
         <div className=" flex items-center justify-between px-2 my-1"  >
       <h2 className="text-md lg:text-lg xl:text-2xl text-left font-extrabold text-gray-800 mb-2">
         Popular Venues

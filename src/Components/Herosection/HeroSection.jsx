@@ -19,7 +19,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center w-[100vw] h-110 xl:h-120 bg-white  overflow-visible">
+    <div className="relative flex items-center justify-center w-full h-110 xl:h-120 bg-white  overflow-visible" >
       <img
         src="https://image.wedmegood.com/resized/1900X/uploads/city_bg_image/1/delhi_bg.jpeg"
  
