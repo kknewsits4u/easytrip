@@ -1,22 +1,28 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { citiesData } from "./Store/DataStore";
+import { blogData, citiesData } from "./Store/DataStore";
 
 const Recommonded = () => {
   return (
-    <div className="flex flex-col  items-center justify-between gap-5 w-full  h-fit bg-white shadow-md rounded-sm  shadow-gray-200 p-5 mt-15 lg:mt-5 ">
-      <h1 className="text-2xl  lg:text-3xl font-bold w-full text-left py-2 ">
-        Explore Famous Cities
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 my-5">
+      <h1 className="text-md lg:text-lg xl:text-2xl text-left font-extrabold text-gray-800 my-3">
+        Latest Top Blogs
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 w-full h-fit gap-5">
-        {citiesData?.slice(0, 6).map((data, idx) => (
-             <div className="flex items-center justify-center w-full h-50 lg:h-60 border border-gray-300 bg-white cursor-pointer shadow-sm shadow-gray-300  relative rounded-md transition-transform duration-300 hover:scale-105"  >
-
-               <img src={data.image} alt="image"  className=" w-full  h-full object-cover object-center  rounded-md"  />
-               <div className=" flex w-full h-full absolute top-0 left-0 rounded-md items-end justify-start  p-5"  style={{  backgroundColor:"rgba(0,0,0,0.05)" , backdropFilter:"blur(1px)" }}  >
-                   <h1 className="text-white font-bold text-2xl" style={{    textShadow:" 2px 2px 8px rgba(0, 0, 0, 0.6)"  }} >{data.cityName}</h1>
-               </div>
-             </div>
+        {blogData?.map((data, idx) => (
+         
+            <div className="flexflex-col items-center justify-center w-full h-fit  border-gray-300 bg-white cursor-pointer shadow-sm shadow-gray-300 rounded">
+             <div className="flex items-center justify-center w-full h-50 lg:h-60  rounded"  > <img
+                src={data.image}
+                alt="image"
+                className=" w-full  h-full object-cover object-center  rounded-md"
+              /></div>
+            <div className=" flex flex-col text-left items-start justify-start gap-3 w-full p-2" >
+               <h1 className=" text-black font-semibold truncate whitespace-nowrap overflow-hidden w-[90%]  "   >{data.heading}</h1>
+               <p className=" line-clamp-2 text-gray-500"  >{data.description}</p>
+            </div>
+            </div>
+        
         ))}
       </div>
     </div>

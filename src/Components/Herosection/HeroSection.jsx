@@ -4,7 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { citiesData, vendorTypes } from "./Store/DataStore";
+import { citiesData, vendorTypes } from "../Store/DataStore";
 
 const HeroSection = () => {
   const [city, setCity] = React.useState(citiesData[0]?.value || "");
@@ -19,29 +19,23 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center w-[100vw] h-100 xl:h-120 bg-white  overflow-visible">
+    <div className="relative flex items-center justify-center w-[100vw] h-110 xl:h-120 bg-white  overflow-visible">
       <img
         src="https://image.wedmegood.com/resized/1900X/uploads/city_bg_image/1/delhi_bg.jpeg"
  
         alt="image"
         className="w-full h-full object-cover object-center"
       />
-      <div
-        className="block  w-full h-full absolute top-0 left-0  "
-        
-      ></div>
+   <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
 
       <div
-        className="flex flex-col items-center justify-between absolute -bottom-20 md:bottom-10 lg:bottom-5  left-1/2 transform -translate-x-1/2 w-[90vw] lg:w-[50vw] h-fit xl:h-40 gap-2  p-2 bg-white  lg:bg-transparent rounded text- border border-gray-300 text-left "
-        style={{
-          backgroundColor: "rgb(255,255,255,0.156)",
-          backdropFilter: "blur(2px)",
-        }}
+        className="flex flex-col items-center justify-between absolute -bottom-20 md:bottom-10 lg:bottom-5  left-1/2 transform -translate-x-1/2 w-[90vw] lg:w-[50vw] h-fit xl:h-40 gap-2  p-2  rounded text-  text-left shadow-md"
+    
       >
         <h1 className="font-bold text-lg md:text-3xl lg:text-4xl xl:text-4xl text-white ">
           Plan Your Wedding With Aarambh
         </h1>
-
+        <p  className=" text-semibold text-[rgb(255,255,255)] font-semibold text-sm lg:text-xl   " >Find the best vendor and destination with the millions of trusted reviews</p>
         <div className="flex flex-col  md:flex-row items-center justify-between w-full h-fit bg-white rounded gap-2 lg:gap-0">
 
      <div className=" flex items-center justify-center w-full md:w-2/5 border-b border-gray-300 "  >
@@ -127,22 +121,15 @@ const HeroSection = () => {
             )
           }
          
-        </Select>
+         </Select>
   
-      </FormControl>
-     </div>
-       <div className="w-full md:w-[20%] h-full" >
-             <Button  fullWidth variant="conatined" sx={{ backgroundColor:"rgb(231,46,119)" , color:"rgb(255,255,255)", height:"100%",   }}  >Search</Button>
-          </div>
+         </FormControl>
         </div>
-      </div>
-
-      <div>
-         
-      </div>
-
-
-
+          <div className="w-full md:w-[20%] h-full" >
+             <Button  fullWidth variant="conatined" sx={{ backgroundColor:"rgb(231,46,119)" , color:"rgb(255,255,255)", height:"100%",   }}  >Search</Button>
+           </div>
+        </div>
+      </div>     
     </div>
   );
 };

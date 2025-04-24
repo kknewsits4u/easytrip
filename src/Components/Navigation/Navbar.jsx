@@ -1,13 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
-import HomeIcon from "@mui/icons-material/Home";
-import FlightIcon from "@mui/icons-material/Flight";
-import HotelIcon from "@mui/icons-material/Hotel";
-import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
-import LoginIcon from "@mui/icons-material/Login";
 import { Button, Select } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import {
@@ -17,13 +11,10 @@ import {
   vanueData,
   photoData,
 } from "../Store/DataStore";
-import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
-
-
   const [open, setOpen] = React.useState(false);
   const [city, setCity] = React.useState("Noida");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,52 +37,130 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [showDiv, setShowDiv] = useState(false);
 
-  const [open1, setOpen1] = useState(false);
-  const dropdownRef = useRef(null);
+  const handleClick = (e) => {
+    const targetClass = e.target.className;
+    if (targetClass !== "toggle-btn" && targetClass !== "toggle-div") {
+      setShowDiv(false);
+    }
+  };
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setOpen1(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
   }, []);
 
   return (
     <>
-      <div className="  flex items-center justify-start h-fit px-2 2xl:px-10   bg-[rgb(180,36,93)] w-full  z-50 p-1 gap-5">
+      <div className=" hidden md:flex items-center justify-start h-fit px-2 2xl:px-10   bg-[rgb(180,36,93)] w-full  z-50 p-1 gap-5">
         <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
           Plan your wedding with India's Largest Plateform
         </h1>
 
-        
-        <div ref={dropdownRef} className="relative">
-          <div className="relative flex items-center justify-between w-50 h-8 p-2 font-semibold bg-[rgb(255,255,255)] rounded">
+        <div
+          className="relative"
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowDiv(true);
+          }}
+        >
+          <div className=" flex items-center justify-between w-50 h-8 p-2 font-semibold bg-[rgb(255,255,255)] rounded">
             <p className=" opacity-70">All Cities </p>
             <ArrowDropDownIcon
               sx={{ borderRadius: "10px", fontSize: "30px" }}
             />
           </div>
 
-        {  open1 &&  (
-          <div className="flex items-start justify-start w-[60vw] h-100 bg-white shadow absolute top-10 -left-20 z-50 rounded p-5">
-            <input
-              type="text"
-              placeholder="Search city, States"
-              className=" border border-gray-300 w-full p-3 rounded  focus:outline-0 text-gray-600 text-md "
-            />
-          </div>
-         )}
+          {showDiv && (
+            <div
+              className="flex flex-col items-start justify-start w-[60vw] h-120 bg-white shadow  z-50 rounded p-5 absolute top-10 left-0  gap-5 "
+              onClick={(e) => e.stopPropagation()}
+            >
+              <input
+                type="text"
+                placeholder="Search city, States"
+                className=" border border-gray-300 w-full p-3 rounded  focus:outline-0 text-gray-600 text-md "
+              />
+              <div className=" grid grid-cols-4 items-start justify-between  w-full h-full">
+                <div className="px-3  h-full flex flex-col items-start justify-start gap-2 ">
+                  <h1 className="text-[rgb(239,74,107)] font-bold">
+                    Top Cities
+                  </h1>
+                  {citiesData.slice(1, 11).map((data, index) => (
+                    <p className=" hover:font-semibold cursor-pointer text-sm">
+                      {data.cityName}
+                    </p>
+                  ))}
+                </div>
+                <div className="h-full px-3  bg-[rgb(248,248,248)]   flex flex-col items-start justify-start gap-2 ">
+                  <h1 className="text-[rgb(239,74,107)] font-bold">
+                    Popular Cities
+                  </h1>
+                  {citiesData.slice(11, 21).map((data, index) => (
+                    <p className=" hover:font-semibold cursor-pointer text-sm">
+                      {data.cityName}
+                    </p>
+                  ))}
+                </div>
+                <div className="px-3 h-full flex flex-col items-start justify-start gap-2   ">
+                  <h1 className="text-[rgb(239,74,107)] font-bold">
+                    Other Cities
+                  </h1>
+                  {citiesData.slice(21, 31).map((data, index) => (
+                    <p className=" hover:font-semibold cursor-pointer text-sm">
+                      {data.cityName}
+                    </p>
+                  ))}
+                </div>
+                <div className="p-2 bg-[rgb(248,248,248)] h-full flex flex-col items-start justify-start gap-2  ">
+                  <div className=" flex flex-col h-1/2 w-full items-start justify-start gap-2">
+                    <h1 className="text-[rgb(239,74,107)] font-bold">States</h1>
+                    <p className=" hover:font-semibold cursor-pointer text-sm">
+                      Rajasthan
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer  text-sm ">
+                      Gujrat
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer  text-sm ">
+                      Kerala
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer  text-sm ">
+                      Uttar Pradesh
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer  text-sm ">
+                      Punjab
+                    </p>
+                  </div>
+                  <div className=" flex flex-col h-1/2 w-full items-start justify-start gap-2 ">
+                    <h1 className="text-[rgb(239,74,107)] font-bold">
+                      International Cities
+                    </h1>
+                    <p className=" hover:font-semibold cursor-pointer text-sm ">
+                      Dubai
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer text-sm ">
+                      New York
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer text-sm ">
+                      Bali
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer text-sm ">
+                      Maldeep
+                    </p>
+                    <p className=" hover:font-semibold cursor-pointer text-sm ">
+                      Abu Dhabi
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
-      <div className=" flex flex-wrap w-full 2xl:px-10 h-15  items-center justify-between  z-40 bg-[rgb(231,46,119)]   ">
-        <div className="order-1 flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
+
+      <div className=" flex  w-full px-5 2xl:px-10 h-15  items-center justify-between  z-40 bg-[rgb(231,46,119)]   ">
+        <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
             className=" flex  text-[rgb(239,74,107)]  font-extrabold items-center justify-center h-fit w-fit "
@@ -105,37 +174,8 @@ const Navbar = () => {
             Aarambh
           </h1>
         </div>
-        <div className="order-2 xl:order-3 hidden sm:flex items-center justify-center rounded  gap-5 ">
-          <div
-            className=" flex items-center justify-center rounded-full h-10 w-10  border-2 border-[rgb(255,255,255)] text-[rgb(255,255,255)]"
-            style={{ boxShadow: "2px 2px 5px rgb(255,255,255)" }}
-          >
-            <SearchIcon />
-          </div>
-          <Button
-            variant=" outlined "
-            sx={{
-              border: "1px solid rgb(255,255,255)",
-              color: "white",
-              boxShadow: "2px 2px 5px rgb(255,255,255)",
-            }}
-          >
-            Login
-          </Button>
-          <Button
-            variant=" outlined "
-            sx={{
-              border: "1px solid rgb(255,255,255)",
-              color: "white",
-              textWrap: "nowrap",
-              boxShadow: "2px 2px 5px rgb(255,255,255)",
-            }}
-          >
-            Join Us
-          </Button>
-        </div>
 
-        <div className="hidden relative md:flex w-full xl:w-2/3 order-3 xl:order-2 items-start justify-start  gap-5 h-full  ">
+        <div className="hidden relative md:flex w-full xl:w-2/3  items-start justify-start  gap-5 h-full  ">
           <ul
             className="flex h-full  items-center text-[rgb(255,255,255)] justify-between gap-10 text-sm lg:text-md    "
             style={{ fontWeight: "500" }}
@@ -538,6 +578,36 @@ const Navbar = () => {
               </div>
             </li>
           </ul>
+        </div>
+
+        <div className=" hidden sm:flex items-center justify-center rounded  gap-5 ">
+          {/* <div
+            className=" flex items-center justify-center rounded-full h-10 w-10  border-2 border-[rgb(255,255,255)] text-[rgb(255,255,255)]"
+            style={{ boxShadow: "2px 2px 5px rgb(255,255,255)" }}
+          >
+            <SearchIcon />
+          </div> */}
+          <Button
+            variant=" outlined "
+            sx={{
+              border: "1px solid rgb(255,255,255)",
+              color: "white",
+              boxShadow: "2px 2px 5px rgb(255,255,255)",
+            }}
+          >
+            Login
+          </Button>
+          <Button
+            variant=" outlined "
+            sx={{
+              border: "1px solid rgb(255,255,255)",
+              color: "white",
+              textWrap: "nowrap",
+              boxShadow: "2px 2px 5px rgb(255,255,255)",
+            }}
+          >
+            Join Us
+          </Button>
         </div>
 
         <Drawer

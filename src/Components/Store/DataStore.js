@@ -680,6 +680,214 @@ export const vendorTypes = [
 ]
 
 
-       // src="https://i.pinimg.com/736x/2c/da/d6/2cdad69c0d2114a8330ad9f351396ccf.jpg"
-        // src="https://i.pinimg.com/736x/a3/0f/5f/a30f5f73d6e99c603c989396bd1be690.jpg"
-        // src="https://i.pinimg.com/736x/5c/2b/9c/5c2b9cd72894929c42b5c1d8a3a54e10.jpg"
+export const popularSearch = [
+  {
+    image:"https://i.pinimg.com/474x/1e/51/1c/1e511cf1a2fa0628b75c11a8caed52bd.jpg",
+    name:"Bridal Wear",
+  },
+  {
+    image:"https://i.pinimg.com/474x/b7/a5/a4/b7a5a4340d172ed6f8bc51a3aabfffdd.jpg",
+    name:"Bridal Makeup",
+  },
+  {
+    image:"https://i.pinimg.com/474x/eb/41/37/eb4137cb8762513a55c08541aedb6db0.jpg",
+    name:"Photographers",
+  },
+  {
+    image:"https://i.pinimg.com/474x/34/74/d0/3474d0c9b0db3a74c854101f88023372.jpg",
+    name:"Invitations",
+  },
+  {
+    image:"https://i.pinimg.com/474x/c0/19/bf/c019bf4e97dfdd27b8e8db12b0857a48.jpg",
+    name:"Decorators",
+  },
+  {
+    image:"https://i.pinimg.com/474x/db/cd/6a/dbcd6a632b10ada57c6b0e86b74a541e.jpg",
+    name:"Mehndi Artist",
+  },
+  {
+    image:"https://i.pinimg.com/474x/65/01/39/6501399a193855b2273e22f37264fe73.jpg",
+    name:"Catering Services",
+  },
+  {
+    image:"https://i.pinimg.com/474x/81/3b/f5/813bf5c37cc7fffcc4e837df23d01285.jpg",
+    name:"Groom Wear",
+  },
+]
+
+
+
+export const businessData =
+[
+  {
+    "image": "https://i.pinimg.com/474x/ff/20/4d/ff204df17bbcbdf85fe2a8b2d3a2953f.jpg",
+    "heading": "Radha Mehndi Artists",
+    "description": "Traditional and bridal mehndi designs with premium quality henna.",
+    "price": "₹3,500"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/51/29/0d/51290d80c53cc685f0894d95aa1a9b4e.jpg",
+    "heading": "Divya Hair Studio",
+    "description": "Exclusive bridal hair styling and accessories.",
+    "price": "₹5,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/38/d2/79/38d2792cac49e9761f988109432f53cd.jpg",
+    "heading": "Agarwal Wedding Decorators",
+    "description": "Elegant wedding decorations tailored to your theme.",
+    "price": "₹15,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/8b/c6/0a/8bc60ade553d343d4cbe90d7b767289f.jpg",
+    "heading": "Gopal Photo Studio",
+    "description": "Candid and traditional photography for all occasions.",
+    "price": "₹20,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/f3/f2/06/f3f20627c5069cef632084f854951173.jpg",
+    "heading": "Anand Garden Banquet",
+    "description": "Spacious wedding venue with beautiful garden setup.",
+    "price": "₹18,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/9e/4a/7d/9e4a7dceccf2db4fa47a39cc6aad4554.jpg",
+    "heading": "Neha Bridal Makeup",
+    "description": "Expert bridal makeup with HD and Airbrush options.",
+    "price": "₹8,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg",
+    "heading": "Ravi Sound & DJ",
+    "description": "Professional DJ with lighting and dance floor setup.",
+    "price": "₹12,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/38/d2/79/38d2792cac49e9761f988109432f53cd.jpg",
+    "heading": "Agarwal Wedding Decorators",
+    "description": "Elegant wedding decorations tailored to your theme.",
+    "price": "₹15,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/ce/b2/f8/ceb2f8da24fce1eaadd693442b1512be.jpg",
+    "heading": "Sakhi Wedding Cards",
+    "description": "Stylish and customizable wedding invitation cards.",
+    "price": "₹3,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/7b/8c/dc/7b8cdc5c5e3dc0dc430da3d44075e92d.jpg",
+    "heading": "Shri Catering Services",
+    "description": "Delicious multi-cuisine wedding catering.",
+    "price": "₹25,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/27/98/5c/27985c7ad69687f7152689e486685e80.jpg",
+    "heading": "Meena Jewels Rental",
+    "description": "Bridal jewelry available on rent at affordable prices.",
+    "price": "₹4,500"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg",
+    "heading": "Ravi Sound & DJ",
+    "description": "Professional DJ with lighting and dance floor setup.",
+    "price": "₹12,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/35/c0/1b/35c01b3669099815cd6fd0566f9f548f.jpg",
+    "heading": "Royal Entry Cars",
+    "description": "Luxury cars and vintage rides for grand wedding entries.",
+    "price": "₹10,000"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/8b/c6/0a/8bc60ade553d343d4cbe90d7b767289f.jpg",
+    "heading": "Gopal Photo Studio",
+    "description": "Candid and traditional photography for all occasions.",
+    "price": "₹20,000"
+  },
+]
+
+
+
+export const blogData = 
+[
+  {
+    "image": "https://i.pinimg.com/736x/25/05/4c/25054c0ee05d8de072e7cc588df0ce7c.jpg",
+    "heading": "Top 10 Bridal Mehndi Designs for 2025",
+    "description": "Explore the most trending and elegant mehndi designs perfect for your big day. From traditional to contemporary, we’ve got them all!"
+  },
+  {
+    "image": "https://i.pinimg.com/474x/12/c1/b9/12c1b948bc286797729d807cf4ee86c3.jpg",
+    "heading": "How to Choose the Right Wedding Photographer",
+    "description": "A guide to help you select a photographer who will capture every special moment just the way you want."
+  },
+  {
+    "image": "https://images.pexels.com/photos/2747255/pexels-photo-2747255.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "heading": "Latest Bridal Hairstyle Trends",
+    "description": "From buns to braids, discover the latest bridal hairstyles that are making waves this wedding season."
+  },
+  {
+    "image": "https://images.pexels.com/photos/5829427/pexels-photo-5829427.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "heading": "Tips for Planning a Budget-Friendly Wedding",
+    "description": "Get expert tips on how to plan the wedding of your dreams without breaking the bank."
+  },
+  {
+    "image": "https://media.istockphoto.com/id/972734600/photo/colorful-stage-decoration-for-bride-and-groom-in-sangeet-night-of-indian-wedding.jpg?s=612x612&w=0&k=20&c=Nfg0iA61eXVAEfl7_UhGBvEp8fJihuG2bAAxEoZJHFg=",
+    "heading": "Unique Wedding Decor Ideas for Every Theme",
+    "description": "Elevate your venue with creative decor inspirations that suit any wedding theme."
+  },
+  {
+    "image": "https://media.istockphoto.com/id/1190043570/photo/happy-wedding-photography-of-bride-and-groom-at-wedding-ceremony-wedding-tradition-sprinkled.jpg?s=612x612&w=0&k=20&c=_aCIW5-iOIiaDdqin_50kvBcbFbIxSULHHamPUILE0c=",
+    "heading": "Must-Have Shots in Your Wedding Album",
+    "description": "Don’t miss these essential moments that make your wedding album complete and memorable."
+  }
+]
+
+export const photoCollection =[
+  {
+    image1:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
+    image2:"https://i.pinimg.com/474x/89/91/33/899133fb2cd0b5579a5f3a45bf710baa.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/eb/41/37/eb4137cb8762513a55c08541aedb6db0.jpg",
+    image2:"https://i.pinimg.com/474x/6d/0f/29/6d0f29ef29c49931893919dd29545ff8.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/96/1e/a2/961ea23f28e6b49872dfaa78a67a0371.jpg",
+    image2:"https://i.pinimg.com/474x/d7/e7/e9/d7e7e93b52eef32c4e06c568c6e42025.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/d4/b6/9b/d4b69bfcb6d6d5101d67217b3f596419.jpg",
+    image2:"https://i.pinimg.com/474x/a8/c2/97/a8c29720bc68ee5c8e2546409d55f2df.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/23/75/fb/2375fb849bc80127f8990d10208d6073.jpg",
+    image2:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/10/ab/02/10ab02102aff31c321fda67684612f01.jpg",
+    image2:"https://i.pinimg.com/474x/33/73/33/337333cdfaa7907a84f5215bcc639ed3.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/fb/e2/62/fbe2626ea9e132ab1dde4e5adf588b88.jpg",
+    image2:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/b4/4a/1d/b44a1d11ddb584faca27c3b81cdba92c.jpg",
+    image2:"https://i.pinimg.com/474x/01/b6/69/01b669a002ef7e6972c14a000d546ef9.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/85/9d/ba/859dba2b063baf9923d40e68e8ce51b8.jpg",
+    image2:"https://i.pinimg.com/474x/f8/b5/26/f8b52605927d8b8c4a1789d649b4a652.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/a6/40/2e/a6402e1aa2c88b1218f54a574f837d76.jpg",
+    image2:"https://i.pinimg.com/474x/3d/66/24/3d6624fe540abb566f3ae9bde1586ff6.jpg",
+  },
+  {
+    image1:"https://i.pinimg.com/474x/b8/de/8f/b8de8f57457efddffef76072c88926f0.jpg",
+    image2:"https://i.pinimg.com/474x/22/7e/63/227e631e1b5b97fb6c810ad0d616d642.jpg",
+  },
+
+
+
+
+]

@@ -2,11 +2,13 @@ import { useState } from 'react'
 import './App.css'
 // import Navbar from './Components/Navbar'
 import ExploreSection from './Components/ExploreSection'
-import AllCities from './Components/AllCities'
-import SpecialOffer from './Components/Advertisement/SpecialOffer'
-import Footer from './Components/Footer'
+import Footer from './Components/Footer/Footer'
 import Navbar from './Components/Navigation/Navbar'
-import HeroSection from './Components/HeroSection'
+import HeroSection from './Components/Herosection/HeroSection'
+import PopularVenues from './Components/Sliders/PopularVenues'
+import PopularSearch from './Components/Sliders/PopularSearch'
+import FeaturedVendors from './Components/Sliders/FeaturedVendors'
+import PhotoGallery from './Components/Sliders/PhotoGallery'
 
 
 function App() {
@@ -16,9 +18,11 @@ function App() {
       <div className='flex flex-col h-full items-center justify-start w-full'  >
       <Navbar/>
       <HeroSection/>
+      <PopularVenues/>
+      <PopularSearch/>
       <ExploreSection/>
-      <SpecialOffer/>
-      <AllCities/>
+      <FeaturedVendors/>
+      <PhotoGallery/>
       <Footer/>
       </div>
   )
