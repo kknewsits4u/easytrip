@@ -175,7 +175,7 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div className="hidden relative md:flex w-full xl:w-2/3  items-start justify-start  gap-5 h-full  ">
+        <div className="hidden relative md:flex w-full xl:w-2/3  items-start justify-start  gap-5 h-full  px-5">
           <ul
             className="flex h-full  items-center text-[rgb(255,255,255)] justify-between gap-10 text-sm lg:text-md    "
             style={{ fontWeight: "500" }}
@@ -186,7 +186,7 @@ const Navbar = () => {
                 className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50 p-5 shadow-md"
+               transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
                 <div className=" w-full flex h-fit items-start justify-between">
@@ -220,7 +220,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index} className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -238,7 +238,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index} className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -253,7 +253,7 @@ const Navbar = () => {
                 className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50 p-5 shadow-md"
+               transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
                 <div className=" w-full flex h-fit items-start justify-between gap-5">
@@ -268,6 +268,7 @@ const Navbar = () => {
                         </h1>
                         {data.p.map((d, index) => (
                           <p
+                           key={index}
                             className="text-gray-600 "
                             style={{
                               fontWeight:
@@ -292,6 +293,7 @@ const Navbar = () => {
                         </h1>
                         {data.p.map((d, index) => (
                           <p
+                          key={index}
                             className="text-gray-600 "
                             style={{
                               fontWeight:
@@ -310,7 +312,7 @@ const Navbar = () => {
                       Destination Wedding Venues
                     </h1>
                     <div className=" w-full grid grid-cols-3 items-center justify-center h-fit gap-5">
-                      {[1, 1, 1, 1, 1, 1].map((idx) => (
+                      {[1, 2, 3, 4, 5, 6].map((idx) => (
                         <div key={idx} className=" h-30 w-30">
                           <div className=" w-full h-25  rounded flex items-center justify-center ">
                             <img
@@ -334,7 +336,7 @@ const Navbar = () => {
                 className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50 p-5"
+               transition-all duration-300 ease-in-out z-50 p-5  shadow-xl "
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
                 <div className=" w-full flex h-fit items-start justify-between">
@@ -348,7 +350,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index}   className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -366,7 +368,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index} className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -384,7 +386,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p  key={index} className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -427,7 +429,7 @@ const Navbar = () => {
                 className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50 p-5"
+               transition-all duration-300 ease-in-out z-50 p-5  shadow-xl "
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
                 <div className=" w-full flex h-fit items-start justify-between">
@@ -441,7 +443,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index}  className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -459,7 +461,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index}  className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -477,7 +479,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index}  className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -521,7 +523,7 @@ const Navbar = () => {
                 className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-15 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-               transition-all duration-300 ease-in-out z-50 p-5 shadow-md"
+               transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
                 <div className=" w-full flex h-fit items-start justify-between">
@@ -535,7 +537,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-500 ">{d.type}</p>
+                          <p key={index} className="text-gray-500 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -553,7 +555,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-500 ">{d.type}</p>
+                          <p  key={index}  className="text-gray-500 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -571,7 +573,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-500 ">{d.type}</p>
+                          <p  key={index}  className="text-gray-500 ">{d.type}</p>
                         ))}
                       </div>
                     ))}
@@ -647,7 +649,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex w-full items-center justify-between px-5">
-              <h1 className=" text-xl ">City :</h1>
+              <h1 className=" text-md  font-semibold ">City :</h1>
               <div className=" flex items-center justify-center  ">
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
                   <Select
@@ -688,32 +690,32 @@ const Navbar = () => {
 
             <div className=" flex w-full border-t-2 py-2 border-gray-500 h-fit ">
               <ul className=" flex flex-col w-full">
-                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2">
-                  Home
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
+                  Venues
                 </li>
-                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Vendors
                 </li>
-                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Banquet Halls
                 </li>
-                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Real Wedding
                 </li>
-                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Blogs
                 </li>
-                <li className="w-full  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Photos
                 </li>
               </ul>
             </div>
             <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 ">
               <ul className=" flex flex-col w-full">
-                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Deals
                 </li>
-                <li className="w-full relative  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2 relative">
                   Aarambh Assured
                   <div className=" flex items-center justify-center px-3  rounded bg-orange-600 absolute top-1 right-3 text-white  text-sm">
                     New
@@ -724,10 +726,10 @@ const Navbar = () => {
 
             <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 ">
               <ul className=" flex flex-col w-full">
-                <li className="w-full   cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Testimonials
                 </li>
-                <li className="w-full relative  cursor-pointer hover:bg-gray-300 px-5 p-2">
+                <li className="w-full hover:text-[rgb(239,76,149)] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
                   Why choose Aarambh
                 </li>
               </ul>

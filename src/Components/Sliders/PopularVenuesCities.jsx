@@ -29,7 +29,7 @@ function PopularVenues() {
 
   const items = citiesData.slice(1, 10).map((data, i) => (
     <div key={i} className="w-full p-2">
-      <div className=" bg-white border border-gray-300 shadow-md rounded-lg gap-5 h-25 md:h-30 lg:h-40 p-2 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
+      <div className=" bg-[rgb(255,255,255)] border border-gray-200 shadow-md rounded-lg gap-5 h-25 md:h-30 lg:h-40 p-2 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
         <div className=" flex items-center justify-center h-1/2 w-full overflow-hidden">
           <img
             src={i % 2 == 0 ? "b1.jpg" : "b2.jpg"}

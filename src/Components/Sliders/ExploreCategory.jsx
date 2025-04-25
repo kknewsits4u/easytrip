@@ -28,7 +28,7 @@ function PopularSearch() {
 
   const items = popularSearch.slice(1, 10).map((data, i) => (
     <div key={i} className="w-full p-2 ">
-      <div className=" rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 ">
+      <div className=" rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md cursor-pointer bg-[rgb(255,255,255)] hover:bg-slate-100 ">
         <div className=" flex items-center justify-center h-70 w-full">
           <img
             src={data.image}
@@ -49,59 +49,6 @@ function PopularSearch() {
         </h2>
       </div>
 
-      {/* <div className="relative  "   style={{  gap:"5px"  }} >
-        <AliceCarousel
-          key={activeIndex}
-          items={items}
-          disableButtonsControls
-          disableDotsControls
-          responsive={responsive}
-          activeIndex={activeIndex}
-          onSlideChanged={syncActiveIndex}
-
-        />
-
-   
-        <div className="hidden md:block absolute -left-5 top-1/2 -translate-y-1/2 z-10">
-          <Button
-            onClick={slidePrev}
-            disabled={activeIndex === 0}
-            variant="contained"
-            sx={{
-              bgcolor: "white",
-              minWidth: "40px",
-              height: "55px",
-              borderRadius:"50%",
-              boxShadow: 2,
-              "&:hover": {
-                bgcolor: "#f0f0f0",
-              },
-            }}
-          >
-            <KeyboardArrowLeftIcon sx={{ color: "black" }} />
-          </Button>
-        </div>
-
-        <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 z-10">
-          <Button
-            onClick={slideNext}
-            disabled={activeIndex >= items.length - 1}
-            variant="contained"
-            sx={{
-              bgcolor: "white",
-              minWidth: "40px",
-              borderRadius:"50%",
-              height: "55px",
-              boxShadow: 2,
-              "&:hover": {
-                bgcolor: "#f0f0f0",
-              },
-            }}
-          >
-            <KeyboardArrowRightIcon sx={{ color: "black" }} />
-          </Button>
-        </div>
-      </div> */}
       <div className=" grid grid-cols-3 lg:grid-cols-4 px-2 gap-5">
         {popularSearch.map((data, i) => (
           <div

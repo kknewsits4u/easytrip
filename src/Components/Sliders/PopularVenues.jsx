@@ -40,7 +40,7 @@ function PopularSearch() {
   const items = venueDetails.slice(1, 20).map((data, i) => (
     <div key={i} className="w-full p-2 ">
       <div
-        className=" rounded-lg gap-3 pb-2 flex flex-col items-start justify-between text-lg font-semibold text-gray-600 shadow-md border border-gray-300  h-90 hover:bg-gray-100 cursor-pointer  "
+        className="bg-[rgb(255,255,255)] rounded-lg gap-3 pb-2 flex flex-col items-start justify-between text-lg font-semibold text-gray-600 shadow-md   h-90 hover:bg-gray-100 cursor-pointer  "
         onClick={() => handleSearchCity("delhi")}
       >
         <div className=" flex items-center justify-center h-50  w-full">
@@ -52,7 +52,7 @@ function PopularSearch() {
         </div>
         <div className=" flex flex-col items-start justify-between h-40 px-3 w-full  ">
           <div className="  flex w-full  h-fit items-center justify-between text-left ">
-            <h1 className="text-md text-black ">{data.venueName}</h1>
+            <h1 className="text-[17px] text-slate-700 ">{data.venueName}</h1>
             <div className=" w-fit  h-8   rounded-full">
               <img
                 src={data.verified == true ? "/verified.png" : "/envrified.png"}
@@ -66,19 +66,19 @@ function PopularSearch() {
               name="sread-only"
               value={data.rating}
               sx={{
-                fontSize: "22px",
+                fontSize: "20px",
               }}
             />
           </div>
-          <p className=" text-sm ">
+          <p className=" text-sm text-slate-500">
             Starting At :{" "}
-            <span className="text-[orange] "> {data.startingPrice} </span>
+            <span className="text-[#2d8202] "> {data.startingPrice} </span>
           </p>
           <div className=" flex w-full gap-2  ">
             <LocationOnIcon
               sx={{ color: "rgb(23,141,241) ", height: "100%" }}
             />
-            <p className=" text-sm text-left line-clamp-2 ">{data.location} </p>
+            <p className=" text-[12px] text-left line-clamp-2 ">{data.location} </p>
           </div>
         </div>
       </div>
