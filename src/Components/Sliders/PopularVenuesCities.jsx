@@ -25,29 +25,30 @@ function PopularVenues() {
     setActiveIndex((prev) => Math.min(prev + 1, items.length - 1));
   };
 
-
-
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
-  const items = citiesData.slice(1,10).map((data, i) => (
+  const items = citiesData.slice(1, 10).map((data, i) => (
     <div key={i} className="w-full p-2">
-      <div className= " bg-white border border-gray-300 shadow-md rounded-lg gap-5 h-25 md:h-30 lg:h-40 p-2 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
-          <div  className=" flex items-center justify-center h-1/2 w-full overflow-hidden" >
-              <img  src={i%2 == 0 ? "b1.jpg":"b2.jpg" }  alt="image" className=" h-full w-auto object-cover object-center transform hover:scale(110) " />
-            
-          </div>
-          <h1 className=" text-sm lg:text-lg"  >{data.cityName}</h1>
+      <div className=" bg-white border border-gray-300 shadow-md rounded-lg gap-5 h-25 md:h-30 lg:h-40 p-2 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
+        <div className=" flex items-center justify-center h-1/2 w-full overflow-hidden">
+          <img
+            src={i % 2 == 0 ? "b1.jpg" : "b2.jpg"}
+            alt="image"
+            className=" h-full w-auto object-cover object-center transform hover:scale(110) "
+          />
+        </div>
+        <h1 className=" text-sm lg:text-lg">{data.cityName}</h1>
       </div>
     </div>
   ));
 
   return (
     <div className="flex flex-col w-full max-w-7xl mx-auto px-4 pt-25 lg:py-5  ">
-      <div className=" flex items-center justify-between px-2 my-1"  >
-      <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-3 lg:mb-5">
-        Popular Venues City
-      </h2>
-     </div>
+      <div className=" flex items-center justify-between px-2 my-1">
+        <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-3 lg:mb-5">
+          Popular Venues City
+        </h2>
+      </div>
 
       <div className="relative ">
         <AliceCarousel
@@ -71,7 +72,7 @@ function PopularVenues() {
               bgcolor: "white",
               minWidth: "40px",
               height: "55px",
-              borderRadius:"50%",
+              borderRadius: "50%",
               boxShadow: 2,
               "&:hover": {
                 bgcolor: "#f0f0f0",
@@ -91,7 +92,7 @@ function PopularVenues() {
             sx={{
               bgcolor: "white",
               minWidth: "40px",
-              borderRadius:"50%",
+              borderRadius: "50%",
               height: "55px",
               boxShadow: 2,
               "&:hover": {

@@ -20,9 +20,8 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative flex items-center justify-center w-full h-110 xl:h-120 2xl:h-140 bg-white  overflow-visible shadow-md shadow-black">
-
-        <MainCarousel/>
+    <div className="relative flex items-center justify-center w-full h-110 xl:h-120 2xl:h-140 bg-white  overflow-visible shadow-md ">
+      <MainCarousel />
 
       <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/80 to-transparent"></div>
 
@@ -136,6 +135,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
-

@@ -200,7 +200,9 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p key={index} className="text-gray-600 ">{d.type}</p>
+                          <p key={index} className="text-gray-600 ">
+                            {d.type}
+                          </p>
                         ))}
                       </div>
                     ))}
@@ -581,12 +583,6 @@ const Navbar = () => {
         </div>
 
         <div className=" hidden sm:flex items-center justify-center rounded  gap-5 ">
-          {/* <div
-            className=" flex items-center justify-center rounded-full h-10 w-10  border-2 border-[rgb(255,255,255)] text-[rgb(255,255,255)]"
-            style={{ boxShadow: "2px 2px 5px rgb(255,255,255)" }}
-          >
-            <SearchIcon />
-          </div> */}
           <Button
             variant=" outlined "
             sx={{

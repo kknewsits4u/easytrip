@@ -29,7 +29,9 @@ const Recommonded = () => {
               <p className="text-gray-600 text-sm line-clamp-2">
                 {data.description}
               </p>
-              <span className="text-xs text-gray-500 font-medium">{data.date}</span>
+              <span className="text-xs text-gray-500 font-medium">
+                {data.date}
+              </span>
             </div>
           </div>
         ))}

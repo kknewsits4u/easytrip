@@ -104,7 +104,10 @@ function PopularSearch() {
       </div> */}
       <div className=" grid grid-cols-3 lg:grid-cols-4 px-2 gap-5">
         {popularSearch.map((data, i) => (
-          <div key={i} className="rounded-lg gap-2 pb-4 flex flex-col items-center justify-between text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 h-[140px] md:h-[200px] lg:h-[320px]">
+          <div
+            key={i}
+            className="rounded-lg gap-2 pb-4 flex flex-col items-center justify-between text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 h-[140px] md:h-[200px] lg:h-[320px]"
+          >
             <div className="w-full h-[85%]">
               <img
                 src={data.image}

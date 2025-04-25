@@ -6,13 +6,13 @@ import { MainCarouselData } from "../Store/DataStore";
 const MainCarousel = () => {
   const items = MainCarouselData.map((item, index) => (
     <div key={index} className="w-screen h-screen ">
-    <img
-      src={item.image}
-      role="presentation"
-      className="w-full h-full object-cover object-center"
-      alt="carousel"
-    />
-  </div>
+      <img
+        src={item.image}
+        role="presentation"
+        className="w-full h-full object-cover object-center"
+        alt="carousel"
+      />
+    </div>
   ));
 
   return (

@@ -5,20 +5,20 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Button from "@mui/material/Button";
 import { venueDetails } from "../Store/DataStore";
-import Rating from '@mui/material/Rating';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import Rating from "@mui/material/Rating";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useNavigate } from "react-router-dom";
 
 function PopularSearch() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const navigate = useNavigate()
-  
- const  handleSearchCity = (city) => {
-     navigate(`/city/venues/${city}`)
- }
+  const navigate = useNavigate();
 
-  console.log(activeIndex)
+  const handleSearchCity = (city) => {
+    navigate(`/city/venues/${city}`);
+  };
+
+  console.log(activeIndex);
 
   const responsive = {
     0: { items: 1 },
@@ -39,7 +39,10 @@ function PopularSearch() {
 
   const items = venueDetails.slice(1, 20).map((data, i) => (
     <div key={i} className="w-full p-2 ">
-      <div className=" rounded-lg gap-3 pb-2 flex flex-col items-start justify-between text-lg font-semibold text-gray-600 shadow-md border border-gray-300  h-90 hover:bg-gray-100 cursor-pointer  "  onClick={()=>handleSearchCity("delhi")}  >
+      <div
+        className=" rounded-lg gap-3 pb-2 flex flex-col items-start justify-between text-lg font-semibold text-gray-600 shadow-md border border-gray-300  h-90 hover:bg-gray-100 cursor-pointer  "
+        onClick={() => handleSearchCity("delhi")}
+      >
         <div className=" flex items-center justify-center h-50  w-full">
           <img
             src={data.image}
@@ -58,21 +61,25 @@ function PopularSearch() {
               />
             </div>
           </div>
-          <div className=" flex items-center justify-start w-full  " >
+          <div className=" flex items-center justify-start w-full  ">
             <Rating
               name="sread-only"
               value={data.rating}
               sx={{
-                fontSize:"22px"
+                fontSize: "22px",
               }}
             />
           </div>
-          <p className=" text-sm "  >Starting At : <span className="text-[orange] " > {data.startingPrice} </span></p>
-          <div className=" flex w-full gap-2  "  >
-          <LocationOnIcon  sx={{  color:"rgb(23,141,241) " , height:"100%"}}  />
-          <p className=" text-sm text-left line-clamp-2 " >{data.location}  </p>
+          <p className=" text-sm ">
+            Starting At :{" "}
+            <span className="text-[orange] "> {data.startingPrice} </span>
+          </p>
+          <div className=" flex w-full gap-2  ">
+            <LocationOnIcon
+              sx={{ color: "rgb(23,141,241) ", height: "100%" }}
+            />
+            <p className=" text-sm text-left line-clamp-2 ">{data.location} </p>
           </div>
-          
         </div>
       </div>
     </div>
@@ -99,7 +106,7 @@ function PopularSearch() {
 
         {/* Prev Button */}
         <div className="hidden md:block absolute -left-5 top-1/2 -translate-y-1/2 z-10">
-        <Button
+          <Button
             onClick={slidePrev}
             disabled={activeIndex === 0}
             variant="contained"
@@ -107,7 +114,7 @@ function PopularSearch() {
               bgcolor: "white",
               minWidth: "40px",
               height: "55px",
-              borderRadius:"50%",
+              borderRadius: "50%",
               boxShadow: 2,
               "&:hover": {
                 bgcolor: "#f0f0f0",
@@ -120,14 +127,14 @@ function PopularSearch() {
 
         {/* Next Button */}
         <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 z-10">
-        <Button
+          <Button
             onClick={slideNext}
             disabled={activeIndex >= items.length - 1}
             variant="contained"
             sx={{
               bgcolor: "white",
               minWidth: "40px",
-              borderRadius:"50%",
+              borderRadius: "50%",
               height: "55px",
               boxShadow: 2,
               "&:hover": {

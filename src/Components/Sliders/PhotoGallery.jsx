@@ -10,7 +10,7 @@ function PopularSearch() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const responsive = {
-    0: { items: 1.5 },     // ✅ Mobile: 1.5 cards
+    0: { items: 1.5 }, // ✅ Mobile: 1.5 cards
     640: { items: 2.5 },
     768: { items: 3 },
     1024: { items: 4 },
