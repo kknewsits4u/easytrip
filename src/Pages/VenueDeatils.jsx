@@ -220,7 +220,7 @@ const VenueDetails = () => {
 
           <div className="flex flex-col items-center justify-start gap-5 w-full h-full bg-white  shadow-md rounded border border-gray-100 px-5 py-3 ">
             <div className=" w-full flex items-center justify-between lg:justify-start  gap-3 ">
-              <div className=" flex items-center justify-center h-fit w-full bg-blue-500 px-3 py-2  rounded-full text-white text-md font-semibold  ">
+              <div className=" flex items-center justify-center h-fit w-fit bg-blue-500 px-3 py-2  rounded-full text-white text-md font-semibold  ">
                 <EmailIcon />{" "}
                 <span className=" ml-2 text-nowrap text-[12px]  md:text-[12px] lg:text-[14px] ">
                   Send Message{" "}
