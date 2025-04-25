@@ -30,11 +30,11 @@ function PopularVenues() {
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
   const items = citiesData.slice(1,10).map((data, i) => (
-    <div key={i} className="w-full px-2">
+    <div key={i} className="w-full p-2">
       <div className= " bg-white border border-gray-300 shadow-md rounded-lg gap-5 h-25 md:h-30 lg:h-40 p-2 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
           <div  className=" flex items-center justify-center h-1/2 w-full overflow-hidden" >
               <img  src={i%2 == 0 ? "b1.jpg":"b2.jpg" }  alt="image" className=" h-full w-auto object-cover object-center transform hover:scale(110) " />
-              {/* src="https://i.pinimg.com/474x/20/70/94/2070943ede3c4756187fd657b1a051e8.jpg" */}
+            
           </div>
           <h1 className=" text-sm lg:text-lg"  >{data.cityName}</h1>
       </div>
@@ -42,14 +42,14 @@ function PopularVenues() {
   ));
 
   return (
-    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 pt-25 lg:py-5 border border-white">
-        <div className=" flex items-center justify-between px-2 my-1"  >
-      <h2 className="text-md lg:text-xl xl:text-3xl text-left font-extrabold text-gray-800 mb-5 lg:mb-10">
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 pt-25 lg:py-5  ">
+      <div className=" flex items-center justify-between px-2 my-1"  >
+      <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-3 lg:mb-5">
         Popular Venues City
       </h2>
      </div>
 
-      <div className="relative">
+      <div className="relative ">
         <AliceCarousel
           key={activeIndex}
           items={items}
@@ -62,7 +62,7 @@ function PopularVenues() {
         />
 
         {/* Prev Button */}
-        <div className="hidden md:block absolute -left-5 top-1/2 -translate-y-1/2 z-10">
+        <div className="hidden md:block absolute -left-5 top-1/2 -translate-y-1/2 z-10  ">
           <Button
             onClick={slidePrev}
             disabled={activeIndex === 0}

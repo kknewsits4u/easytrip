@@ -79,9 +79,9 @@ function PopularSearch() {
   ));
 
   return (
-    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-10">
-      <div className=" flex items-center justify-between px-2 my-1">
-        <h2 className="text-md lg:text-xl xl:text-3xl text-left font-extrabold text-gray-800 mb-5 lg:mb-10">
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-1 ">
+      <div className=" flex items-center justify-between px-2 ">
+        <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-3 lg:mb-5">
           Popular Venue
         </h2>
       </div>

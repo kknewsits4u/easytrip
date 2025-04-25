@@ -200,7 +200,7 @@ const Navbar = () => {
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
-                          <p className="text-gray-600 ">{d.type}</p>
+                          <p key={index} className="text-gray-600 ">{d.type}</p>
                         ))}
                       </div>
                     ))}

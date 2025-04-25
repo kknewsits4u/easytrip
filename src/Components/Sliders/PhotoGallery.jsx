@@ -4,52 +4,49 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Button from "@mui/material/Button";
-import { citiesData, photoCollection, popularSearch } from "../Store/DataStore";
+import { photoCollection } from "../Store/DataStore";
 
 function PopularSearch() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const responsive = {
-    0: { items: 1 },
+    0: { items: 1.5 },     // ✅ Mobile: 1.5 cards
+    640: { items: 2.5 },
     768: { items: 3 },
     1024: { items: 4 },
-    // 1280: { items: 5 },
   };
 
   const slidePrev = () => {
-    // setActiveIndex((prev) => Math.max(prev - 1, 0));
-    setActiveIndex((prev) => activeIndex === 0 ? items.length - 1 : prev-1 );
+    setActiveIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
   };
 
   const slideNext = () => {
-    // setActiveIndex((prev) => Math.min(prev + 1, items.length - 1));
-    setActiveIndex((prev) => activeIndex === items.length - 1 ? 0 : prev+1 );
+    setActiveIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
   };
-
-
 
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
-  const items = photoCollection.slice(0,8).map((data, i) => (
-    <div key={i} className="w-full p-2 flex flex-col gap-5">
-      <div className= " rounded-lg gap-3 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md  hover:tranform  transition-all hover:-translate-y-2 cursor-pointer ">
-          <div  className=" flex items-center justify-center h-90 w-full" >
-              <img src={data.image} alt="image" className=" h-full w-full object-cover object-center rounded" />
-          </div>
-        
+  const items = photoCollection.slice(0, 8).map((data, i) => (
+    <div key={i} className="px-2">
+      <div className="rounded-lg shadow-md flex flex-col items-center justify-center text-lg font-semibold text-gray-600 hover:transform transition-all hover:-translate-y-2 cursor-pointer overflow-hidden h-[230px] md:h-[280px] lg:h-[320px]">
+        <div className="h-full w-full">
+          <img
+            src={data.image}
+            alt="photo"
+            className="h-full w-full object-cover object-center rounded"
+          />
+        </div>
       </div>
     </div>
   ));
 
   return (
-    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-10">
-       <div className=" flex items-center justify-between px-2 my-1"  >
-      <h2 className="text-md lg:text-xl xl:text-3xl text-left font-extrabold text-gray-800 mb-5 lg:mb-10">
-        Best Photo Collection 
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-4">
+      <h2 className="px-2 text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-4">
+        Best Photo Collection
       </h2>
-     </div>
 
-      <div className="relative  "   style={{  gap:"5px"  }} >
+      <div className="relative">
         <AliceCarousel
           key={activeIndex}
           items={items}
@@ -58,20 +55,20 @@ function PopularSearch() {
           responsive={responsive}
           activeIndex={activeIndex}
           onSlideChanged={syncActiveIndex}
-
+          mouseTracking
+          paddingLeft={5}
         />
 
         {/* Prev Button */}
         <div className="hidden md:block absolute -left-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slidePrev}
-            // disabled={activeIndex === 0}
             variant="contained"
             sx={{
               bgcolor: "white",
               minWidth: "40px",
               height: "55px",
-              borderRadius:"50%",
+              borderRadius: "50%",
               boxShadow: 2,
               "&:hover": {
                 bgcolor: "#f0f0f0",
@@ -86,13 +83,12 @@ function PopularSearch() {
         <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slideNext}
-            // disabled={activeIndex >= items.length - 1}
             variant="contained"
             sx={{
               bgcolor: "white",
               minWidth: "40px",
-              borderRadius:"50%",
               height: "55px",
+              borderRadius: "50%",
               boxShadow: 2,
               "&:hover": {
                 bgcolor: "#f0f0f0",

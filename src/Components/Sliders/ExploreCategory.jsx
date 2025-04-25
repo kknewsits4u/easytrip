@@ -24,30 +24,32 @@ function PopularSearch() {
     setActiveIndex((prev) => Math.min(prev + 1, items.length - 1));
   };
 
-
-
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
-  const items = popularSearch.slice(1,10).map((data, i) => (
+  const items = popularSearch.slice(1, 10).map((data, i) => (
     <div key={i} className="w-full p-2 ">
-      <div className= " rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 ">
-          <div  className=" flex items-center justify-center h-70 w-full" >
-              <img src={data.image} alt="image" className=" h-full w-full object-cover object-center rounded" />
-          </div>
-          <h1>{data.name}</h1>
+      <div className=" rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 ">
+        <div className=" flex items-center justify-center h-70 w-full">
+          <img
+            src={data.image}
+            alt="image"
+            className=" h-full w-full object-cover object-center rounded"
+          />
+        </div>
+        <h1>{data.name}</h1>
       </div>
     </div>
   ));
 
   return (
-    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-10">
-       <div className=" flex items-center justify-between px-2 my-1"  >
-      <h2 className="text-md lg:text-xl xl:text-3xl text-left font-extrabold text-gray-800 mb-5 lg:mb-10">
-        Popular Searches
-      </h2>
-     </div>
+    <div className="flex flex-col w-full max-w-7xl mx-auto px-4 ">
+      <div className=" flex items-center justify-between px-2">
+        <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-3 lg:mb-5">
+          Explore Category
+        </h2>
+      </div>
 
-      <div className="relative  "   style={{  gap:"5px"  }} >
+      {/* <div className="relative  "   style={{  gap:"5px"  }} >
         <AliceCarousel
           key={activeIndex}
           items={items}
@@ -59,7 +61,7 @@ function PopularSearch() {
 
         />
 
-        {/* Prev Button */}
+   
         <div className="hidden md:block absolute -left-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slidePrev}
@@ -80,7 +82,6 @@ function PopularSearch() {
           </Button>
         </div>
 
-        {/* Next Button */}
         <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slideNext}
@@ -100,6 +101,22 @@ function PopularSearch() {
             <KeyboardArrowRightIcon sx={{ color: "black" }} />
           </Button>
         </div>
+      </div> */}
+      <div className=" grid grid-cols-3 lg:grid-cols-4 px-2 gap-5">
+        {popularSearch.map((data, i) => (
+          <div key={i} className="rounded-lg gap-2 pb-4 flex flex-col items-center justify-between text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 h-[140px] md:h-[200px] lg:h-[320px]">
+            <div className="w-full h-[85%]">
+              <img
+                src={data.image}
+                alt="image"
+                className="w-full h-full object-cover object-center rounded-t"
+              />
+            </div>
+            <h1 className="w-full text-center text-[10px] md:text-[12px] lg:text-[16px] h-[15%] flex items-center justify-center font-semibold">
+              {data.name}
+            </h1>
+          </div>
+        ))}
       </div>
     </div>
   );

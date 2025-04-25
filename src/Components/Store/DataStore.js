@@ -705,6 +705,7 @@ export const popularSearch = [
     image:"https://i.pinimg.com/474x/db/cd/6a/dbcd6a632b10ada57c6b0e86b74a541e.jpg",
     name:"Mehndi Artist",
   },
+  
   {
     image:"https://i.pinimg.com/474x/65/01/39/6501399a193855b2273e22f37264fe73.jpg",
     name:"Catering Services",
