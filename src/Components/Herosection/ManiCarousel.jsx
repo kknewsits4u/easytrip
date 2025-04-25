@@ -16,7 +16,7 @@ const MainCarousel = () => {
   ));
 
   return (
-    <div className="w-full border border-red-500 h-full overflow-hidden">
+    <div className="w-full h-full overflow-hidden">
       <AliceCarousel
         items={items}
         disableButtonsControls
