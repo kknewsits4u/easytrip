@@ -4,7 +4,8 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: rgba(228, 241, 254, 0.156);
+  background-color: rgba(235, 244, 249, 0.156);
+  /* background-color: rgba(228, 241, 254, 0.156); */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -33,5 +34,28 @@ body::-webkit-scrollbar{
   -ms-overflow-style: none; 
   scrollbar-width: none;    
 }
+
+
+
+
+.btn-grad {background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: left center;
+   color: #fff;
+   text-decoration: none;
+ }
 
 

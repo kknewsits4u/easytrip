@@ -75,9 +75,9 @@ const WeddingCategories = () => {
         </h2>
         <a
           href="#"
-          className="max-md:hidden block  text-pink-600 font-medium hover:underline"
+          className="max-md:hidden block  text-[#FF512F] font-medium hover:underline"
         >
-          <div className="flex items-center justify-center px-2 py-1 border border-pink-500 rounded">
+          <div className="flex items-center justify-center px-2 py-1 border border-[#FF512F] rounded">
             View All
           </div>
         </a>

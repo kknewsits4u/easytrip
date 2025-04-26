@@ -33,8 +33,8 @@ const HeroSection = () => {
           Find the best vendor and destination with the millions of trusted
           reviews
         </p>
-        <div className="flex flex-col  md:flex-row items-center justify-between w-full h-fit bg-white rounded gap-2 lg:gap-0">
-          <div className=" flex items-center justify-center w-full md:w-2/5 border-b border-gray-300 ">
+        <div className="flex flex-col  md:flex-row items-center justify-between w-full h-fit bg-white rounded gap-2 lg:gap-0 divide-y-2  lg:divide-x-2 ">
+          <div className=" flex items-center justify-center w-full md:w-2/5 border-b border-gray-300  ">
             <FormControl sx={{ minWidth: 120, width: "100%" }}>
               <Select
                 value={vendorType}
@@ -67,7 +67,7 @@ const HeroSection = () => {
             </FormControl>
           </div>
 
-          <div className=" flex items-center justify-center w-full md:w-2/5  border-b border-gray-300">
+          <div className=" flex items-center justify-center w-full md:w-2/5  border-b border-gray-300  ">
             <FormControl sx={{ minWidth: 120, width: "100%" }}>
               <Select
                 value={city}
@@ -115,13 +115,14 @@ const HeroSection = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="w-full md:w-[20%] h-full">
+          <div className="w-full md:w-[20%] h-[100%]   ">
             <Button
               fullWidth
               variant="conatined"
-              sx={{
-                backgroundColor: "rgb(231,46,119,0.78)",
+              className="btn-grad"
+               sx={{
                 color: "rgb(255,255,255)",
+                boxShadow:"none",
                 height: "100%",
               }}
             >

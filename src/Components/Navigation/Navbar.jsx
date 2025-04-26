@@ -15,9 +15,12 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
+
+
   const [open, setOpen] = React.useState(false);
   const [city, setCity] = React.useState("Noida");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showDiv, setShowDiv] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -37,7 +40,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [showDiv, setShowDiv] = useState(false);
 
   const handleClick = (e) => {
     const targetClass = e.target.className;
@@ -53,7 +55,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className=" hidden md:flex items-center justify-start h-fit px-2 2xl:px-10   bg-[rgb(180,36,93,0.78)] w-full  z-50 p-1 gap-5">
+      <div className=" hidden md:flex items-center justify-start h-fit px-2 2xl:px-10
+         bg-[#c34a36] w-full border-b border-white  z-50 p-1 gap-5" style={{ background:"linear-gradient(90deg, #FF5F6D, #FFC371)"}}    >
         <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
           Plan your wedding with India's Largest Plateform
         </h1>
@@ -159,18 +162,19 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className=" flex  w-full px-5 2xl:px-10 h-15  items-center justify-between  z-40 bg-[rgb(231,46,119,0.78)]   ">
+      <div className=" flex w-full px-5 2xl:px-10 h-14 items-center justify-between z-40 
+              sticky top-0 left-0 shadow-md " style={{ background:"linear-gradient(90deg, #FF5F6D, #FFC371)"}}  >
         <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
             className=" flex  text-[rgb(239,74,107)]  font-extrabold items-center justify-center h-fit w-fit "
           >
             <DensityMediumIcon
-              sx={{ fontWeight: "700", fontSize: "30px", color: "white" }}
+              sx={{ fontWeight: "700", fontSize: "25px", color: "white" }}
             />
           </div>
 
-          <h1 className="text-xl lg:text-3xl flex items-center justify-center  text-white ">
+          <h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
             Aarambh
           </h1>
         </div>
@@ -183,20 +187,20 @@ const Navbar = () => {
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Vendors
               <div
-                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-15 left-0
+                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-14 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
-                <div className=" w-full flex h-fit items-start justify-between">
+                <div className=" w-full flex h-120 items-start justify-between">
                   <div className=" w-1/3 flex flex-col h-fit gap-3">
                     {vendorsData.slice(0, 5).map((data, idx) => (
                       <div
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-1 text-md"
                       >
-                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                        <h1 className="text-[#FF512F] font-bold ">
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
@@ -207,14 +211,14 @@ const Navbar = () => {
                       </div>
                     ))}
                   </div>
-                  <div className=" w-1/3  flex flex-col h-fit gap-3">
+                  <div className=" w-1/3  flex flex-col h-full gap-3    ">
                     {vendorsData.slice(5, 8).map((data, idx) => (
                       <div
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold "
+                          className="text-[#FF512F] font-bold "
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -232,7 +236,7 @@ const Navbar = () => {
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold"
+                          className="text-[#FF512F] font-bold"
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -250,20 +254,20 @@ const Navbar = () => {
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Vanues
               <div
-                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
+                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-14 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
-                <div className=" w-full flex h-fit items-start justify-between gap-5">
+                <div className=" w-full flex h-120 items-start justify-between gap-5">
                   <div className=" w-1/4 flex flex-col h-fit gap-3">
                     {vanueData.slice(0, 1).map((data, idx) => (
                       <div
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md text-left"
                       >
-                        <h1 className="text-[rgb(231,46,119)] font-bold text-lg">
+                        <h1 className="text-[#FF512F] font-bold text-md">
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
@@ -282,13 +286,13 @@ const Navbar = () => {
                     ))}
                   </div>
 
-                  <div className=" w-1/4  flex flex-col h-fit gap-3">
+                  <div className=" w-1/4  flex flex-col h-full gap-3   ">
                     {vanueData.slice(1, 2).map((data, idx) => (
                       <div
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
-                        <h1 className="text-[rgb(231,46,119)] font-bold text-lg">
+                        <h1 className="text-[#FF512F] font-bold text-md">
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
@@ -308,7 +312,7 @@ const Navbar = () => {
                   </div>
 
                   <div className=" w-1/2 flex flex-col h-fit gap-3 items-start">
-                    <h1 className="text-[rgb(231,46,119)] font-bold text-lg ">
+                    <h1 className="text-[#FF512F] font-bold text-md ">
                       Destination Wedding Venues
                     </h1>
                     <div className=" w-full grid grid-cols-3 items-center justify-center h-fit gap-5">
@@ -333,7 +337,7 @@ const Navbar = () => {
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Real Wedding
               <div
-                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
+                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-14 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                transition-all duration-300 ease-in-out z-50 p-5  shadow-xl "
@@ -346,7 +350,7 @@ const Navbar = () => {
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md"
                       >
-                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                        <h1 className="text-[#FF512F] font-bold ">
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
@@ -362,7 +366,7 @@ const Navbar = () => {
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold "
+                          className="text-[#FF512F] font-bold "
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -380,7 +384,7 @@ const Navbar = () => {
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold"
+                          className="text-[#FF512F] font-bold"
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -392,7 +396,7 @@ const Navbar = () => {
                     ))}
                   </div>
                   <div className=" w-1/4 flex flex-col h-fit gap-3">
-                    <h1 className="text-[rgb(231,46,119)] font-bold text-left">
+                    <h1 className="text-[#FF512F] font-bold text-left">
                       Latest Real Wedding
                     </h1>
                     <div className=" w-full flex flex-col h-fit items-center justify-between gap-2 ">
@@ -426,7 +430,7 @@ const Navbar = () => {
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Blog
               <div
-                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-15 left-0
+                className="flex flex-wrap items-start justify-start w-[60vw] h-fit rounded-md absolute top-14 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                transition-all duration-300 ease-in-out z-50 p-5  shadow-xl "
@@ -439,7 +443,7 @@ const Navbar = () => {
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md"
                       >
-                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                        <h1 className="text-[#FF512F] font-bold ">
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
@@ -448,14 +452,14 @@ const Navbar = () => {
                       </div>
                     ))}
                   </div>
-                  <div className=" w-1/4  flex flex-col h-fit gap-3">
+                  <div className=" w-1/4  flex flex-col  gap-3 h-full  ">
                     {RealWedding.slice(1, 2).map((data, idx) => (
                       <div
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold "
+                          className="text-[#FF512F] font-bold "
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -473,7 +477,7 @@ const Navbar = () => {
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold"
+                          className="text-[#FF512F] font-bold"
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -484,8 +488,8 @@ const Navbar = () => {
                       </div>
                     ))}
                   </div>
-                  <div className=" w-1/4 flex flex-col h-fit gap-3">
-                    <h1 className="text-[rgb(231,46,119)] font-bold text-left">
+                  <div className=" w-1/4 flex flex-col h-fit gap-3   px-2 ">
+                    <h1 className="text-[#FF512F] font-bold text-left">
                       Top Blogs
                     </h1>
                     <div className=" w-full flex flex-col h-fit items-center justify-between gap-2 ">
@@ -520,7 +524,7 @@ const Navbar = () => {
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Photos
               <div
-                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-15 left-0
+                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-14 left-0
                opacity-0 translate-y-5 pointer-events-none
                group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
@@ -533,7 +537,7 @@ const Navbar = () => {
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-1 text-md"
                       >
-                        <h1 className="text-[rgb(231,46,119)] font-bold ">
+                        <h1 className="text-[#FF512F] font-bold ">
                           {data.category}
                         </h1>
                         {data.p.map((d, index) => (
@@ -542,14 +546,14 @@ const Navbar = () => {
                       </div>
                     ))}
                   </div>
-                  <div className=" w-1/3  flex flex-col h-fit gap-3">
+                  <div className=" w-1/3  flex flex-col h-fit gap-3  ">
                     {photoData.slice(3, 6).map((data, idx) => (
                       <div
                         key={idx}
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold "
+                          className="text-[#FF512F] font-bold "
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -567,7 +571,7 @@ const Navbar = () => {
                         className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
                       >
                         <h1
-                          className="text-[rgb(231,46,119)] font-bold"
+                          className="text-[#FF512F] font-bold"
                           style={{ fontSize: "16px" }}
                         >
                           {data.category}
@@ -587,22 +591,23 @@ const Navbar = () => {
         <div className=" hidden sm:flex items-center justify-center rounded  gap-5 ">
           <Button
             variant=" outlined "
+            className="btn-grad"
             sx={{
-              border: "1px solid rgb(255,255,255)",
               color: "white",
-              boxShadow: "2px 2px 5px rgb(255,255,255)",
             }}
           >
             Login
           </Button>
+
+
+          
           <Button
             variant=" outlined "
             sx={{
-              border: "1px solid rgb(255,255,255)",
               color: "white",
               textWrap: "nowrap",
-              boxShadow: "2px 2px 5px rgb(255,255,255)",
             }}
+            className="btn-grad"
           >
             Join Us
           </Button>

@@ -27,6 +27,13 @@ function PopularSearch() {
     // 1280: { items: 5 },
   };
 
+  const getItemsPerPage = () => {
+    const width = window.innerWidth;
+    if (width >= 1024) return 4;
+    if (width >= 768) return 3;
+    return 2.75;
+  };
+
   const slidePrev = () => {
     setActiveIndex((prev) => Math.max(prev - 1, 0));
   };
@@ -72,7 +79,7 @@ function PopularSearch() {
           </div>
           <p className=" text-sm text-slate-500">
             Starting At :{" "}
-            <span className="text-[#2d8202] "> {data.startingPrice} </span>
+            <span className="text-[#FF512F] "> {data.startingPrice} </span>
           </p>
           <div className=" flex w-full gap-2  ">
             <LocationOnIcon
@@ -129,7 +136,7 @@ function PopularSearch() {
         <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slideNext}
-            disabled={activeIndex >= items.length - 1}
+            disabled={activeIndex >= items.length - getItemsPerPage()}
             variant="contained"
             sx={{
               bgcolor: "white",

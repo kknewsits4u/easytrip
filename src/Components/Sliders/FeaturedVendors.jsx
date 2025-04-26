@@ -45,7 +45,7 @@ function PopularSearch() {
           <p className="text-xs sm:text-sm text-gray-500 truncate w-[90%]">
             {data.description}
           </p>
-          <span className="text-sm sm:text-base font-semibold text-[rgb(239,74,107)]">
+          <span className="text-sm sm:text-base font-semibold text-[#FF512F]">
             {data.price}
           </span>
         </div>

@@ -17,6 +17,15 @@ function PopularVenues() {
     1280: { items: 6.5 },
   };
 
+  const getItemsPerPage = () => {
+    const width = window.innerWidth;
+    if (width >= 1280) return 6.5;
+    if (width >= 968) return 5.5;
+    if (width >= 768) return 4.25;
+    if (width >= 650) return 4.5;
+    return 2.75;
+  };
+
   const slidePrev = () => {
     setActiveIndex((prev) => Math.max(prev - 1, 0));
   };
@@ -87,7 +96,7 @@ function PopularVenues() {
         <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slideNext}
-            disabled={activeIndex >= items.length - 1}
+            disabled={activeIndex >= items.length - getItemsPerPage()}
             variant="contained"
             sx={{
               bgcolor: "white",
