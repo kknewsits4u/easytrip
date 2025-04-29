@@ -21,7 +21,7 @@ const UpperHeader = () => {
   return (
     
      <div className=" hidden md:flex items-center justify-start h-fit px-2 2xl:px-10
-             bg-[#56021F] w-full border-b border-gray-600  z-50 p-1 gap-5"   >
+             bg-[#6b0227] w-full border-b border-gray-600  z-50 p-1 gap-5"   >
             <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
               Plan your wedding with India's Largest Plateform
             </h1>

@@ -30,14 +30,14 @@ const HeroSection = () => {
          <h1 className="font-bold text-xl md:text-3xl lg:text-4xl xl:text-4xl text-white text-center">
           Plan Your Wedding With Aarambhs
         </h1>
-        <p className=" text-semibold text-[rgb(255,255,255)] text-center font-semibold text-sm lg:text-xl   ">
+        <p className=" text-semibold text-[rgb(255,255,255)] text-center font-semibold text-sm lg:text-lg   ">
           Find the best vendor and destination with the millions of trusted
           reviews
         </p>
 
 
 
-        <div className="flex flex-col  md:flex-row items-center justify-between w-[80%] lg:w-[90%] h-fit bg-white rounded gap-2 lg:gap-0 divide-y divide-gray-300  lg:divide-x ">
+        <div className="flex flex-col  md:flex-row items-center justify-between w-[80%] lg:w-[70%] h-fit bg-white rounded gap-2 lg:gap-0 divide-y divide-gray-300  lg:divide-x ">
 
 
           <div className=" flex items-center justify-center w-full md:w-2/5  ">
