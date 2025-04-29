@@ -113,7 +113,7 @@ const Navbar = () => {
             onClick={() => setShowButtons(!showButtons)}
           >
             <img
-              src="public/profile.png"
+              src="/profile.png"
               alt="user"
               className="w-full h-full object-cover object-center rounded-full"
             />
