@@ -41,7 +41,7 @@ const Navbar = () => {
       <UpperHeader />
       {/* style={{ background: "linear-gradient(90deg, #FF5F6D, #FFC371)" }} */}
       <div className=" flex w-full px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
-              sticky top-0 left-0 shadow-md bg-[#690B22] "  >
+              sticky top-0 left-0 shadow-md bg-[#94092c] "  >
         <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
