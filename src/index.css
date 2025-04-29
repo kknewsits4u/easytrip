@@ -4,19 +4,18 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: rgba(235, 244, 249, 0.156);
-  /* background-color: rgba(228, 241, 254, 0.156); */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(235, 244, 249, 0.156);
   color: black;
 }
 
 body {
   margin: 0;
   display: flex;
-  align-items: start;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
   height: fit-content;
@@ -47,9 +46,9 @@ body::-webkit-scrollbar{
    transition: 0.5s;
    background-size: 200% auto;
    color: white;            
-   box-shadow: 0 0 20px #eee;
    border-radius: 10px;
    display: block;
+   border: none;
  }
 
  .btn-grad:hover {

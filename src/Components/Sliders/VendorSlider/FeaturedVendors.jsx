@@ -4,15 +4,18 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Button from "@mui/material/Button";
-import { businessData } from "../Store/DataStore";
+import { businessData } from "../../Store/DataStore";
+import VendorCard from "./VendorCard";
 
-function PopularSearch() {
+function FeaturedVendors() {
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   const responsive = {
-    0: { items: 1.5 },
-    768: { items: 2.5 },
-    1024: { items: 3.5 },
+    0: { items: 1.25 },
+    768: { items: 2 },
+    1024: { items: 3 },
+    1280: { items: 4 }
   };
 
   const slidePrev = () => {
@@ -26,31 +29,11 @@ function PopularSearch() {
   const syncActiveIndex = ({ item }) => setActiveIndex(item);
 
   const items = businessData.map((data, i) => (
+    
     <div key={i} className="w-full p-2">
-      <div className="rounded-lg shadow-md flex flex-col items-start justify-between cursor-pointer  bg-[rgb(255,255,255)] hover:bg-slate-100 h-[240px] sm:h-[260px] md:h-[280px] lg:h-[320px] xl:h-[380px] transition-all duration-300">
-        {/* Image */}
-        <div className="flex items-center justify-center h-[65%] w-full">
-          <img
-            src={data.image}
-            alt="image"
-            className="h-full w-full object-cover object-center rounded-t-lg"
-          />
-        </div>
-
-        {/* Text */}
-        <div className="flex flex-col p-2 w-full h-[35%] justify-evenly text-left gap-1">
-          <h1 className="text-[15px]  font-semibold text-slate-700 line-clamp-1">
-            {data.heading}
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-500 truncate w-[90%]">
-            {data.description}
-          </p>
-          <span className="text-sm sm:text-base font-semibold text-[#FF512F]">
-            {data.price}
-          </span>
-        </div>
-      </div>
+      <VendorCard  data={data} />
     </div>
+
   ));
 
   return (
@@ -73,7 +56,7 @@ function PopularSearch() {
           mouseTracking
         />
 
-        {/* Prev */}
+   
         <div className="hidden md:block absolute -left-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slidePrev}
@@ -93,7 +76,6 @@ function PopularSearch() {
           </Button>
         </div>
 
-        {/* Next */}
         <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 z-10">
           <Button
             onClick={slideNext}
@@ -117,4 +99,4 @@ function PopularSearch() {
   );
 }
 
-export default PopularSearch;
+export default FeaturedVendors;

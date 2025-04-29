@@ -9,12 +9,15 @@ import CityWiseSearchPage from "./Pages/CityWiseSearchPage";
 import ScrollToTop from "./Utils/ScrollToTop";
 import FilterCategory from "./Pages/FilterComponent/FilterCategory";
 import VenueDetails from "./Pages/VenueDeatils";
+import "react-datepicker/dist/react-datepicker.css";
+
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+      <div   className=" w-full flex flex-col items-center  " >
       <BrowserRouter>
       <ScrollToTop/>
        <Navbar />
@@ -22,10 +25,10 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/city/venues/:id" element={<VenueDetails />} />
           <Route path="/city/venues" element={<CityWiseSearchPage />} />
-          {/* <Route path="/search" element={<FilterCategory />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
+      </div>
     </>
   );
 }

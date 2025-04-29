@@ -65,7 +65,7 @@ const Footer = () => {
                 className=" w-full h-full object-cover object-top rounded-full"
               />
             </div>
-            <h1 className=" text-white text-3xl ">Aarambh</h1>
+            <h1 className=" text-white text-3xl ">Aarambhs</h1>
           </div>
           <p className=" text-white opacity-70 text-sm">
             Call our 24-hour helpline

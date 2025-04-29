@@ -18,7 +18,7 @@ function PopularSearch() {
     navigate(`/city/venues/${city}`);
   };
 
-  console.log(activeIndex);
+ 
 
   const responsive = {
     0: { items: 1 },

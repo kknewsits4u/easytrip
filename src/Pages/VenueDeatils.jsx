@@ -1,26 +1,34 @@
 import React, { useState } from "react";
-import Rating from "@mui/material/Rating";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { Button } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
-import EmailIcon from "@mui/icons-material/Email";
 import { Share, RateReview } from "@mui/icons-material";
-import TextField from "@mui/material/TextField";
-import Switch from "@mui/material/Switch";
+
 import StarIcon from "@mui/icons-material/Star";
 import AliceCarousel from "react-alice-carousel";
 import ImageIcon from "@mui/icons-material/Image";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
+import WifiIcon from '@mui/icons-material/Wifi';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
+import SensorWindowIcon from '@mui/icons-material/SensorWindow';
+import LocationPinIcon from '@mui/icons-material/LocationPin';
+import BedIcon from '@mui/icons-material/Bed';
+import LocalParkingIcon from '@mui/icons-material/LocalParking';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import RatingComponent from "../Components/Rating&Review/RatingComponent";
+import ReviewComponent from "../Components/Rating&Review/ReviewComponent";
+import HotelEnquiryForm from "../Components/HotelEnquiry/HotelEnquiryForm";
 
-const label = { inputProps: { "aria-label": "Switch demo" } };
+
+
+
+
+
 
 const VenueDetails = () => {
+
+
   const items = [
     <div
       className=" w-full h-full flex items-start justify-center bg-[#f2f2f2] "
@@ -64,6 +72,8 @@ const VenueDetails = () => {
   ];
 
   const [open, setOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+  const [activeTab, setActiveTab] = useState("PORTFOLIO");
 
   const handlePriceDivExpend = () => {
     setOpen(!open);
@@ -91,11 +101,8 @@ const VenueDetails = () => {
       name: "Altitude 3",
     },
   ];
-  const [showMore, setShowMore] = useState(false);
 
   const visibleAreas = showMore ? areas : areas.slice(0, 4);
-
-  const [activeTab, setActiveTab] = useState("PORTFOLIO");
 
   const portfolioImages = [
     "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
@@ -127,8 +134,33 @@ const VenueDetails = () => {
     return [];
   };
 
+  const highLights = [
+    {
+      icon: <LocationPinIcon />,
+      text: "Located in Centre of New Delhi"
+    },
+    {
+      icon: <FlightTakeoffIcon />,
+      text: "Airport Transfer"
+    },
+    {
+      icon: <SensorWindowIcon />,
+      text: "Front desk [24-Hour]"
+    },
+    {
+      icon: <DirectionsBusIcon />,
+      text: "240 Meters for public transportation"
+    },
+    {
+      icon: <WifiIcon />,
+      text: "Free Wi-Fi in all rooms"
+    },
+  ]
+
+
   return (
-    <div className="flex flex-col items-center justify-start w-full h-full min-h-[100vh] bg-gray-100 px-1 md:px-5 py-1 lg:pt-2 ">
+    <div className="flex flex-col items-center justify-start w-full h-full min-h-[100vh] gap-5 px-1 md:px-5 py-1 lg:pt-2 max-w-[1280px]">
+
       <div className=" grid w-full grid-cols-1 lg:grid-cols-2 h-fit  gap-2 ">
         <div className="flex flex-col items-start justify-between gap-3 h-fit  w-full ">
           <div className="flex flex-col w-full h-fit rounded relative  ">
@@ -333,248 +365,147 @@ const VenueDetails = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-start gap-5 w-full h-full bg-white  shadow-md rounded border border-gray-100 px-5 py-3 ">
-            <div className=" w-full flex items-center justify-between lg:justify-start  gap-3 ">
-              <div className=" flex items-center justify-center h-fit w-fit bg-blue-500 px-2 lg:px-3 py-2  rounded-full text-white text-md font-semibold  ">
-                <EmailIcon sx={{ fontSize: "18px" }} />
-                <span className=" ml-2 text-nowrap text-[12px]  md:text-[12px] lg:text-[14px] ">
-                  Send Message
-                </span>
-              </div>
-              <div className=" flex items-center justify-center h-fit w-fit bg-yellow-600  px-2 lg:px-3 py-2  rounded-full text-white text-md font-semibold ">
-                <PhoneIcon sx={{ fontSize: "18px" }} />
-                <span className=" ml-2 text-nowrap text-[12px]  md:text-[12px] lg:text-[14px]">
-                  View Contact
-                </span>
-              </div>
-            </div>
+          <HotelEnquiryForm />
 
-            <h1 className=" w-full text-left font-semibold text-md text-gray-600">
-              Hi, Venue Name{" "}
+        </div>
+
+
+      </div>
+
+      {/*  hightslights start here.................... */}
+
+      <div className=" grid w-full items-start grid-cols-1 lg:grid-cols-[70%_30%] h-fit gap-2  min-h-40"  >
+
+        <div className=" flex  items-start justify-center flex-col gap-3  " >
+
+
+          <div className=" flex flex-col items-start justify-start gap-3 p-5 shadow w-full border border-gray-300 rounded" >
+            <h1 className=" text-slate-600 font-semibold text-lg "   >Highlights</h1>
+            <ul className=" flex max-md:flex-col flex-row items-start w-full  justify-start gap-3 " >
+              {
+                highLights.map((data, i) =>
+                  <li key={i} className=" flex max-md:flex-row flex-col gap-max-md:gap-2 gap-3"  >
+                    <div   >{data.icon} </div>
+                    <p className=" text-sm text-slate-400 font-semibold" >{data.text}</p>
+                  </li>
+
+                )
+              }
+
+            </ul>
+          </div>
+
+          <div className=" flex flex-col items-start justify-start gap-3 py-3 px-5 shadow w-full border border-gray-300 rounded"  >
+            <h1 className=" w-full border-b pb-2 text-left text-slate-600 font-semibold text-lg" >
+              Space & Rooms
             </h1>
-            <div className=" flex flex-col items-start w-full justify-start  text-left gap-6">
-              <div className=" flex flex-col md:flex-row w-full gap-5  ">
-                <TextField
-                  fullWidth
-                  placeholder="Fullname *"
-                  variant="standard"
-                  required
-                  InputProps={{ disableUnderline: false }}
-                  sx={{
-                    input: {
-                      fontSize: "15px",
-                      paddingY: "8px",
-                      "::placeholder": {
-                        fontSize: "14px",
-                        color: "#999",
-                      },
-                    },
-                  }}
-                />
-                <TextField
-                  fullWidth
-                  placeholder="Contact *  "
-                  variant="standard"
-                  required
-                  InputProps={{ disableUnderline: false }}
-                  sx={{
-                    input: {
-                      fontSize: "15px",
-                      paddingY: "8px",
-                      "::placeholder": {
-                        fontSize: "14px",
-                        color: "#999",
-                      },
-                    },
-                  }}
-                />
-              </div>
-              <div className=" flex flex-col md:flex-row w-full gap-5   ">
-                <TextField
-                  fullWidth
-                  placeholder="Email Address *"
-                  variant="standard"
-                  required
-                  InputProps={{ disableUnderline: false }}
-                  sx={{
-                    input: {
-                      fontSize: "15px",
-                      paddingY: "8px",
-                      "::placeholder": {
-                        fontSize: "14px",
-                        color: "#999",
-                      },
-                    },
-                  }}
-                />
-                <TextField
-                  fullWidth
-                  placeholder="Function Date *  "
-                  variant="standard"
-                  required
-                  type="date"
-                  InputProps={{ disableUnderline: false }}
-                  sx={{
-                    input: {
-                      fontSize: "15px",
-                      paddingY: "8px",
-                      "::placeholder": {
-                        fontSize: "14px",
-                        color: "#999",
-                      },
-                    },
-                  }}
-                />
-              </div>
-              <div className=" flex w-full gap-5 flex-col md:flex-row  ">
-                <TextField
-                  multiline
-                  fullWidth
-                  placeholder="Full details about function *"
-                  variant="standard"
-                  required
-                  InputProps={{ disableUnderline: false }}
-                  sx={{
-                    input: {
-                      fontSize: "15px",
-                      paddingY: "8px",
-                      "::placeholder": {
-                        fontSize: "14px",
-                        color: "#999",
-                      },
-                    },
-                  }}
-                />
-              </div>
-              <div className=" flex max-md:flex-col flex-row items-start max:md:items-center justify-between w-full gap-5">
-                <FormControl>
-                  <FormLabel
-                    id="demo-row-radio-buttons-group-label"
-                    sx={{ fontWeight: "600", fontSize: "15px" }}
-                  >
-                    Function Type
-                  </FormLabel>
-                  <RadioGroup
-                    defaultValue="prewedding"
-                    row
-                    aria-labelledby="demo-row-radio-buttons-group-label"
-                    name="row-radio-buttons-group"
-                  >
-                    <FormControlLabel
-                      value="prewedding"
-                      control={
-                        <Radio
-                          sx={{
-                            color: "#FF512F",
-                            "&.Mui-checked": {
-                              color: "#FF512F",
-                            },
-                          }}
-                        />
-                      }
-                      label="Pre-Wedding"
-                      sx={{
-                        "& .MuiFormControlLabel-label": { fontSize: "0.9rem" },
-                      }}
-                    />
-                    <FormControlLabel
-                      value="wedding"
-                      control={
-                        <Radio
-                          sx={{
-                            color: "#FF512F",
-                            "&.Mui-checked": {
-                              color: "#FF512F",
-                            },
-                          }}
-                        />
-                      }
-                      label="Wedding"
-                      sx={{
-                        "& .MuiFormControlLabel-label": { fontSize: "0.9rem" },
-                      }}
-                    />
-                  </RadioGroup>
-                </FormControl>
-                <FormControl>
-                  <FormLabel
-                    id="demo-row-radio-buttons-group-label"
-                    sx={{ fontWeight: "600", fontSize: "15px" }}
-                  >
-                    Function Time
-                  </FormLabel>
-                  <RadioGroup
-                    defaultValue="evening"
-                    row
-                    aria-labelledby="demo-row-radio-buttons-group-label"
-                    name="evening"
-                  >
-                    <FormControlLabel
-                      value="evening"
-                      control={
-                        <Radio
-                          sx={{
-                            color: "#FF512F",
-                            "&.Mui-checked": {
-                              color: "#FF512F",
-                            },
-                          }}
-                        />
-                      }
-                      label="Evening"
-                      sx={{
-                        "& .MuiFormControlLabel-label": { fontSize: "0.9rem" },
-                      }}
-                    />
-                    <FormControlLabel
-                      value="day"
-                      control={
-                        <Radio
-                          sx={{
-                            color: "#FF512F",
-                            "&.Mui-checked": {
-                              color: "#FF512F",
-                            },
-                          }}
-                        />
-                      }
-                      label="Day"
-                      name="day"
-                      sx={{
-                        "& .MuiFormControlLabel-label": { fontSize: "0.9rem" },
-                      }}
-                    />
-                  </RadioGroup>
-                </FormControl>
-              </div>
 
-              <div className=" flex w-full  items-center  justify-start  gap-10 ">
-                <p className="font-semibold text-md text-gray-600">
-                  Notify me on Whatsapp
-                </p>
-                <Switch {...label} defaultChecked />
+            <div className=" flex flex-col  w-full items-start justify-start gap-2"  >
+              <h1>Apartment/Flat</h1>
+              <div className=" flex max-md:flex-col flex-row items-start justify-start gap-5 " >
+
+                <div className=" flex flex-col items-start justify-start gap-3 " >
+                  <p className=" text-sm text-slate-600" >Max 3 guests | 1 bed</p>
+                  <div className=" flex flex-col items-start  justify-between border w-50 border-gray-300 p-2 gap-2 rounded-md " >
+                    <h2 className=" text-slate-700 text-base" >Bedroom 1</h2>
+                    <p className=" text-sm text-slate-500" >1 double bed</p>
+                    <div>
+                      <BedIcon />
+                    </div>
+
+                  </div>
+                </div>
+
+                <div className=" flex flex-col items-start justify-start gap-3 " >
+                  <p className=" text-sm text-slate-600" >Max 5 guests | 2 bed</p>
+                  <div className=" flex flex-col items-start  justify-between border w-50 border-gray-300 p-2 gap-2 rounded-md " >
+                    <h2 className=" text-slate-700 text-base" >Bedroom 1</h2>
+                    <p className=" text-sm text-slate-500" >2 double bed </p>
+                    <div className=" gap-3 flex " >
+                      <BedIcon />
+                      <BedIcon />
+                    </div>
+
+                  </div>
+                </div>
+
               </div>
             </div>
+          </div>
 
-            <div className="flex items-center justify-center w-full  font-semibold text-md text-gray-600">
-              <Button
-                fullWidth
-                variant="contained"
-                className="btn-grad"
-                sx={{
-                  backgroundColor: "#e53935",
-                  color: "#fff",
-                  fontWeight: 500,
-                  fontSize: "15px",
-                  paddingY: "10px",
-                }}
-              >
-                Send Message
-              </Button>
+
+        </div>
+
+
+        <div className=" flex  items-start justify-start flex-col w-full h-fit gap-3"  >
+
+          <div className=" flex flex-col border border-gray-300 shadow w-full h-30 divide-y divide-gray-300 px-3 rounded " >
+            <div className="flex  items-center justify-between w-full h-20"  >
+              <div className="flex flex-col gap-2 items-start justify-center"  >
+                <h1 className="text-base text-slate-700 font-semibold " >Check-In</h1>
+                <p className=" text-slate-500 text-sm" >12:00 PM</p>
+              </div>
+              <div className="flex flex-col gap-2 items-start justify-center"  >
+                <h1 className="text-base text-slate-700 font-semibold " >Check-Out</h1>
+                <p className=" text-slate-500 text-sm" >until 11:00 AM</p>
+              </div>
+            </div>
+            <div className="flex  items-center justify-end w-full "  >
+              <a href="" className=" text-blue-500 font-semibold" >See more info</a>
+            </div>
+          </div>
+
+          <div className=" flex flex-col border border-gray-300 shadow w-full h-fit divide-y divide-gray-300 p-2 rounded gap-2"  >
+            <div className=" w-full h-25 flex items-center justify-center pb-2" >
+              <img src="https://i.pinimg.com/474x/e0/54/bd/e054bdcf455dbee8fef16b7a8d72b2e4.jpg" alt="map image" className="w-full h-full object-cover object-center rounded  " />
+            </div>
+            <div className=" flex w-full items-center justify-between pb-2"  >
+              <div><LocalParkingIcon sx={{ fontSize: "18px", color: "gray" }} />  <span className=" text-sm text-slate-700  font-semibold " >Parking</span></div>
+              <p className=" text-blue-500 text-base" >Available Free</p>
+            </div>
+            <div className=" flex flex-col  w-full items-start gap-3 justify-between pb-2"  >
+              <h1 className=" text-sm text-slate-700  font-semibold " >Popular Landmarks</h1>
+              <ul className="flex flex-col items-start justify-start gap-2 w-full" >
+                <li className=" flex w-full items-center justify-between"   >
+                  <div><AccountBalanceIcon sx={{ fontSize: "18px", color: "gray" }} />  <span className="ml-2 text-sm text-slate-700   " >Lotus Temple</span></div>
+                  <p className=" text-blue-500 text-sm" >2.8 km</p>
+                </li>
+                <li className=" flex w-full items-center justify-between "   >
+                  <div><AccountBalanceIcon sx={{ fontSize: "18px", color: "gray" }} />  <span className="ml-2 text-sm text-slate-700  " >India Gate</span></div>
+                  <p className=" text-blue-500 text-sm" >3.2 km</p>
+                </li>
+                <li className=" flex w-full items-center justify-between "   >
+                  <div><AccountBalanceIcon sx={{ fontSize: "18px", color: "gray" }} />  <span className="ml-2 text-sm text-slate-700  " >Qutub Meenar</span></div>
+                  <p className=" text-blue-500 text-sm" >4.5 km</p>
+                </li>
+              </ul>
+
             </div>
           </div>
         </div>
+
+
+
       </div>
+
+      <div className="flex flex-col items-start w-full border border-gray-300 bg-white h-fit rounded py-2 px-5 gap-4"   >
+        <div className="flex w-full text-start" >
+          <h1 className=" text-slate-600 font-semibold text-lg " >Superior doubles & Twin Room</h1>
+        </div>
+        <div className=" flex gap-2 h-fit min-h-50 bg-gray-100 w-full" >
+          <div   >
+            <div>
+              <div></div>
+              <div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+
 
       <div className=" flex flex-col w-full gap-3 bg-white shadow-md h-fit mt-3 rounded px-5 py-2">
         <div className=" flex w-full items-start justify-start  h-10  ">
@@ -582,19 +513,18 @@ const VenueDetails = () => {
             {["PORTFOLIO", "PHOTOS", "VIDEOS"].map((tab) => (
               <li
                 key={tab}
-                className={`cursor-pointer font-semibold lg:mr-5 ${
-                  activeTab === tab
-                    ? "text-pink-600 border-b-2 border-pink-500 pb-1"
-                    : "text-slate-700"
-                }`}
+                className={`cursor-pointer font-semibold lg:mr-5 ${activeTab === tab
+                  ? "text-pink-600 border-b-2 border-pink-500 pb-1"
+                  : "text-slate-700"
+                  }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab} (
                 {tab === "PORTFOLIO"
                   ? portfolioImages.length
                   : tab === "PHOTOS"
-                  ? photoImages.length
-                  : videoThumbnails.length}
+                    ? photoImages.length
+                    : videoThumbnails.length}
                 )
               </li>
             ))}
@@ -617,79 +547,12 @@ const VenueDetails = () => {
       </div>
 
       <div className=" grid grid-cols-1  lg:grid-cols-2  w-full gap-3 shadow-md h-fit min-h-50 my-3  ">
-        <div className="flex flex-col w-full  bg-white p-4 rounded shadow-md gap-4">
-         
-          <div className="flex items-center justify-between">
-            <p className="font-semibold text-gray-800">Rating Distribution</p>
-            <div className="flex items-center gap-1 bg-green-500 text-white px-2 py-1 rounded">
-              <span className="text-sm font-bold">4.8</span>
-            </div>
-          </div>
-
-          <p className="text-sm text-gray-600">53 reviews</p>
-
-          <div className="flex flex-col gap-3">
-            {[
-              { stars: 5, percent: 85, reviews: 48, color: "bg-green-500" },
-              { stars: 4, percent: 6, reviews: 3, color: "bg-green-400" },
-              { stars: 3, percent: 2, reviews: 1, color: "bg-yellow-400" },
-              { stars: 2, percent: 2, reviews: 1, color: "bg-orange-400" },
-              { stars: 1, percent: 0, reviews: 0, color: "bg-gray-300" },
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <input type="checkbox" className="accent-green-500" />
-                <div className="flex items-center gap-1 w-10">
-                  <span className="text-sm font-semibold">{item.stars}</span>*
-                </div>
-                <div className="flex-1 bg-gray-200 h-2 rounded relative overflow-hidden">
-                  <div
-                    className={`${item.color} h-full rounded`}
-                    style={{ width: `${item.percent}%` }}
-                  ></div>
-                </div>
-                <span className="text-xs text-gray-600 w-12 text-right">
-                  {item.reviews} review{item.reviews !== 1 && "s"}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-xs text-gray-500 italic mt-2">
-            Last Review Updated on 28 Nov 2024
-          </p>
-        </div>
-
-        <div className=" flex flex-col w-full gap-3 bg-white shadow-md h-fit min-h-50  rounded p-5 ">
-          <div className=" flex w-full  items-center justify-start  text-xs  md:text-sm lg:text-md border-b-2 border-slate-300 h-fit pb-2">
-            <h1 className=" text-amber-700 font-semibold ">WRITE A REVIEW </h1>
-          </div>
-          <div className=" flex flex-col items-start justify-start gap-3 text-left">
-            <h1 className=" text-sm  font-semibold text-slate-600  ">
-              Review Hotel Name
-            </h1>
-            <form className=" w-full"  >
-            <div className=" flex flex-col items-start justify-start gap-5 text-left w-full">
-              <h1 className=" text-sm  font-semibold text-slate-600  ">
-                Rate Vendor
-              </h1>
-              <div className=" flex items-center justify-start gap-3">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <div className=" flex border border-slate-300 w-5 h-5 cursor-pointer hover:border-amber-600 rounded items-center justify-center text-xs  hover:text-amber-600 ">
-                    {i}
-                  </div>
-                ))}
-              </div>
-              <textarea
-                className="w-full p-2 border border-slate-400 rounded focus:outline-0  "
-                rows={5}
-                placeholder="Write something positive....."
-              ></textarea>
-                <Button variant="contained " fullWidth  className=" btn-grad" >Submit</Button>
-            </div>
-            </form>
-          </div>
-        </div>
+        <RatingComponent />
+        <ReviewComponent />
       </div>
+
+
+
     </div>
   );
 };
