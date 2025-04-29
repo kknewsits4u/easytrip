@@ -4,12 +4,10 @@ import "./App.css";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navigation/Navbar";
 import Homepage from "./Pages/Homepage";
-import HotelDetailsPage from "./Pages/VenueDeatils";
 import CityWiseSearchPage from "./Pages/CityWiseSearchPage";
 import ScrollToTop from "./Utils/ScrollToTop";
-import FilterCategory from "./Pages/FilterComponent/FilterCategory";
-import VenueDetails from "./Pages/VenueDeatils";
 import "react-datepicker/dist/react-datepicker.css";
+import VenueDetails from "./Pages/VenueDetailPage/VenueDeatils";
 
 
 function App() {

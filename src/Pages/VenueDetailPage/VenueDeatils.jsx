@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { Share, RateReview } from "@mui/icons-material";
-
+import LivingIcon from '@mui/icons-material/Living';
 import StarIcon from "@mui/icons-material/Star";
 import AliceCarousel from "react-alice-carousel";
 import ImageIcon from "@mui/icons-material/Image";
@@ -16,14 +16,14 @@ import LocationPinIcon from '@mui/icons-material/LocationPin';
 import BedIcon from '@mui/icons-material/Bed';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import RatingComponent from "../Components/Rating&Review/RatingComponent";
-import ReviewComponent from "../Components/Rating&Review/ReviewComponent";
-import HotelEnquiryForm from "../Components/HotelEnquiry/HotelEnquiryForm";
-
-
-
-
-
+import RatingComponent from "../../Components/Rating&Review/RatingComponent";
+import ReviewComponent from "../../Components/Rating&Review/ReviewComponent";
+import HotelEnquiryForm from "../../Components/HotelEnquiry/HotelEnquiryForm";
+import VenueRoomTypeCard from "./HotelCard";
+import HotelCard from "./HotelCard";
+import TopDestinations from "./TrendingCities";
+import TrendingCities from "./TrendingCities";
+import ReviewCard from "./ReviewCard";
 
 
 const VenueDetails = () => {
@@ -158,11 +158,16 @@ const VenueDetails = () => {
   ]
 
 
+  // confiration for world famous destionations .......................................
+
+
+
   return (
-    <div className="flex flex-col items-center justify-start w-full h-full min-h-[100vh] gap-5 px-1 md:px-5 py-1 lg:pt-2 max-w-[1280px]">
+    <div className="flex flex-col items-center justify-start w-full h-full min-h-[100vh] gap-3 px-1 md:px-5 py-1 lg:pt-2 max-w-[1280px]">
 
       <div className=" grid w-full grid-cols-1 lg:grid-cols-2 h-fit  gap-2 ">
         <div className="flex flex-col items-start justify-between gap-3 h-fit  w-full ">
+
           <div className="flex flex-col w-full h-fit rounded relative  ">
             <div className="w-full h-fit bg-[rgb(255,255,255)] rounded ">
               <div style={{ maxWidth: "100%", margin: "auto" }}>
@@ -293,7 +298,7 @@ const VenueDetails = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col w-full h-fit gap-1 lg:gap-3 ">
+        <div className=" flex flex-col justify-between items-center w-full h-full gap-1 lg:gap-3 ">
           <div className=" flex flex-col w-full rounded bg-white shadow-md h-fit divide-y divide-gray-300 border border-gray-100   ">
             <div className="  flex items-center justify-between w-full px-2 lg:px-5 py-3 text-lg font-semibold text-slate-600 ">
               <p className="  text-[15px] lg:text-[18px] "> Price Details</p>
@@ -346,6 +351,7 @@ const VenueDetails = () => {
               </div>
             ))}
           </div>
+
           <div className=" flex flex-col w-full rounded bg-[#ecfaf9] shadow-md h-fit divide-y divide-gray-300 border border-gray-100  text-left ">
             <div className="  flex w-full px-2 lg:px-5 py-2 lg:py-3 text-md font-semibold text-slate-600 ">
               Destination Package
@@ -488,26 +494,56 @@ const VenueDetails = () => {
 
       </div>
 
-      <div className="flex flex-col items-start w-full border border-gray-300 bg-white h-fit rounded py-2 px-5 gap-4"   >
-        <div className="flex w-full text-start" >
-          <h1 className=" text-slate-600 font-semibold text-lg " >Superior doubles & Twin Room</h1>
+      {/* room details and booking ...................... */}
+
+      <div className="flex flex-col items-start w-full border border-gray-300 bg-white h-fit rounded  "  >
+        <div className="flex w-full text-start items-center h-15  px-3" >
+          <h1 className=" text-slate-600 font-semibold text-lg " >Deluxe Rooms</h1>
         </div>
-        <div className=" flex gap-2 h-fit min-h-50 bg-gray-100 w-full" >
-          <div   >
-            <div>
-              <div></div>
-              <div>
-                <div></div>
-                <div></div>
+        <div className=" flex max-sm:flex-col flex-row gap-2 h-fit min-h-50 bg-gray-100 w-full p-1" >
+
+          <div className="flex flex-col max-sm:w-full w-[20%]  h-fit "  >
+            <div className=" flex flex-col w-full items-start  justify-start gap-1 h-fit "  >
+              <div className="flex items-center justify-center w-full h-40 "  >
+                <img src="https://i.pinimg.com/474x/f6/bf/2e/f6bf2ead8546606c5da8094f461b7299.jpg" alt="hotel_image" className=" w-full h-full object-cover object-center rounded" />
+              </div>
+              <div className="flex items-center justify-center w-full h-fit  gap-1" >
+                <div className="flex items-center justify-center w-1/2  h-20"  >
+                  <img src="https://i.pinimg.com/474x/b5/53/aa/b553aa08c5150b6f9a08795fb2db99ca.jpg" alt="hotel_image" className=" w-full h-full object-cover object-center rounded" />
+                </div>
+                <div className="flex items-center justify-center w-1/2  h-20"  >
+                  <img src="https://i.pinimg.com/474x/db/64/50/db64500b75f217ebc90e9a2c62ea6065.jpg" alt="hotel_image" className=" w-full h-full object-cover object-center rounded" />
+                </div>
               </div>
             </div>
+            <div className=" flex flex-col w-full items-start py-2 justify-start  h-fit gap-5 px-3" >
+              <p className=" text-blue-500 font-semibold hover:text-blue-600 "  ><a href="">See all photos </a></p>
+              <ul className="flex flex-col gap-4 " >
+                {
+                  [1, 2, 3, 4, 5, 6, 7, 8].map((idx) =>
+                    <li className="text-sm text-slate-700"  > <LivingIcon sx={{ fontSize: { xs: "10px", sm: "14px", md: "16px" }, color: "rgb(120,120,120)" }} />  <span className=" ml-3" >Facility Content</span> </li>
+                  )
+                }
+              </ul>
+
+            </div>
           </div>
-          <div></div>
+
+          <div className="flex flex-col items-center justify-start max-sm:w-full w-[80%] gap-2"  >
+            {
+              [1, 2, 3].map((idx) =>
+                <HotelCard idx={idx} />
+              )
+            }
+
+          </div>
         </div>
       </div>
 
 
-      <div className=" flex flex-col w-full gap-3 bg-white shadow-md h-fit mt-3 rounded px-5 py-2">
+      {/*  hotel photos section ............... */}
+
+      <div className=" flex flex-col w-full gap-3 bg-white shadow-md h-fit rounded px-5 py-2">
         <div className=" flex w-full items-start justify-start  h-10  ">
           <ul className="flex items-center justify-between lg:justify-start h-full gap-5 border-b-2 border-gray-300 w-full text-xs md:text-sm lg:text-md ">
             {["PORTFOLIO", "PHOTOS", "VIDEOS"].map((tab) => (
@@ -530,11 +566,11 @@ const VenueDetails = () => {
             ))}
           </ul>
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 w-full gap-5   ">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 w-full gap-5  ">
           {getImages().map((src, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center w-full h-20 md:h-40 lg:h-60 rounded"
+              className="flex items-center justify-center w-full h-20 md:h-40 lg:h-45 rounded"
             >
               <img
                 src={src}
@@ -544,15 +580,34 @@ const VenueDetails = () => {
             </div>
           ))}
         </div>
+
       </div>
 
-      <div className=" grid grid-cols-1  lg:grid-cols-2  w-full gap-3 shadow-md h-fit min-h-50 my-3  ">
+      <div className=" grid grid-cols-1  lg:grid-cols-2  w-full gap-3  h-fit min-h-50 my-3  ">
         <RatingComponent />
         <ReviewComponent />
       </div>
 
+      {/* section for tp destinations in the world ..............  */}
 
-
+      <div className=" flex flex-col w-full gap-3 bg-white shadow-md h-fit  rounded "  >
+        <TrendingCities />
+      </div>
+     
+      {/* all reviews goes here .................................  */}
+      <div className=" flex flex-col w-full gap-3 bg-white shadow-md h-fit  rounded p-2 md:p-5"  >
+       <div className="w-full text-left flex items-center  justify-start border-b border-gray-300 pb-3" >
+       <h1  className="px-2 text-md lg:text-xl xl:text-lg text-left font-semibold text-slate-600 mb-4"  >Most Favourite Reviews</h1>
+       </div>
+       <div className="flex flex-col items-start justify-start gap-5 md:gap-10 divide-y divide-gray-300 " >
+            {
+              [1,2,3].map((i)=>
+                <ReviewCard  key={i}  />
+              )
+            }
+       </div>
+        
+      </div>
     </div>
   );
 };
