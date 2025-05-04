@@ -26,21 +26,14 @@ const HeroSection = () => {
 
       <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
 
-      <div className="flex flex-col items-center justify-between absolute -bottom-20 md:bottom-10 lg:bottom-5  left-1/2 transform -translate-x-1/2 w-[90vw] lg:w-[50vw] h-fit xl:h-40 gap-2  p-2  rounded text-  text-left ">
+      <div className="flex flex-col items-center justify-between absolute -bottom-20 md:bottom-10 lg:bottom-5  left-1/2 transform -translate-x-1/2 w-[90vw] lg:w-[50vw] h-fit xl:h-30 gap-2  p-2  rounded text-  text-left ">
          <h1 className="font-bold text-xl md:text-3xl lg:text-4xl xl:text-4xl text-white text-center">
           Plan Your Wedding With Aarambhs
         </h1>
-        <p className=" text-semibold text-[rgb(255,255,255)] text-center font-semibold text-sm lg:text-lg   ">
-          Find the best vendor and destination with the millions of trusted
-          reviews
-        </p>
+        <div className="flex flex-col  md:flex-row items-center justify-between w-[80%] lg:w-[90%] h-12 bg-[rgb(255,255,255)] rounded gap-2 lg:gap-0 divide-y divide-gray-300  lg:divide-x ">
 
 
-
-        <div className="flex flex-col  md:flex-row items-center justify-between w-[80%] lg:w-[70%] h-fit bg-white rounded gap-2 lg:gap-0 divide-y divide-gray-300  lg:divide-x ">
-
-
-          <div className=" flex items-center justify-center w-full md:w-2/5  ">
+          <div className=" flex items-center justify-center w-full md:w-2/5 h-full ">
            
             <FormControl sx={{ minWidth: 120, width: "100%" }}>
               <Select
@@ -74,7 +67,7 @@ const HeroSection = () => {
             </FormControl>
           </div>
 
-          <div className=" flex items-center justify-center w-full md:w-2/5   ">
+          <div className=" flex items-center justify-center w-full h-full md:w-2/5   ">
             <FormControl sx={{ minWidth: 120, width: "100%" }}>
               <Select
                 value={city}
@@ -133,7 +126,7 @@ const HeroSection = () => {
                 boxShadow:"none",
                 height: "100%",
                 borderRadius:0,
-                background: "linear-gradient(45deg, #690B22, #E63946)"
+                background:" linear-gradient(135deg, #FA812F, rgb(98,110,118))"
 
               }}
             >

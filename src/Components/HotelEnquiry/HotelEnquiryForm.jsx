@@ -37,7 +37,7 @@ const HotelEnquiryForm = () => {
     </div>
 
     <h1 className=" w-full text-left font-semibold text-md text-gray-600">
-      Hi, Venue Name{" "}
+      Hi, Sanjay Marriage Home
     </h1>
     <div className=" flex flex-col items-start w-full justify-start  text-left gap-6">
       <div className=" flex flex-col md:flex-row w-full gap-5  ">
@@ -46,14 +46,14 @@ const HotelEnquiryForm = () => {
           placeholder="Fullname *"
           variant="standard"
           required
-          InputProps={{ disableUnderline: false }}
+          disableUnderline
           sx={{
             input: {
               fontSize: "15px",
               paddingY: "8px",
               "::placeholder": {
                 fontSize: "14px",
-                color: "#999",
+                color: "black",
               },
             },
           }}
@@ -63,14 +63,14 @@ const HotelEnquiryForm = () => {
           placeholder="Contact *  "
           variant="standard"
           required
-          InputProps={{ disableUnderline: false }}
+          disableUnderline
           sx={{
             input: {
               fontSize: "15px",
               paddingY: "8px",
               "::placeholder": {
                 fontSize: "14px",
-                color: "#999",
+                color: "black",
               },
             },
           }}
@@ -82,20 +82,20 @@ const HotelEnquiryForm = () => {
           placeholder="Email Address *"
           variant="standard"
           required
-          InputProps={{ disableUnderline: false }}
+          disableUnderline
           sx={{
             input: {
               fontSize: "15px",
               paddingY: "8px",
               "::placeholder": {
                 fontSize: "14px",
-                color: "#999",
+                color: "black",
               },
             },
           }}
         />
 
-        <div className="flex w-1/2"  >
+        <div className="flex w-full lg:w-1/2"  >
           <DatePicker
 
             selected={selectedDate}
@@ -116,14 +116,14 @@ const HotelEnquiryForm = () => {
           placeholder="Full details about function *"
           variant="standard"
           required
-          InputProps={{ disableUnderline: false }}
+          disableUnderline
           sx={{
             input: {
               fontSize: "15px",
               paddingY: "8px",
               "::placeholder": {
                 fontSize: "14px",
-                color: "#999",
+                color: "black",
               },
             },
           }}
@@ -232,7 +232,7 @@ const HotelEnquiryForm = () => {
       </div>
 
       <div className=" flex w-full  items-center  justify-start  gap-10 ">
-        <p className="font-semibold text-md text-gray-600">
+        <p className="font-semibold text-nowrap text-md text-gray-600">
           Notify me on Whatsapp
         </p>
         <Switch {...label} defaultChecked />
@@ -247,12 +247,13 @@ const HotelEnquiryForm = () => {
         sx={{
           backgroundColor: "#e53935",
           color: "#fff",
-          fontWeight: 500,
+          fontWeight: 700,
           fontSize: "15px",
           paddingY: "10px",
+
         }}
       >
-        Send Message
+        Make Enquiry
       </Button>
     </div>
   </div>

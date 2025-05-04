@@ -18,10 +18,10 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import RatingComponent from "../../Components/Rating&Review/RatingComponent";
 import ReviewComponent from "../../Components/Rating&Review/ReviewComponent";
 import HotelCard from "./HotelCard";
-import TopDestinations from "./TrendingCities";
 import TrendingCities from "./TrendingCities";
 import ReviewCard from "./ReviewCard";
-import CheckIcon from "@mui/icons-material/Check";
+import HotelEnquiryForm from "../../Components/HotelEnquiry/HotelEnquiryForm";
+
 
 const VenueDetails = () => {
   const items = [
@@ -193,222 +193,7 @@ const VenueDetails = () => {
         </div>
       </div>
 
-      {/* <div className=" grid w-full grid-cols-1 lg:grid-cols-2 h-fit  gap-2 ">
-        <div className="flex flex-col items-start justify-between gap-3 h-fit  w-full ">
-
-          <div className="flex flex-col w-full h-fit rounded relative ">
-            <div className="w-full h-fit bg-[rgb(255,255,255)] rounded">
-              <div style={{ maxWidth: "100%", margin: "auto" }}>
-                <AliceCarousel
-                  items={items}
-                  autoPlay={items.length > 1}
-                  infinite
-                  animationDuration={3000}
-                  disableDotsControls={true}
-                  disableButtonsControls={true}
-                />
-               </div>
-            </div>
-
-            <div className="flex flex-col items-start justify-between bg-[rgb(255,255,255)] w-full  h-60  rounded  shadow-md max-md:mt-3 ">
-              <div className=" flex  items-start justify-between w-full h-fit py-2 px-2 md:px-4 ">
-                <h1 className="flex w-full text-[18px] lg:text-[18px] text-left  font-semibold text-slate-800 ">
-                  Sanjay Marriage Garden
-                </h1>
-                <div className="flex items-center justify-center px-2 py-1 bg-[rgb(91,168,41)] rounded text-white font-semibold text-[12px] sm:text-[14px] md:text-[16px]">
-                  <StarIcon
-                    className="mr-1"
-                    sx={{
-                      fontSize: {
-                        xs: "14px",
-                        sm: "16px",
-                        md: "18px",
-                        lg: "20px",
-                      },
-                    }}
-                  />
-                  5.0
-                </div>
-              </div>
-              <div className=" flex  items-center justify-between w-full  h-fit py-2 px-2 md:px-4 ">
-                <p className=" text-[12px] md:text-[14px] lg:text-[16px] text-gray-600  ">
-                  ( Formly known for its better decoration )
-                </p>
-                <p className="text-gray-500 font-semibold text-right w-fit  text-[12px] sm:text-[13px] md:text-[14px] lg:text-[16px]   ">
-                  20 Reviews
-                </p>
-              </div>
-              <div className=" flex flex-col items-start justify-between w-full h-fit py-2 pb-4 px-2 md:px-4 gap-5 ">
-                <p className=" text-[12px] md:text-[14px] lg:text-[16px] text-gray-600 text-left ">
-                  <span>
-                    <LocationOnIcon
-                      sx={{
-                        color: "#FF512F",
-                        fontSize: " 18px ",
-                        marginRight: "3px",
-                      }}
-                    />
-                  </span>{" "}
-                  <span>Near Bhanwan Takies, Agra, Uttar Pradesh, 282116</span>
-                </p>
-                <p className=" text-blue-500 font-semibold  text-[12px] md:text-[14px] lg:text-[16px] cursor-pointer">
-                  <PhoneIcon sx={{ fontSize: " 18px ", marginRight: "3px" }} />{" "}
-                  Contact
-                </p>
-              </div>
-
-              <div className=" w-full h-[25%] grid grid-cols-3 items-center justify-between divide-x-2 divide-gray-400 ">
-                <div className="flex items-center bg-[rgb(238,238,238)] h-full   text-slate-700 text-sm sm:text-md font-semibold  justify-center  ">
-                  <ImageIcon fontSize="small" />
-                  <span className="ml-2  text-nowrap  text-[12px]  md:text-[12px] lg:text-[14px] ">
-                    View Photos
-                  </span>
-                </div>
-                <div className="flex items-center bg-[rgb(238,238,238)] h-full   text-slate-700  text-sm sm:text-md font-semibold justify-center ">
-                  <Share fontSize="small" />
-                  <span className="ml-2 text-nowrap text-[12px]  md:text-[12px] lg:text-[14px]  ">
-                    Share
-                  </span>
-                </div>
-                <div className="flex items-center bg-[rgb(238,238,238)] h-full   text-slate-700   text-sm sm:text-md font-semibold justify-center  ">
-                  <RateReview fontSize="small" />
-                  <span className="ml-2  text-nowrap text-[12px]  md:text-[12px] lg:text-[14px] ">
-                    Write Review
-                  </span>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-
-          <div className="w-full max-md:p-2 p-4  rounded shadow-lg bg-white  ">
-            <h2 className="text-lg text-left w-full border-b pb-2 text-slate-800 font-semibold mb-4 ">
-              Areas Available ({areas.length})
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {visibleAreas.map((area, index) => (
-                <div key={index} className="flex gap-5 items-start  ">
-                  <div className="text-gray-500">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M3 12l2-2m0 0l7-7 7 7m-9 2v6h4v-6m5 4v6h3a2 2 0 002-2v-5a2 2 0 00-2-2h-3.5"
-                      />
-                    </svg>
-                  </div>
-
-                  <div className="w-full flex flex-col text-start ">
-                    <p className="text-sm font-semibold">{area.seating}</p>
-                    <p className="text-gray-500 text-xs">{area.type}</p>
-                    <p className="text-gray-700 text-sm">{area.name}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="block md:hidden mt-4 text-center">
-              {!showMore && areas.length > 4 && (
-                <button
-                  onClick={() => setShowMore(true)}
-                  className="text-red-500 font-medium text-sm"
-                >
-                  Show More
-                </button>
-              )}
-            </div>
-          </div>
-
-        </div>
-
-        <div className=" flex flex-col justify-between items-center w-full h-full gap-1 lg:gap-3 ">
-          <div className=" flex flex-col w-full rounded bg-white h-fit divide-y divide-gray-300 border border-gray-200   ">
-            <div className="  flex items-center justify-between w-full px-2 lg:px-5 py-3 text-lg font-semibold text-slate-600 ">
-              <p className="  text-[15px] lg:text-[18px] "> Price Details</p>
-              <p
-                className="  text-[13px] lg:text-[16px] border px-1 rounded text-[#FF512F]  cursor-pointer"
-                onClick={handlePriceDivExpend}
-              >
-                View {open ? "Less" : "More"}
-                {open ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
-              </p>
-            </div>
-
-            {open && (
-              <div className="  flex flex-col md:flex-row items-start md:items-center justify-between w-full px-5 py-2 text-lg font-semibold text-slate-600 bg-[rgb(255,255,255)] h-fit gap-5 ">
-                {packagePlan.map((d, i) => (
-                  <div
-                    key={i}
-                    className=" w-1/2 flex flex-col  items-start  justify-center gap-2 h-full "
-                  >
-                    <h1 className="text-[14px] lg:text-[16px]  text-slate-700 ">
-                      {d.package}
-                    </h1>
-                    <p className="text-[12px] lg:text-[14px]  text-slate-500 ">
-                      {d.include}{" "}
-                    </p>
-                    <p className="text-[12px] lg:text-[14px]  text-[rgba(239,76,149,0.8)] ">
-                      {d.price} Per Day
-                    </p>
-                  </div>
-                ))}
-              </div>
-            )}
-            {priceDetails.map((data, i) => (
-              <div
-                key={i}
-                className="  flex  items-center justify-between  w-full px-2 lg:px-5 py-3  "
-              >
-                <p className=" text-md text-[#FF512F] font-semibold">
-                  ₹ {data.price}{" "}
-                  <span className=" text-[12px] md:text-[15px] text-[#FF512F]">
-                    per plate
-                  </span>
-                  <span className=" text-[12px] md:text-[15px] text-slate-400 ml-2">
-                    ( taxes extra )
-                  </span>
-                </p>
-                <p className=" font-semibold text-[12px] md:text-[15px] text-slate-500 ">
-                  {data.type}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className=" flex flex-col w-full rounded bg-[#ecfaf9] shadow-md h-fit divide-y divide-gray-300 border border-gray-100  text-left ">
-            <div className="  flex w-full px-2 lg:px-5 py-2 lg:py-3 text-md font-semibold text-slate-600 ">
-              Destination Package
-            </div>
-            <div className="  flex  items-center justify-between  w-full  px-2 lg:px-5 py-3  ">
-              <p className=" text-md lg:text-xl text-[#FF512F] font-semibold">
-                ₹ 45 Lakh
-              </p>
-              <div className=" flex flex-col items-start justify-between h-full ">
-                <p className=" text-[12px] md:text-[15px] font-semibold text-slate-600  ">
-                  /day for 30 rooms
-                </p>
-                <p className="text-[12px] md:text-[15px] text-slate-500 ">
-                  ( Incl. rooms + 3 Meals + Venue )
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <HotelEnquiryForm />
-
-        </div>
-
-
-      </div>  */}
-
+      
       {/*  hightslights start here.................... */}
 
       <div className=" grid w-full items-start grid-cols-1 lg:grid-cols-[70%_30%] h-fit gap-2  min-h-40">
@@ -490,7 +275,7 @@ const VenueDetails = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {visibleAreas.map((area, index) => (
                 <div key={index} className="flex gap-5 items-start  ">
-                  <div className="text-gray-500">
+                  <div className="text-gray-600">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -507,10 +292,10 @@ const VenueDetails = () => {
                   </div>
 
                   <div className="w-full flex flex-col text-start ">
-                    <p className="text-sm font-semibold text-slate-500">
+                    <p className="text-sm font-semibold text-slate-700">
                       {area.seating}
                     </p>
-                    <p className="text-gray-500 text-xs">{area.type}</p>
+                    <p className="text-gray-600 text-sm">{area.type}</p>
                     <p className="text-gray-600 text-sm">{area.name}</p>
                   </div>
                 </div>
@@ -548,10 +333,10 @@ const VenueDetails = () => {
                     key={i}
                     className=" w-1/2 flex flex-col  items-start  justify-center gap-2 h-full "
                   >
-                    <h1 className="text-[14px] lg:text-[16px]  text-slate-700 ">
+                    <h1 className="text-[14px] lg:text-[16px]  text-slate-800 ">
                       {d.package}
                     </h1>
-                    <p className="text-[12px] lg:text-[12px]  text-slate-500 ">
+                    <p className="text-[12px] lg:text-[12px]  text-slate-600 ">
                       {d.include}{" "}
                     </p>
                     <p className="text-[12px] lg:text-[12px]  text-[#FF512F] ">
@@ -571,7 +356,7 @@ const VenueDetails = () => {
                   <span className=" text-[12px] md:text-[15px] text-[#FF512F]">
                     per plate
                   </span>
-                  <span className=" text-[12px] md:text-[15px] text-slate-400 ml-2">
+                  <span className=" text-[12px] md:text-[15px] text-slate-600 ml-2">
                     ( taxes extra )
                   </span>
                 </p>
@@ -583,7 +368,7 @@ const VenueDetails = () => {
           </div>
 
           <div className=" flex flex-col items-start justify-start gap-3 p-2 lg:p-5 shadow w-full border border-gray-300 rounded">
-            <h1 className=" text-slate-600 font-semibold  text-[15px] lg:text-[18px]">
+            <h1 className=" text-slate-800 font-semibold  text-[15px] lg:text-[18px]">
               Highlights
             </h1>
             <ul className=" flex max-md:flex-col flex-row items-start w-full  justify-start gap-3 ">
@@ -593,7 +378,7 @@ const VenueDetails = () => {
                   className="flex max-md:flex-row flex-col gap-2 md:gap-3"
                 >
                   <div>{data.icon} </div>
-                  <p className=" text-sm text-slate-400 font-semibold">
+                  <p className=" text-sm text-slate-600 font-semibold">
                     {data.text}
                   </p>
                 </li>
@@ -602,7 +387,7 @@ const VenueDetails = () => {
           </div>
 
           <div className=" flex flex-col items-start justify-start gap-3 py-3 px-2 lg:px-5 shadow w-full border border-gray-300 rounded">
-            <h1 className=" w-full border-b pb-2 text-left text-slate-600 font-semibold text-lg">
+            <h1 className=" w-full border-b pb-2 text-left text-slate-800 font-semibold text-lg">
               Space & Rooms
             </h1>
 
@@ -610,12 +395,12 @@ const VenueDetails = () => {
               <h1>Apartment/Flat</h1>
               <div className=" flex max-md:flex-col flex-row items-start justify-start gap-5 ">
                 <div className=" flex flex-col items-start justify-start gap-3 ">
-                  <p className=" text-sm text-slate-600">
+                  <p className=" text-sm text-slate-700">
                     Max 3 guests | 1 bed
                   </p>
                   <div className=" flex flex-col items-start  justify-between border w-50 border-gray-300 p-2 gap-2 rounded-md ">
                     <h2 className=" text-slate-700 text-base">Bedroom 1</h2>
-                    <p className=" text-sm text-slate-500">1 double bed</p>
+                    <p className=" text-sm text-slate-700">1 double bed</p>
                     <div>
                       <BedIcon />
                     </div>
@@ -728,6 +513,13 @@ const VenueDetails = () => {
               </ul>
             </div>
           </div>
+          
+          <div className=" flex flex-co  w-full h-fit divide-y divide-gray-300  border border-gray-300 rounded gap-2" >
+              <HotelEnquiryForm/>
+          </div>
+          
+
+
         </div>
       </div>
 
