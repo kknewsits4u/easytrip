@@ -155,8 +155,8 @@ const VenueDetails = () => {
   // confiration for world famous destionations .......................................
 
   return (
-    <div className="flex flex-col items-center justify-start w-full h-full min-h-[100vh] gap-3 px-1 md:px-5 py-1 lg:pt-5 max-w-[1280px]">
-      <div className="flex max-md:flex-col flex-row w-full min-h-50 h-fit  md:gap-3 max-md:border-b border-gray-300  ">
+    <div className="flex flex-col items-center justify-start w-full h-full min-h-[100vh] gap-2 px-1 md:px-5 py-1 lg:pt-5 max-w-[1280px]">
+      <div className="flex max-md:flex-col flex-row w-full min-h-50 h-fit  md:gap-3   ">
         <div className=" flex items-center justify-center h-[250px] sm:h-[280px]  md:h-[330px]  max-md:w-full w-2/5 rounded-md hover:shadow-md ">
           <img
             src="https://image.wedmegood.com/resized/1000X/uploads/member/1349488/1730125126_image6606.jpg?crop=0,600,2048,1151"
@@ -177,12 +177,12 @@ const VenueDetails = () => {
             ))}
           </div>
 
-          <div className="max-md:flex hidden min-w-full w-fit h-fit py-2 gap-3  overflow-x-scroll scrollbar-hide ">
+          <div className="max-md:flex hidden min-w-full w-fit h-fit py-2 gap-3  overflow-x-scroll scrollbar-hide bg-slate-200">
             <div className=" flex w-fit h-fit gap-3">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((d, idx) => (
                 <div className="flex items-center justify-center w-25 h-25 rounded-md border border-gray-300 ">
                   <img
-                    src="https://image.wedmegood.com/resized/1000X/uploads/member/1349488/1730125126_image6606.jpg?crop=0,600,2048,1151"
+                    src="https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg"
                     alt="hotelImage"
                     className=" h-full w-full object-cover object-center rounded-md"
                   />
@@ -413,7 +413,7 @@ const VenueDetails = () => {
 
       <div className=" grid w-full items-start grid-cols-1 lg:grid-cols-[70%_30%] h-fit gap-2  min-h-40">
         <div className=" flex  items-start justify-center flex-col gap-3  ">
-          <div className="flex flex-col items-start justify-between bg-[rgb(255,255,255)] w-full  h-60  rounded  border border-gray-200 max-md:mt-3">
+          <div className="flex flex-col items-start justify-between bg-[rgb(255,255,255)] w-full h-60  rounded  border border-gray-200 ">
             <div className=" flex  items-start justify-between w-full h-fit py-2 px-2 md:px-4 ">
               <h1 className="flex w-full text-[18px] lg:text-[18px] text-left  font-semibold text-slate-800 ">
                 Sanjay Marriage Garden
