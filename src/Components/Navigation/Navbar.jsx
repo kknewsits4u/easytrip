@@ -39,9 +39,9 @@ const Navbar = () => {
   return (
     <>
       <UpperHeader />
-     
+      {/* rgb(98,110,118) */}
       <div className=" flex w-full px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
-               shadow-md bg-[rgb(98,110,118)] "  >
+               shadow-md bg-[rgb(127,137,144)] "  >
         <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
