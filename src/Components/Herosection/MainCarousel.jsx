@@ -25,6 +25,7 @@ const MainCarousel = () => {
           <div key={index} className="w-screen h-screen">
             <img
               src={item.image}
+              loading="lazy"
               className="w-full h-full object-cover object-center"
               alt="carousel"
             />

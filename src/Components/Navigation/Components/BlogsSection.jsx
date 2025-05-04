@@ -18,7 +18,7 @@ const BlogsSection = () => {
               key={idx}
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md"
             >
-              <h1 className="text-[#FF512F] font-bold ">
+              <h1 className="text-[#FA812F] font-bold ">
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
@@ -34,7 +34,7 @@ const BlogsSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold "
+                className="text-[#FA812F] font-bold "
                 style={{ fontSize: "16px" }}
               >
                 {data.category}
@@ -52,7 +52,7 @@ const BlogsSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold"
+                className="text-[#FA812F] font-bold"
                 style={{ fontSize: "16px" }}
               >
                 {data.category}
@@ -64,7 +64,7 @@ const BlogsSection = () => {
           ))}
         </div>
         <div className=" w-1/4 flex flex-col h-fit gap-3   px-2 ">
-          <h1 className="text-[#FF512F] font-bold text-left">
+          <h1 className="text-[#FA812F] font-bold text-left">
             Top Blogs
           </h1>
           <div className=" w-full flex flex-col h-fit items-center justify-between gap-2 ">

@@ -17,11 +17,11 @@ const RealWeddingSection = () => {
               key={idx}
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md"
             >
-              <h1 className="text-[#FF512F] font-bold ">
+              <h1 className="text-[#FA812F] font-bold ">
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
-                <p key={index} className="text-gray-600 ">{d.type}</p>
+                <a href={`real-wedding/${d.type}`}  > <p key={index} className="text-gray-600 hover:text-[#FA812F] ">{d.type}</p> </a>
               ))}
             </div>
           ))}
@@ -33,13 +33,13 @@ const RealWeddingSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold "
+                className="text-[#FA812F] font-bold "
                 style={{ fontSize: "16px" }}
               >
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
-                <p key={index} className="text-gray-600 ">{d.type}</p>
+                <a href={`real-wedding/${d.type}`}  > <p key={index} className="text-gray-600 hover:text-[#FA812F]">{d.type}</p> </a>
               ))}
             </div>
           ))}
@@ -51,19 +51,19 @@ const RealWeddingSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold"
+                className="text-[#FA812F] font-bold"
                 style={{ fontSize: "16px" }}
               >
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
-                <p key={index} className="text-gray-600 ">{d.type}</p>
+                <a href={`real-wedding/${d.type}`}  > <p key={index} className="text-gray-600 hover:text-[#FA812F]">{d.type}</p> </a>
               ))}
             </div>
           ))}
         </div>
         <div className=" w-1/4 flex flex-col h-fit gap-3">
-          <h1 className="text-[#FF512F] font-bold text-left">
+          <h1 className="text-[#FA812F] font-bold text-left">
             Latest Real Wedding
           </h1>
           <div className=" w-full flex flex-col h-fit items-center justify-between gap-2 ">

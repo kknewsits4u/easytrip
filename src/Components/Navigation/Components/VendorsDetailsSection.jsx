@@ -1,9 +1,7 @@
-import React from 'react'
-import { vendorsData } from '../../Store/DataStore'
+import React from "react";
+import { vendorsData } from "../../Store/DataStore";
 
 const VendorsDetailsSection = () => {
-
-
   return (
     <div
       className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-14 left-0
@@ -19,13 +17,12 @@ const VendorsDetailsSection = () => {
               key={idx}
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-1 text-md"
             >
-              <h1 className="text-[#FF512F] font-bold ">
-                {data.category}
-              </h1>
+              <h1 className="text-[#FA812F] font-semibold">{data.category}</h1>
               {data.p.map((d, index) => (
-                <p key={index} className="text-gray-600 ">
-                  {d.type}
-                </p>
+                <a href={`vendor/${d.type}`} ><p key={index} className="text-gray-600 text-light hover:text-[#FA812F] ">
+                {d.type}
+              </p></a>
+              
               ))}
             </div>
           ))}
@@ -37,13 +34,15 @@ const VendorsDetailsSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold "
+                className="text-[#FA812F] font-semibold "
                 style={{ fontSize: "16px" }}
               >
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
-                <p key={index} className="text-gray-600 ">{d.type}</p>
+                <a href={`vendor/${d.type}`} ><p key={index} className="text-gray-600 text-light hover:text-[#FA812F] ">
+                {d.type}
+              </p></a>
               ))}
             </div>
           ))}
@@ -55,20 +54,22 @@ const VendorsDetailsSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold"
+                className="text-[#FA812F] font-semibold"
                 style={{ fontSize: "16px" }}
               >
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
-                <p key={index} className="text-gray-600 ">{d.type}</p>
+                <a href={`vendor/${d.type}`} ><p key={index} className="text-gray-600 text-light hover:text-[#FA812F]">
+                {d.type}
+              </p></a>
               ))}
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default VendorsDetailsSection
+export default VendorsDetailsSection;

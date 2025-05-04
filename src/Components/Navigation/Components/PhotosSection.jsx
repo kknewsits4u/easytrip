@@ -17,7 +17,7 @@ const PhotosSection = () => {
               key={idx}
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-1 text-md"
             >
-              <h1 className="text-[#FF512F] font-bold ">
+              <h1 className="text-[#FA812F] font-bold ">
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
@@ -33,7 +33,7 @@ const PhotosSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold "
+                className="text-[#FA812F] font-bold "
                 style={{ fontSize: "16px" }}
               >
                 {data.category}
@@ -51,7 +51,7 @@ const PhotosSection = () => {
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
               <h1
-                className="text-[#FF512F] font-bold"
+                className="text-[#FA812F] font-bold"
                 style={{ fontSize: "16px" }}
               >
                 {data.category}

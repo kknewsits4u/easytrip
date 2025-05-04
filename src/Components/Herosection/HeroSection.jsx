@@ -26,11 +26,11 @@ const HeroSection = () => {
 
       <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent"></div>
 
-      <div className="flex flex-col items-center justify-between absolute -bottom-20 md:bottom-10 lg:bottom-5  left-1/2 transform -translate-x-1/2 w-[90vw] lg:w-[50vw] h-fit xl:h-30 gap-2  p-2  rounded text-  text-left ">
-         <h1 className="font-bold text-xl md:text-3xl lg:text-4xl xl:text-4xl text-white text-center">
+      <div className="flex flex-col items-center justify-between absolute -bottom-20 md:bottom-10 lg:bottom-5  left-1/2 transform -translate-x-1/2 w-[90vw] lg:w-[50vw] h-fit xl:h-30 gap-2 p-2  rounded text-  text-left  ">
+         <h1 className="font-bold text-lg md:text-3xl lg:text-4xl xl:text-4xl text-white text-center">
           Plan Your Wedding With Aarambhs
         </h1>
-        <div className="flex flex-col  md:flex-row items-center justify-between w-[80%] lg:w-[90%] h-12 bg-[rgb(255,255,255)] rounded gap-2 lg:gap-0 divide-y divide-gray-300  lg:divide-x ">
+        <div className="flex flex-col  md:flex-row items-center justify-between w-full lg:w-[90%] h-fit md:h-12 bg-[rgb(255,255,255)] rounded gap-2 lg:gap-0 divide-y divide-gray-300  lg:divide-x ">
 
 
           <div className=" flex items-center justify-center w-full md:w-2/5 h-full ">

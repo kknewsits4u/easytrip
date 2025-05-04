@@ -17,20 +17,20 @@ const VenueListSection = () => {
               key={idx}
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 text-md text-left"
             >
-              <h1 className="text-[#FF512F] font-bold text-md">
+              <h1 className="text-[#FA812F] font-semibold  text-md">
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
-                <p
-                  key={index}
-                  className="text-gray-600 "
-                  style={{
-                    fontWeight:
-                      index === data.p.length - 1 ? "700" : "500",
-                  }}
-                >
-                  {d.type}
-                </p>
+              <a href={`venue/${d.type}`}  >   <p
+              key={index}
+              className="text-gray-600 hover:text-[#FA812F]"
+              style={{
+                fontWeight:
+                  index === data.p.length - 1 ? "700" : "500",
+              }}
+            >
+              {d.type}
+            </p></a>
               ))}
             </div>
           ))}
@@ -42,27 +42,23 @@ const VenueListSection = () => {
               key={idx}
               className="w-full flex flex-col  h-auto  items-start justify-start p-2 gap-2 "
             >
-              <h1 className="text-[#FF512F] font-bold text-md">
+              <h1 className="text-[#FA812F] font-semibold  text-md">
                 {data.category}
               </h1>
               {data.p.map((d, index) => (
-                <p
-                  key={index}
-                  className="text-gray-600 "
-                  style={{
-                    fontWeight:
-                      index === data.p.length - 1 ? "700" : "500",
-                  }}
-                >
-                  {d.type}
-                </p>
+               <a href={`vendor/${d.type}`} ><p
+               key={index}
+               className="text-gray-600 text-light hover:text-[#FA812F] "
+             >
+               {d.type}
+             </p></a>
               ))}
             </div>
           ))}
         </div>
 
         <div className=" w-1/2 flex flex-col h-fit gap-3 items-start">
-          <h1 className="text-[#FF512F] font-bold text-md ">
+          <h1 className="text-[#FA812F] font-semibold text-md ">
             Destination Wedding Venues
           </h1>
           <div className=" w-full grid grid-cols-3 items-center justify-center h-fit gap-5">

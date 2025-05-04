@@ -20,7 +20,7 @@ const UpperHeader = () => {
 
   return (
     
-     <div className="flex items-center justify-start h-fit px-2 2xl:px-10
+     <div className="max-md:hidden flex items-center justify-start h-fit px-2 2xl:px-10
              bg-[#FA812F] w-full z-50 p-1 gap-5"   >
             <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
               Plan your wedding with India's Largest Plateform

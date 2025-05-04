@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import { Button } from "@mui/material";
-
 import UpperHeader from "./Components/UpperHeader";
 import VendorsDetailsSection from "./Components/VendorsDetailsSection";
 import VenueListSection from "./Components/VenueListSection";
@@ -10,36 +9,37 @@ import RealWeddingSection from "./Components/RealWeddingSection";
 import BlogsSection from "./Components/BlogsSection";
 import PhotosSection from "./Components/PhotosSection";
 import SideDrawer from "./Components/SideDrawer";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import CloseIcon from '@mui/icons-material/Close';
+import SearchIcon from '@mui/icons-material/Search';
+import { citiesData, internationalCities } from "../Store/DataStore";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Navbar = () => {
 
-
   const [open, setOpen] = React.useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [citiesDivOpen, setCitiesDivOpen] = React.useState(false);
   const [showButtons, setShowButtons] = useState(false);
-
+  const [totalTopCities, setTotalTopCities] = useState(0) 
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 60);
-    };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const expendDiv = () =>{
+    setTotalTopCities(totalTopCities)
+  }
 
 
   return (
     <>
       <UpperHeader />
       {/* rgb(98,110,118) */}
-      <div className=" flex w-full px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
-               shadow-md bg-[rgb(127,137,144)] "  >
+      <div
+        className=" flex w-full px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
+               shadow-md bg-[rgb(127,137,144)] "
+      >
         <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
@@ -50,7 +50,7 @@ const Navbar = () => {
             />
           </div>
 
-          <h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
+           <h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
             Aarambhs
           </h1>
         </div>
@@ -67,45 +67,110 @@ const Navbar = () => {
 
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Vanues
-
               <VenueListSection />
-
             </li>
 
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Real Wedding
-
               <RealWeddingSection />
-
             </li>
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Blog
-
               <BlogsSection />
-
             </li>
 
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Photos
-
-
               <PhotosSection />
-
             </li>
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Corporate Meeting
-
-
               <PhotosSection />
-
             </li>
           </ul>
         </div>
+        <div  className=" max-md:flex hidden "   onClick={() => setCitiesDivOpen(!citiesDivOpen)}   >
+           <p className="text-white" >All Cities <span> <ArrowDropDownIcon/> </span>  </p>
+        </div>
+        {
+          citiesDivOpen && (
+            <div className=" w-full bg-white min-h-[100vh] h-fit absolute top-0 left-0 z-50" >
+              <div className="flex flex-col w-full items-center justify-center gap-5  h-30  bg-[#FA812F] px-5 ">
+                   <div className=" flex  w-full items-center justify-start " onClick={() => setCitiesDivOpen(!citiesDivOpen)} >
+                      <CloseIcon sx={{  color:"white" }}    />
+                      <p  className="text-white text-lg font-semibold ml-3" >Cities </p>
+                   </div>
+                   <div className=" flex  w-full items-center justify-start " >
+                      <div className="flex w-full border border-white p-2 rounded-full bg-white"  >
+                      <SearchIcon  sx={{ color:"#FA812F" }}  />   
+                     <input  type=" text" placeholder="Search Cities" className="focus:border-0 focus:outline-0 px-2 " />
+                        </div>       
+                   </div>
+                   
+              </div>
+               <div className="flex flex-col gap-5 w-full h-fit items-start justify-start divide-y divide-gray-300"  >
+
+               <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white p-5"  >
+                    <h1 className=" text-lg  text-[#FA812F]  font-semibold"  >Top Cities</h1>
+                    <div className=" grid grid-cols-2 w-full h-fit gap-3" >
+                    {
+                      citiesData.slice(1,15).map((data, idx)=> 
+                        <a href={`${data.cityName}`}  ><p  className="text-base w-full text-left hover:text-[#FA812F]" >{data.cityName}</p></a>
+                      )
+                    }
+                    </div>
+                    <p className=" text-base font-semibold cursor-pointer" >View All  <KeyboardArrowDownIcon/> </p>
+                </div>
+                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white p-5"  >
+                    <h1 className=" text-lg  text-[#FA812F]  font-semibold"  >Popular Cities </h1>
+                    <div className=" grid grid-cols-2 w-full h-fit gap-3" >
+                    {
+                      citiesData.slice(15,23).map((data, idx)=> 
+                        <a href={`${data.cityName}`} >
+                          <p key={idx} className="text-base w-full text-left " >{data.cityName}</p>
+                        </a>
+                        
+                      )
+                    }
+                    </div>
+                    <p className=" text-base font-semibold cursor-pointer" onClick={expendDiv}  >View All  <KeyboardArrowDownIcon/> </p>
+                </div>
+
+                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white p-5"  >
+                    <h1 className=" text-lg  text-[#FA812F]  font-semibold"  >Other Cities </h1>
+                    <div className=" grid grid-cols-2 w-full h-fit gap-3" >
+                    {
+                      citiesData.slice(23,35).map((data, idx)=> 
+                        <a href={`${data.cityName}`} >
+                      <p key={idx} className="text-base w-full text-left " >{data.cityName}</p>
+                    </a>
+                      )
+                    }
+                    </div>
+                    <p className=" text-base font-semibold cursor-pointer" onClick={expendDiv}  >View All  <KeyboardArrowDownIcon/> </p>
+                </div>
+                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white p-5"  >
+                    <h1 className=" text-lg  text-[#FA812F]  font-semibold"  >International Cities </h1>
+                    <div className=" grid grid-cols-2 w-full h-fit gap-3" >
+                    {
+                      internationalCities.slice(0,10).map((data, idx)=> 
+                        <a href={`${data.city}`} >
+                      <p key={idx} className="text-base w-full text-left " >{data.city}</p>
+                    </a>
+                      )
+                    }
+                    </div>
+                    <p className=" text-base font-semibold cursor-pointer" onClick={expendDiv}  >View All  <KeyboardArrowDownIcon/> </p>
+                </div>
 
 
+               </div>
+
+            </div>
+          )
+        }
 
         <div className="flex items-center justify-center gap-5 rounded">
-
           <div
             className="sm:hidden w-10 h-10 rounded-full cursor-pointer"
             onClick={() => setShowButtons(!showButtons)}
@@ -133,8 +198,8 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {(showButtons ) && (
-            <div className="absolute right-5 top-16 rounded flex flex-col bg-white border border-gray-300 h-30 w-40 p-3 gap-5" >
+          {showButtons && (
+            <div className="absolute right-5 top-16 rounded flex flex-col bg-white border border-gray-300 h-30 w-40 p-3 gap-5">
               <Button
                 variant="outlined"
                 className="btn-grad"
@@ -174,11 +239,7 @@ const Navbar = () => {
           }}
         >
           <SideDrawer />
-
-
         </Drawer>
-
-
       </div>
     </>
   );

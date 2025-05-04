@@ -870,3 +870,164 @@ export const MainCarouselData =[
   }
  
  ]
+
+
+ export const stateData = 
+ [
+  { "name": "Andhra Pradesh", "capital": "Amaravati", "code": "AP" },
+  { "name": "Arunachal Pradesh", "capital": "Itanagar", "code": "AR" },
+  { "name": "Assam", "capital": "Dispur", "code": "AS" },
+  { "name": "Bihar", "capital": "Patna", "code": "BR" },
+  { "name": "Chhattisgarh", "capital": "Raipur", "code": "CG" },
+  { "name": "Goa", "capital": "Panaji", "code": "GA" },
+  { "name": "Gujarat", "capital": "Gandhinagar", "code": "GJ" },
+  { "name": "Haryana", "capital": "Chandigarh", "code": "HR" },
+  { "name": "Himachal Pradesh", "capital": "Shimla", "code": "HP" },
+  { "name": "Jharkhand", "capital": "Ranchi", "code": "JH" },
+  { "name": "Karnataka", "capital": "Bengaluru", "code": "KA" },
+  { "name": "Kerala", "capital": "Thiruvananthapuram", "code": "KL" },
+  { "name": "Madhya Pradesh", "capital": "Bhopal", "code": "MP" },
+  { "name": "Maharashtra", "capital": "Mumbai", "code": "MH" },
+  { "name": "Manipur", "capital": "Imphal", "code": "MN" },
+  { "name": "Meghalaya", "capital": "Shillong", "code": "ML" },
+  { "name": "Mizoram", "capital": "Aizawl", "code": "MZ" },
+  { "name": "Nagaland", "capital": "Kohima", "code": "NL" },
+  { "name": "Odisha", "capital": "Bhubaneswar", "code": "OR" },
+  { "name": "Punjab", "capital": "Chandigarh", "code": "PB" },
+  { "name": "Rajasthan", "capital": "Jaipur", "code": "RJ" },
+  { "name": "Sikkim", "capital": "Gangtok", "code": "SK" },
+  { "name": "Tamil Nadu", "capital": "Chennai", "code": "TN" },
+  { "name": "Telangana", "capital": "Hyderabad", "code": "TS" },
+  { "name": "Tripura", "capital": "Agartala", "code": "TR" },
+  { "name": "Uttar Pradesh", "capital": "Lucknow", "code": "UP" },
+  { "name": "Uttarakhand", "capital": "Dehradun", "code": "UK" },
+  { "name": "West Bengal", "capital": "Kolkata", "code": "WB" }
+]
+
+export const countryData =
+[
+  {
+    "name": "Italy",
+    "capital": "Rome",
+    "code": "IT",
+    "why": "Romantic cities like Venice and scenic Tuscany make Italy ideal for weddings."
+  },
+  {
+    "name": "France",
+    "capital": "Paris",
+    "code": "FR",
+    "why": "The charm of Paris and countryside chateaux offer luxurious wedding venues."
+  },
+  {
+    "name": "Greece",
+    "capital": "Athens",
+    "code": "GR",
+    "why": "Santorini's iconic white and blue landscapes are a favorite for couples."
+  },
+  {
+    "name": "Thailand",
+    "capital": "Bangkok",
+    "code": "TH",
+    "why": "Beautiful beaches like Phuket and affordable luxury draw wedding crowds."
+  },
+  {
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "code": "MX",
+    "why": "Cancun and Riviera Maya offer beach resorts with vibrant culture."
+  },
+  {
+    "name": "India",
+    "capital": "New Delhi",
+    "code": "IN",
+    "why": "Royal palaces in Rajasthan and beach resorts in Goa are wedding hotspots."
+  },
+  {
+    "name": "Indonesia",
+    "capital": "Jakarta",
+    "code": "ID",
+    "why": "Bali’s tropical beauty and resorts make it perfect for a romantic ceremony."
+  },
+  {
+    "name": "United States",
+    "capital": "Washington, D.C.",
+    "code": "US",
+    "why": "Places like Hawaii, California vineyards, and Las Vegas offer diverse options."
+  },
+  {
+    "name": "Spain",
+    "capital": "Madrid",
+    "code": "ES",
+    "why": "Barcelona and Seville are rich in culture, architecture, and wedding venues."
+  },
+  {
+    "name": "Turkey",
+    "capital": "Ankara",
+    "code": "TR",
+    "why": "Bosphorus views and Ottoman architecture offer exotic wedding experiences."
+  }
+]
+
+export const internationalCities =
+[
+  {
+    "city": "Paris",
+    "country": "France",
+    "description": "The City of Love with iconic landmarks and romantic ambiance.",
+    "why": "Eiffel Tower backdrops, luxury venues, and timeless elegance."
+  },
+  {
+    "city": "Santorini",
+    "country": "Greece",
+    "description": "A stunning island known for white-washed buildings and blue domes.",
+    "why": "Incredible sunset views and cliffside wedding venues."
+  },
+  {
+    "city": "Venice",
+    "country": "Italy",
+    "description": "A city of canals, gondolas, and historic charm.",
+    "why": "Romantic waterside ceremonies and Renaissance architecture."
+  },
+  {
+    "city": "Bali",
+    "country": "Indonesia",
+    "description": "Tropical paradise with beaches, jungles, and resorts.",
+    "why": "Affordable luxury and breathtaking natural backdrops."
+  },
+  {
+    "city": "Cancun",
+    "country": "Mexico",
+    "description": "Beach city with all-inclusive resorts on the Caribbean coast.",
+    "why": "Oceanfront weddings and vibrant nightlife."
+  },
+  {
+    "city": "Jaipur",
+    "country": "India",
+    "description": "The Pink City with royal palaces and forts.",
+    "why": "Regal Indian weddings in heritage venues like palaces and havelis."
+  },
+  {
+    "city": "Lake Como",
+    "country": "Italy",
+    "description": "An upscale lakeside area surrounded by mountains.",
+    "why": "Luxury villas and cinematic landscapes."
+  },
+  {
+    "city": "Hawaii (Maui, Oahu)",
+    "country": "USA",
+    "description": "Islands with volcanoes, waterfalls, and beaches.",
+    "why": "Tropical paradise for laid-back, scenic weddings."
+  },
+  {
+    "city": "Dubai",
+    "country": "UAE",
+    "description": "Modern city with luxury hotels and desert landscapes.",
+    "why": "Lavish venues, year-round sun, and destination luxury."
+  },
+  {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "description": "Coastal city with mountains, vineyards, and beaches.",
+    "why": "Diverse scenery and unique wedding experiences."
+  }
+]
