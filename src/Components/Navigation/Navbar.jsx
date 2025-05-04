@@ -121,7 +121,7 @@ const Navbar = () => {
                     </div>
                     <p className=" text-base font-semibold cursor-pointer" >View All  <KeyboardArrowDownIcon/> </p>
                 </div>
-                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white p-5"  >
+                 <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white px-5 pb-5"  >
                     <h1 className=" text-lg  text-[#FA812F]  font-semibold"  >Popular Cities </h1>
                     <div className=" grid grid-cols-2 w-full h-fit gap-3" >
                     {
@@ -136,7 +136,7 @@ const Navbar = () => {
                     <p className=" text-base font-semibold cursor-pointer" onClick={expendDiv}  >View All  <KeyboardArrowDownIcon/> </p>
                 </div>
 
-                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white p-5"  >
+                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white px-5 pb-3"   >
                     <h1 className=" text-lg  text-[#FA812F]  font-semibold"  >Other Cities </h1>
                     <div className=" grid grid-cols-2 w-full h-fit gap-3" >
                     {
@@ -149,7 +149,7 @@ const Navbar = () => {
                     </div>
                     <p className=" text-base font-semibold cursor-pointer" onClick={expendDiv}  >View All  <KeyboardArrowDownIcon/> </p>
                 </div>
-                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white p-5"  >
+                <div className="flex flex-col w-full items-start justify-start gap-5 h-fit bg-white px-5 pb-5 "  >
                     <h1 className=" text-lg  text-[#FA812F]  font-semibold"  >International Cities </h1>
                     <div className=" grid grid-cols-2 w-full h-fit gap-3" >
                     {
