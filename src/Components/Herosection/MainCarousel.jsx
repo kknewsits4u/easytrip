@@ -5,12 +5,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const MainCarousel = () => {
+
+
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     fade: true,             
     speed: 4000,
     cssEase: "linear",
@@ -18,7 +20,7 @@ const MainCarousel = () => {
 
   return (
     <div className="w-full h-full overflow-hidden">
-      <Slider {...settings}>
+      <Slider {...settings}  >
         {MainCarouselData.map((item, index) => (
           <div key={index} className="w-screen h-screen">
             <img

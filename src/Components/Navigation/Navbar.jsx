@@ -34,8 +34,6 @@ const Navbar = () => {
   }, []);
 
 
-
-
   return (
     <>
       <UpperHeader />

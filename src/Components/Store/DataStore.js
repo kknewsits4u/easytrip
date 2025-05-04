@@ -854,20 +854,19 @@ export const venueDetails =
 export const MainCarouselData =[
 
   {
-   image:"https://media.istockphoto.com/id/1135107849/photo/family-welcoming-guests-or-in-namaste-namaskara-pose-while-looking-at-camera-in-celebration.jpg?s=2048x2048&w=is&k=20&c=L2M9_7sIsK0M_PkDaRUQmdaJG1Gea7t1SvnATPLBy0s=" ,
-   path:"/women/clothing/lenga_choli"
+   image:"/MainCarouselImaiges/mainCarousel1.jpg" ,
+   
   },
   {
-   image:  "https://www.shutterstock.com/shutterstock/photos/2553388629/display_1500/stock-photo--create-a-blog-post-for-the-perfume-brand-add-the-effects-of-indian-weddings-add-the-image-of-a-2553388629.jpg",
-   path:"/women/clothing/women_saree"
+    image:"/MainCarouselImaiges/mainCarousel2.jpg" ,
+
   },
   {
-   image:  "https://media.istockphoto.com/id/2148402012/photo/bride-entering-the-wedding-venue-beneath-the-phoolon-ki-chadar-along-with-the-family-members.jpg?s=2048x2048&w=is&k=20&c=l7BTag8-7MfSl2PDwMLcXH-JGe0wxJW1Q0kAkoceR_I=",
-   path:"/women/clothing/women_saree"
+    image:"/MainCarouselImaiges/mainCarousel3.jpg" ,
+
   },
   {
-   image: "https://media.istockphoto.com/id/2127645644/photo/family-and-friends-dance-with-bride-and-groom-during-their-haldi-ceremony.jpg?s=2048x2048&w=is&k=20&c=ac5sO4J5sWbrRsCDGGip5rjFun380PYjIHprv4e43No=" ,
-   path:"/women/clothing/women_dress"
+    image:"/MainCarouselImaiges/mainCarousel4.jpg" ,
   }
  
  ]
