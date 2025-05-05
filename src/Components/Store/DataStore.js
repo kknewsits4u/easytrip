@@ -570,6 +570,8 @@ export const popularSearch = [
   },
 ]
 
+
+
 export const businessData =
 [
   {
@@ -1024,3 +1026,29 @@ export const internationalCities =
     "why": "Diverse scenery and unique wedding experiences."
   }
 ]
+
+
+export const vendorCategory =
+[
+  { "type": "Photographers", "image": "https://i.pinimg.com/474x/eb/41/37/eb4137cb8762513a55c08541aedb6db0.jpg" },
+  { "type": "Bridal Makeup", "image": "https://i.pinimg.com/474x/b7/a5/a4/b7a5a4340d172ed6f8bc51a3aabfffdd.jpg" },
+  { "type": "Family Makeup", "image": "https://i.pinimg.com/736x/74/a7/91/74a791ee0a35ae5a63b5de1ac217b79d.jpg" },
+  { "type": "Wedding Pandits", "image": "https://i.pinimg.com/736x/e9/e5/5b/e9e55b06289f155b418628c08069438e.jpg" },
+  { "type": "Mehndi Artist", "image": "https://i.pinimg.com/474x/db/cd/6a/dbcd6a632b10ada57c6b0e86b74a541e.jpg" },
+  { "type": "Wedding Planner", "image": "https://i.pinimg.com/736x/3e/1c/58/3e1c580ca4c87e46cedc3834056188a3.jpg" },
+  { "type": "Decorators", "image": "https://i.pinimg.com/474x/c0/19/bf/c019bf4e97dfdd27b8e8db12b0857a48.jpg" },
+  { "type": "Djs", "image": "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg" },
+  { "type": "Sangeet CoreoGrapher", "image": "https://i.pinimg.com/736x/e9/73/4e/e9734ed4a5dac0d431e5f06fa9bac34c.jpg" },
+  { "type": "Wedding Entertainment", "image": "https://i.pinimg.com/736x/83/38/78/83387835aed15167531e48a9d170709c.jpg" },
+  { "type": "Jewellery", "image": "https://i.pinimg.com/736x/c9/c8/43/c9c843e7c007bdd3ee5181460aec2022.jpg"},
+  { "type": "Flower Jewellery", "image": "https://i.pinimg.com/736x/db/5d/71/db5d71b18f7cf4d08f6a2b6e020676de.jpg" },
+  { "type": "Bridal Jewellery on Rent", "image": "https://i.pinimg.com/736x/4e/7a/00/4e7a00738bd98a99c1e942f444f9f791.jpg" },
+  { "type": "Trousseau Packers", "image": "https://i.pinimg.com/736x/f7/fd/d4/f7fdd498450fa0d570edea7bae1a2ccd.jpg" },
+  { "type": "Invitaton Gifts", "image": "https://i.pinimg.com/736x/5e/5a/c2/5e5ac2eead5a9c950d0d6941b20a312c.jpg" },
+  { "type": "Mehndi Favors", "image": "https://i.pinimg.com/736x/fd/fb/1b/fdfb1b1c602a38625a7f4c44e3fcb1e2.jpg" },
+  { "type": "Catering Services", "image": "https://i.pinimg.com/474x/65/01/39/6501399a193855b2273e22f37264fe73.jpg" },  
+  { "type": "Cake", "image": "https://i.pinimg.com/736x/d6/1e/b6/d61eb6bd625e37fb1e15064e128b4923.jpg" },
+  { "type": "Chaat & Food Worker", "image": "https://i.pinimg.com/736x/8f/d8/5f/8fd85f67371718e40eef31028866d6d0.jpg" },
+  { "type": "Bartenders", "image": "https://i.pinimg.com/736x/a5/8d/b9/a58db9a4169624b25fb5bb7a362e7733.jpg" },
+]
+
