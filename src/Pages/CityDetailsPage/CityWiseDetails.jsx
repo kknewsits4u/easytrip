@@ -105,7 +105,7 @@ const CityWiseDetails = () => {
                        </div>
                        <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/40 to-transparent flex items-end justify-center rounded-md">
                        <div className=' flex items-start justify-center w-full h-15'  >
-                         <h1 className=' text-white font-semibold  max-md:text-base  max-lg:text-lg text-xl w-[80%] group-hover:text-2xl ' >{d.name} in {currentCity}</h1>
+                         <h1 className=' text-white font-semibold  max-md:text-base  max-lg:text-lg text-xl w-[80%] ' >{d.name} in {currentCity}</h1>
                          </div>
                        </div>
                    </div>
@@ -129,7 +129,7 @@ const CityWiseDetails = () => {
                        </div>
                        <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/40 to-transparent flex items-end justify-center rounded-md">
                          <div className=' flex items-start justify-center w-full h-15'  >
-                         <h1 className=' text-white font-semibold  max-md:text-base  max-lg:text-lg text-xl w-[80%] group-hover:text-2xl ' >{d.name} in {currentCity}</h1>
+                         <h1 className=' text-white font-semibold  max-md:text-base  max-lg:text-lg text-xl w-[80%]  ' >{d.name} in {currentCity}</h1>
                          </div>
                        </div>
                    </div>
