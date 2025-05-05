@@ -40,7 +40,7 @@ const Navbar = () => {
 
       <div
         className=" flex w-full px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
-               shadow-md bg-[rgb(127,137,144)] "
+               shadow-md max-md:bg-[#FA812F] bg-[rgb(127,137,144)]"
       >
         <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
           <div
@@ -64,7 +64,16 @@ const Navbar = () => {
           >
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Vendors
-              <VendorsDetailsSection />
+              <div
+                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-14 left-0
+                   opacity-0 translate-y-5 pointer-events-none
+                   group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                   transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
+                style={{ backgroundColor: "rgb(255,255,255)" }}
+              >
+                <VendorsDetailsSection />
+
+              </div>
             </li>
 
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
@@ -104,10 +113,8 @@ const Navbar = () => {
           </p>
         </div>
         {citiesDivOpen && (
-
-
           <div className=" w-full bg-white h-[100vh] fixed inset-0 top-0 left-0 z-50  overflow-y-auto ">
-          
+
             <div className="flex flex-col w-full items-center justify-center gap-5  h-30  bg-[#FA812F] px-5 ">
               <div
                 className=" flex  w-full items-center justify-start "
@@ -130,10 +137,8 @@ const Navbar = () => {
               </div>
             </div>
 
-            <CityData  searchQuery={searchQuery} />
+            <CityData searchQuery={searchQuery} />
           </div>
-
-
         )}
 
         <div className="flex items-center justify-center gap-5 rounded">
@@ -190,8 +195,8 @@ const Navbar = () => {
           onClose={toggleDrawer(false)}
           PaperProps={{
             sx: {
-              backgroundColor: "rgba(255, 255, 255,0.76)",
-              backdropFilter: "blur(20px)",
+              backgroundColor: "rgb(245,245,245)",
+              // backdropFilter: "blur(20px)",
               width: 250,
               height: "calc(100%)",
             },
@@ -204,8 +209,10 @@ const Navbar = () => {
             },
           }}
         >
-          <SideDrawer />
+          <SideDrawer handleCloseDrawer={() => setOpen(false)} />
+
         </Drawer>
+
       </div>
     </>
   );

@@ -9,6 +9,12 @@ import "react-datepicker/dist/react-datepicker.css";
 import VenueDetails from "./Pages/VenueDetailPage/VenueDeatils";
 import SearchPage from "./Pages/SearchPage";
 import CityWiseDetails from "./Pages/CityDetailsPage/CityWiseDetails";
+import AllBlogPage from "./Pages/BlogPage/AllBlogPage";
+import AllBanquet from "./Pages/BanquetHallPage/AllBanquet";
+import AllVendors from "./Pages/VendorsPage/AllVendors";
+import AllRealWedding from "./Pages/RealWeddingPage/AllRealWedding";
+import AllPhotos from "./Pages/PhotosPage/AllPhotos";
+import Co_operateMettingPage from "./Pages/Co_operatePage/Co_operateMettingPage";
 
 
 function App() {
@@ -23,9 +29,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/:city" element={<CityWiseDetails />} />
-            <Route path="/:city/:venues" element={<SearchPage />} />
-            <Route path="/:city/:venues/:id" element={<VenueDetails />} />
-
+            <Route path="/blogs" element={<AllBlogPage />} />
+            <Route path="/banquets" element={<AllBanquet />} />
+            <Route path="/vendors" element={<AllVendors />} />
+            <Route path="/real-weddings" element={<AllRealWedding />} />
+            <Route path="/photos" element={<AllPhotos />} />
+            <Route path="/co-oporate-meeting" element={<Co_operateMettingPage />} />
+            <Route path="/venues" element={<SearchPage />} />
+            <Route path="/venues/:id" element={<VenueDetails />} />
           </Routes>
           <Footer />
         </BrowserRouter>

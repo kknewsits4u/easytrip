@@ -1,20 +1,65 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { citiesData } from '../../Store/DataStore'
 import { Button, Select } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
+import { useNavigate } from 'react-router-dom';
 
 
-const SideDrawer = () => {
+const SideDrawer = ({handleCloseDrawer}) => {
 
   const [city, setCity] = React.useState("delhi");
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     setCity(event.target.value);
   };
 
+  const handleCitySearch = (city) => {
+      handleCloseDrawer()
+      if(city) navigate(`/${city}`);
+  }
+
+  const categoryList =[
+    {
+      name:"Venues",
+      value:"venues"
+    },
+    {
+      name:"Vendors",
+      value:"vendors"
+    },
+    {
+      name:"Banquet Halls",
+      value:"banquets"
+    },
+    {
+      name:"Real Wedding",
+      value:"real-weddings"
+    },
+    {
+      name:"Co-Oporate Meeting",
+      value:"co-oporate-meeting"
+    },
+    {
+      name:"Blogs",
+      value:"blogs"
+    },
+    {
+      name:"Photos",
+      value:"photos"
+    },
+  ]
+
+   const handleCategorySearch = (category) => {
+     handleCloseDrawer()
+     if(category) navigate(`/${category}`);
+   }
+
+
   return (
-    <div className=" flex flex-col w-full h-full items-center  justify-start">
+    <div className=" flex flex-col w-full h-full items-center divide-y-2 divide-gray-300   justify-start">
       <div className=" flex relative w-full h-40 mr-1">
         <img
           src="https://i.pinimg.com/736x/99/68/ba/9968ba222fe2b9123607529fda81c316.jpg"
@@ -35,7 +80,7 @@ const SideDrawer = () => {
         </div>
       </div>
       <div className="flex w-full items-center justify-between px-5">
-        <h1 className=" text-md  font-semibold ">City :</h1>
+        <h1 className=" text-md text-[#FA812F] font-semibold ">City :</h1>
         <div className=" flex items-center justify-center  ">
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Select
@@ -65,7 +110,7 @@ const SideDrawer = () => {
               }}
             >
               {citiesData?.map((data, i) => (
-                <MenuItem key={i} value={data.value}>
+                <MenuItem key={i} value={data.value}  onClick={()=> handleCitySearch(data.value)} >
                   {data.cityName}
                 </MenuItem>
               ))}
@@ -74,37 +119,25 @@ const SideDrawer = () => {
         </div>
       </div>
 
-      <div className=" flex w-full border-t-2 py-2 border-gray-500 h-fit ">
+      <div className=" flex w-full  py-2  h-fit ">
         <ul className=" flex flex-col w-full">
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
-            Venues
+          {
+            categoryList.map((data, idx)=>
+
+          <li key={idx} className="w-full hover:text-[#FA812F] hover:font-semibold  cursor-pointer hover:bg-[rgba(250,129,47,0.1)] px-5 p-2"  onClick={()=> handleCategorySearch(data.value)}    >
+            {data.name}  
           </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
-            Vendors
-          </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
-            Corporate Meeting
-          </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
-            Banquet Halls
-          </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
-            Real Wedding
-          </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
-            Blogs
-          </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
-            Photos
-          </li>
+           
+            )
+          }
         </ul>
       </div>
-      <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 ">
+      <div className=" flex w-full  h-fit py-2 ">
         <ul className=" flex flex-col w-full">
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
+          <li className="w-full hover:text-[#FA812F] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
             Deals
           </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2 relative">
+          <li className="w-full hover:text-[#FA812F] hover:font-semibold  cursor-pointer hover:bg-[rgba(250,129,47,0.1)] px-5 p-2 relative">
             Aarambh Assured
             <div className=" flex items-center justify-center px-3  rounded bg-orange-600 absolute top-1 right-3 text-white  text-sm">
               New
@@ -113,24 +146,31 @@ const SideDrawer = () => {
         </ul>
       </div>
 
-      <div className=" flex w-full border-t-2 border-gray-500 h-fit py-2 ">
+      <div className=" flex w-full  h-fit py-2 ">
         <ul className=" flex flex-col w-full">
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
+          <li className="w-full hover:text-[#FA812F] hover:font-semibold  cursor-pointer hover:bg-[rgba(250,129,47,0.1)] px-5 p-2">
             Testimonials
           </li>
-          <li className="w-full hover:text-[#780C28] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
+          <li className="w-full hover:text-[#FA812F] hover:font-semibold  cursor-pointer hover:bg-[rgba(250,129,47,0.1)] px-5 p-2">
             Why choose Aarambh
           </li>
         </ul>
       </div>
-      <div className=" flex items-center justify-center  w-full border-t-2 border-gray-500 h-fit px-5 py-2  ">
+      <div className="group flex items-center justify-center  w-full  h-fit px-5 py-2  ">
         <Button
           fullWidth
           variant="outlined "
           sx={{
-            border: "1px solid orange",
-            color: "orange",
+            border: "1px solid rgb(250,129,47)",
+            color: "rgb(250,129,47)",
             marginTop: "5px",
+            cursor:"pointer",
+            transition: "all 0.3s ease",
+            '&:hover': {
+              backgroundColor: 'rgb(250,129,47)',
+              color: 'white',
+              borderColor: 'rgb(250,129,47)',
+            },
           }}
         >
           List Your Business
