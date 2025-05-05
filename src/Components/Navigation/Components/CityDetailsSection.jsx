@@ -3,10 +3,6 @@ import { citiesData, countryData, stateData } from '../../Store/DataStore'
 
 const CityDetailsSection = () => {
 
-  
-
-
-
 
   return (
     <div
@@ -18,7 +14,7 @@ const CityDetailsSection = () => {
         placeholder="Search city, States"
         className=" border border-gray-300 w-full p-3 rounded  focus:outline-0 text-gray-600 text-md "
       />
-      <div className=" grid grid-cols-4 items-start justify-between  w-full h-full">
+      <div className=" grid grid-cols-1 lg:grid-cols-4 items-start justify-between  w-full h-full">
         <div className="px-3  h-full flex flex-col items-start justify-start gap-2 ">
           <h1 className="text-[#FA812F] font-semibold">
             Top Cities

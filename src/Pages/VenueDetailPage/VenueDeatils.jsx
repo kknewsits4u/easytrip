@@ -22,7 +22,6 @@ import TrendingCities from "./TrendingCities";
 import ReviewCard from "./ReviewCard";
 import HotelEnquiryForm from "../../Components/HotelEnquiry/HotelEnquiryForm";
 
-
 const VenueDetails = () => {
   const items = [
     <div
@@ -101,23 +100,29 @@ const VenueDetails = () => {
 
   const portfolioImages = [
     "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
-    "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
-    "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
-    "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
-    "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
-    "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
+    "https://i.pinimg.com/736x/3e/5b/19/3e5b1940ece06810717316a981d591ad.jpg",
+    "https://i.pinimg.com/736x/e6/30/db/e630db9e931df9ea09a6090cf5dbfa89.jpg",
+    "https://i.pinimg.com/736x/6d/0e/3a/6d0e3ac0335111f16761088900ba5849.jpg",
+    "https://i.pinimg.com/736x/21/fc/72/21fc727f5423dc5f76e5b2ff34ace72a.jpg",
+    "https://i.pinimg.com/736x/e6/30/db/e630db9e931df9ea09a6090cf5dbfa89.jpg",
+    "https://i.pinimg.com/736x/6d/0e/3a/6d0e3ac0335111f16761088900ba5849.jpg",
+    "https://i.pinimg.com/736x/7f/19/3b/7f193b23bfbf647cf5c9495d803daf26.jpg",
+    "https://i.pinimg.com/736x/3e/5b/19/3e5b1940ece06810717316a981d591ad.jpg",
+    "https://i.pinimg.com/736x/e6/30/db/e630db9e931df9ea09a6090cf5dbfa89.jpg",
+    "https://i.pinimg.com/736x/6d/0e/3a/6d0e3ac0335111f16761088900ba5849.jpg",
+    "https://i.pinimg.com/736x/21/fc/72/21fc727f5423dc5f76e5b2ff34ace72a.jpg",
   ];
 
   const photoImages = [
-    "https://i.pinimg.com/474x/09/67/11/09671103d8f4d5dbe819e4c50c7e1c1b.jpg",
-    "https://i.pinimg.com/474x/09/67/11/09671103d8f4d5dbe819e4c50c7e1c1b.jpg",
-    "https://i.pinimg.com/474x/09/67/11/09671103d8f4d5dbe819e4c50c7e1c1b.jpg",
-    "https://i.pinimg.com/474x/09/67/11/09671103d8f4d5dbe819e4c50c7e1c1b.jpg",
-    "https://i.pinimg.com/474x/09/67/11/09671103d8f4d5dbe819e4c50c7e1c1b.jpg",
+    "https://i.pinimg.com/736x/e5/9d/06/e59d06a864d98fb752875ba989cd73a4.jpg",
+    "https://i.pinimg.com/736x/65/01/f6/6501f68cf8e4449a7ecfed68ea0c73ce.jpg",
+    "https://i.pinimg.com/736x/56/fd/b3/56fdb3cf6f55ba339c33fd3033f919ff.jpg",
+    "https://i.pinimg.com/474x/b7/19/b5/b719b5c1c5eb21895452e3cb051c07de.jpg",
+    "https://i.pinimg.com/736x/9d/85/11/9d8511a1cc09d8e5c5b6c90d47472c81.jpg",
   ];
 
   const videoThumbnails = [
-    "https://i.pinimg.com/474x/09/67/11/09671103d8f4d5dbe819e4c50c7e1c1b.jpg",
+    "https://i.pinimg.com/736x/8e/44/5e/8e445e6e95285ec48c58800b760d8ade.jpg",
     "https://i.pinimg.com/474x/20/67/11/20671103d8f4d5dbe819e4c50c7e1c1b.jpg",
     "https://i.pinimg.com/474x/20/67/11/20671103d8f4d5dbe819e4c50c7e1c1b.jpg",
   ];
@@ -193,7 +198,6 @@ const VenueDetails = () => {
         </div>
       </div>
 
-      
       {/*  hightslights start here.................... */}
 
       <div className=" grid w-full items-start grid-cols-1 lg:grid-cols-[70%_30%] h-fit gap-2  min-h-40">
@@ -513,13 +517,10 @@ const VenueDetails = () => {
               </ul>
             </div>
           </div>
-          
-          <div className=" flex flex-co  w-full h-fit divide-y divide-gray-300  border border-gray-300 rounded gap-2" >
-              <HotelEnquiryForm/>
+
+          <div className=" flex flex-co  w-full h-fit divide-y divide-gray-300  border border-gray-300 rounded gap-2">
+            <HotelEnquiryForm />
           </div>
-          
-
-
         </div>
       </div>
 

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CityDetailsSection from './CityDetailsSection';
+import { useLocation, useParams } from 'react-router-dom';
+
 
 const UpperHeader = () => {
 
   const [showDiv, setShowDiv] = useState(false);
+  const [currentCity, setCurrentCity]= useState("All Cities")
 
   const handleClick = (e) => {
     const targetClass = e.target.className;
@@ -18,8 +21,17 @@ const UpperHeader = () => {
     return () => document.removeEventListener("click", handleClick);
   }, []);
 
+const location = useLocation();
+const city = location.pathname.split("/")[1];
+
+useEffect(() => {
+  if (city) {
+    setCurrentCity(city );
+  }
+}, [city]);
+
   return (
-    
+   
      <div className="max-md:hidden flex items-center justify-start h-fit px-2 2xl:px-10
              bg-[#FA812F] w-full z-50 p-1 gap-5"   >
             <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
@@ -34,16 +46,14 @@ const UpperHeader = () => {
               }}
             >
               <div className=" flex items-center justify-between w-50 h-8 p-2 font-semibold bg-[rgb(255,255,255)] rounded">
-                <p className=" opacity-70">All Cities </p>
+                <p className=" opacity-70">{currentCity}</p>
                 <ArrowDropDownIcon
                   sx={{ borderRadius: "10px", fontSize: "30px" }}
                 />
               </div>
     
-              {showDiv && (
-
-                <CityDetailsSection/>
-
+              {showDiv && (               
+                          <CityDetailsSection/> 
               )}
             </div>
           </div>

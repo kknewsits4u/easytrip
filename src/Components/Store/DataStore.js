@@ -342,10 +342,6 @@ export const RealWedding = [
       {
         type:"Telugu"
       },
-      
-      {
-        type:"More"
-      },
     ]      
   },
   {
@@ -369,10 +365,6 @@ export const RealWedding = [
       
       {
         type:"International"
-      },
-      
-      {
-        type:"Others"
       },
     ]      
   }
@@ -530,6 +522,8 @@ export const photoData = [
     ]      
   }
 ]
+
+
 export const vendorTypes = [
  { type:"Choose Vendor Type"},
   {type:"All Categories"},
@@ -706,7 +700,6 @@ export const blogData =
 export const photoCollection =[
   {
     image:"https://i.pinimg.com/474x/46/32/51/4632518a699adc66f04505f885f26d0d.jpg",
-  
   },
   {
     image:"https://i.pinimg.com/474x/89/91/33/899133fb2cd0b5579a5f3a45bf710baa.jpg",
@@ -971,61 +964,61 @@ export const countryData =
 export const internationalCities =
 [
   {
-    "city": "Paris",
+    "cityName": "Paris",
     "country": "France",
     "description": "The City of Love with iconic landmarks and romantic ambiance.",
     "why": "Eiffel Tower backdrops, luxury venues, and timeless elegance."
   },
   {
-    "city": "Santorini",
+    "cityName": "Santorini",
     "country": "Greece",
     "description": "A stunning island known for white-washed buildings and blue domes.",
     "why": "Incredible sunset views and cliffside wedding venues."
   },
   {
-    "city": "Venice",
+    "cityName": "Venice",
     "country": "Italy",
     "description": "A city of canals, gondolas, and historic charm.",
     "why": "Romantic waterside ceremonies and Renaissance architecture."
   },
   {
-    "city": "Bali",
+    "cityName": "Bali",
     "country": "Indonesia",
     "description": "Tropical paradise with beaches, jungles, and resorts.",
     "why": "Affordable luxury and breathtaking natural backdrops."
   },
   {
-    "city": "Cancun",
+    "cityName": "Cancun",
     "country": "Mexico",
     "description": "Beach city with all-inclusive resorts on the Caribbean coast.",
     "why": "Oceanfront weddings and vibrant nightlife."
   },
   {
-    "city": "Jaipur",
+    "cityName": "Jaipur",
     "country": "India",
     "description": "The Pink City with royal palaces and forts.",
     "why": "Regal Indian weddings in heritage venues like palaces and havelis."
   },
   {
-    "city": "Lake Como",
+    "cityName": "Lake Como",
     "country": "Italy",
     "description": "An upscale lakeside area surrounded by mountains.",
     "why": "Luxury villas and cinematic landscapes."
   },
   {
-    "city": "Hawaii (Maui, Oahu)",
+    "cityName": "Hawaii (Maui, Oahu)",
     "country": "USA",
     "description": "Islands with volcanoes, waterfalls, and beaches.",
     "why": "Tropical paradise for laid-back, scenic weddings."
   },
   {
-    "city": "Dubai",
+    "cityName": "Dubai",
     "country": "UAE",
     "description": "Modern city with luxury hotels and desert landscapes.",
     "why": "Lavish venues, year-round sun, and destination luxury."
   },
   {
-    "city": "Cape Town",
+    "cityName": "Cape Town",
     "country": "South Africa",
     "description": "Coastal city with mountains, vineyards, and beaches.",
     "why": "Diverse scenery and unique wedding experiences."

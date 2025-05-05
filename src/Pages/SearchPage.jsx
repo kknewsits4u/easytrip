@@ -5,7 +5,7 @@ import { citiesData } from "../Components/Store/DataStore";
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import AppsIcon from '@mui/icons-material/Apps';
 
-const CityWiseSearchPage = () => {
+const SearchPage = () => {
   const buttonList = [
     { listElem: "Locality" },
     { listElem: "No. Of Guests" },
@@ -68,4 +68,4 @@ const CityWiseSearchPage = () => {
   );
 };
 
-export default CityWiseSearchPage;
+export default SearchPage;
