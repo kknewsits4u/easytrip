@@ -47,7 +47,7 @@ const AllVendors = () => {
     }
   }
 
-  const allPhotos = [
+  const allPhotos =null || [
     "https://i.pinimg.com/736x/47/64/5b/47645b62d984e66ad9f781f73a550c30.jpg",
     "https://i.pinimg.com/736x/c7/de/72/c7de72c0fb14a2eb876114afbf1ee8f7.jpg",
     "https://i.pinimg.com/736x/a0/9c/a0/a09ca05b42473138d9166f74cb23170c.jpg",
@@ -62,6 +62,7 @@ const AllVendors = () => {
     "https://i.pinimg.com/736x/e8/19/98/e81998f29963c01c20dbff17bd6f2b02.jpg",
     "https://i.pinimg.com/736x/57/58/4e/57584ec187b82b6a4ce93d504ea9bf85.jpg"
   ]
+
 
   const allVideos = [
     "https://videos.pexels.com/video-files/2078587/2078587-sd_640_360_24fps.mp4",
@@ -174,27 +175,29 @@ const AllVendors = () => {
 
           </div>
 
-          <div className=' flex flex-col items-start justify-start w-full px-3  py-1 gap-3 h-fit shadow-md rounded-md border border-gray-100 divide-y divide-gray-300 '>
-            <div className=' flex items-center justify-start h-fit w-full max-md:gap-2 pb-1 gap-5' >
-              <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl py-2 px-5 font-semibold ${activeTab == "Photos" ? "bg-orange-400 && text-white" : "bg-white && text-orange-400"}  text-slate-600 max-md:w-1/2 w-auto cursor-pointer`}
+          <div className=' flex flex-col items-start justify-start w-full gap-3 h-fit shadow-md rounded-md border border-gray-100  bg-[rgb(255,255,255)] border border-gray-300 '>
+            <div className=' flex items-center justify-start h-fit w-full max-md:gap-2 px-3  py-1  pb-3 gap-5 border-b border-gray-300' >
+              <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl rounded-lg text-slate-500 py-2 px-5 font-semibold  ${activeTab == "Photos" ? " border-b-2 border-orange-400   " : "border-0 "}  max-md:w-1/2 w-auto cursor-pointer`}
                 onClick={() => handleActiveTab("Photos")}  >Latest Photos</div>
-              <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl font-semibold  text-slate-600 max-md:w-1/2 w-auto focus:bg-orange-400 py-2 px-5  cursor-pointer ${activeTab == "Videos" ? "bg-orange-400 && text-white" : "bg-white && text-orange-400"} `} onClick={() => handleActiveTab("Videos")}  >Latest Videos</div>
+              <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl font-semibold text-slate-500  max-md:w-1/2 w-auto focus:bg-orange-400 py-2 px-5 rounded-lg cursor-pointer ${activeTab == "Videos" ? "border-b-2 border-orange-400  " : "border-0 "} `} onClick={() => handleActiveTab("Videos")}  >Latest Videos</div>
             </div>
-            <div className=' grid max-md:grid-cols-2 max-lg:grid-cols-4 grid-cols-4  item-start justify-start w-full  h-fit gap-5 ' >
+            <div className=' grid max-md:grid-cols-2 max-lg:grid-cols-4 grid-cols-4  item-start justify-start w-full  h-fit max-md:gap-2 gap-5 px-3 ' >
 
               {
 
                 activeTab == "Photos" ?
 
-                  allPhotos.map((data, idx) => (
-                    <div key={idx} className=' flex items-center justify-center w-full max-md:h-35 h-45 ' >
-                      <img src={data} alt="images" className=' w-full h-full object-center object-cover ' />
-                    </div>
-                  ))
+                  allPhotos == null ? <p className='w-full text-left mt-5' > Loading..... </p>
+                    :
+                    allPhotos.map((data, idx) => (
+                      <div key={idx} className=' flex items-center justify-center w-full max-md:h-35 h-45 rounded  rounded-tl-xl rounded-br-xl shadow-lg border border-slate-500 ' >
+                        <img src={data} alt="images" className=' w-full h-full object-center object-cover rounded rounded-tl-xl rounded-br-xl '/>
+                      </div>
+                    ))
                   :
                   allVideos.map((data, idx) => (
-                    <div key={idx} className=' flex items-center justify-center w-full h-fit ' >
-                     <video src={data} autoPlay className=' h-full w-full ' ></video>
+                    <div key={idx} className=' flex items-center justify-center w-full h-fit rounded-md border border-slate-500' >
+                      <video src={data}   autoPlay muted className=' h-full w-full rounded-md ' ></video>
                     </div>
                   ))
 
