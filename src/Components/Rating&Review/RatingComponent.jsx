@@ -14,7 +14,7 @@ const RatingComponent = () => {
 
   return (
     
-    <div className="flex flex-col w-full  bg-white p-4 rounded shadow-md gap-4">
+    <div className="flex flex-col w-full h-full bg-white p-4 rounded shadow-md gap-4">
 
     <div className="flex items-center justify-between">
       <p className="font-semibold text-lg text-gray-600">Rating Distribution</p>

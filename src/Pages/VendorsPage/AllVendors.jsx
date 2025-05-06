@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import DatePicker from "react-datepicker";
+import ReviewComponent from '../../Components/Rating&Review/ReviewComponent';
+import RatingComponent from '../../Components/Rating&Review/RatingComponent';
+import BookingCard from './Components/BookingCard';
+import AccordionTransition from './Components/FAQs';
 
 const AllVendors = () => {
 
@@ -47,7 +51,7 @@ const AllVendors = () => {
     }
   }
 
-  const allPhotos =null || [
+  const allPhotos = null || [
     "https://i.pinimg.com/736x/47/64/5b/47645b62d984e66ad9f781f73a550c30.jpg",
     "https://i.pinimg.com/736x/c7/de/72/c7de72c0fb14a2eb876114afbf1ee8f7.jpg",
     "https://i.pinimg.com/736x/a0/9c/a0/a09ca05b42473138d9166f74cb23170c.jpg",
@@ -75,7 +79,7 @@ const AllVendors = () => {
 
   return (
     <div className=' flex flex-col items-center  justify-start  max-w-[1440px] w-full min-h-[100vh] h-fit  max-md:px-3  px-5 gap-2 bg-white py-3'  >
-      <div className='grid max-md:grid-cols-1 grid-cols-[1fr_2fr] gap-3 max-md:gap-3  w-full min-h-100 h-fit ' >
+      <div className='grid max-lg:grid-cols-1 grid-cols-[1fr_2fr] gap-3 max-md:gap-3  w-full  h-fit ' >
 
         <div className=" rounded-[2rem] rounded-tl-md h-fit rounded-tr-md overflow-hidden shadow-lg bg-white">
 
@@ -110,9 +114,7 @@ const AllVendors = () => {
             <div className='max-lg:flex-col  flex  flex-row items-center justify-between w-full h-fit max-md:mt-5  mt-10 border-t border-gray-300 pt-5 gap-5'  >
               <p className=' text-slate-800 text-sm font-semibold' >Started Pricing : <span className='line-through text-gray-500 ml-3'  > ₹ 18,000 </span> <span className='ml-3 text-orange-400 font-semibold ' > ₹ 15,000</span></p>
               <div className=' flex items-center justify-center gap-3 max-lg:w-full w-auto' >
-                <div className=' flex items-center justify-center rounded-full border-2  border-orange-400 w-8 h-8 hover:shadow-lg' >
-                  <LocalPhoneIcon sx={{ color: "#FA812F" }} />
-                </div>
+             
                 <div className='max-lg:w-[80%] w-auto flex items-center justify-center px-3 py-1 text-[rgb(255,255,255)] border-2 border-orange-400 bg-orange-400 hover:bg-white hover:text-orange-400 rounded-md  ' onClick={handleAvailability} >
                   BOOK NOW
                 </div>
@@ -120,6 +122,7 @@ const AllVendors = () => {
             </div>
 
           </div>
+
         </div>
 
         <div className=' flex flex-col w-full  items-start justify-start gap-3'  >
@@ -141,7 +144,7 @@ const AllVendors = () => {
             </div>
           </div>
 
-          <div className=' flex flex-col items-start justify-start w-full px-3  py-1 gap-3 h-fit shadow-md rounded-md border border-gray-100 divide-y divide-gray-300 '>
+          <div className=' flex flex-col items-start justify-start w-full px-3  py-1 gap-3 max-md:min-h-fit min-h-60  shadow-md rounded-md border border-gray-100 divide-y divide-gray-300 '>
             <h1 className='w-full text-left pb-2 max-md:text-base max-lg:text-lg text-xl font-semibold text-slate-600 ' >Check Availability</h1>
             <div className=' flex w-full h-fit gap-5 py-2' >
               <div className=' flex items-center justify-between gap-3 h-10 border border-orange-400 w-full rounded-md cursor-pointer'  >
@@ -174,44 +177,88 @@ const AllVendors = () => {
 
 
           </div>
+        </div>
 
-          <div className=' flex flex-col items-start justify-start w-full gap-3 h-fit shadow-md rounded-md border border-gray-100  bg-[rgb(255,255,255)] border border-gray-300 '>
-            <div className=' flex items-center justify-start h-fit w-full max-md:gap-2 px-3  py-1  pb-3 gap-5 border-b border-gray-300' >
-              <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl rounded-lg text-slate-500 py-2 px-5 font-semibold  ${activeTab == "Photos" ? " border-b-2 border-orange-400   " : "border-0 "}  max-md:w-1/2 w-auto cursor-pointer`}
-                onClick={() => handleActiveTab("Photos")}  >Latest Photos</div>
-              <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl font-semibold text-slate-500  max-md:w-1/2 w-auto focus:bg-orange-400 py-2 px-5 rounded-lg cursor-pointer ${activeTab == "Videos" ? "border-b-2 border-orange-400  " : "border-0 "} `} onClick={() => handleActiveTab("Videos")}  >Latest Videos</div>
-            </div>
-            <div className=' grid max-md:grid-cols-2 max-lg:grid-cols-4 grid-cols-4  item-start justify-start w-full  h-fit max-md:gap-2 gap-5 px-3 ' >
+      </div>
+     <div className='flex flex-col items-center justify-start w-full  h-fit  border border-gray-300  shadow rounded mt-3 bg-[rgb(250,250,250)] '  >
+         <div className=' flex items-center  justify-start w-full px-4 py-3 font-semibold text-lg text-gray-600 border-b-2 border-gray-300 bg-white rounded-md'  >
+             Latest Bookings 
+         </div>
+          <div className=' grid max-md:grid-cols-1 grid-cols-2 items-center gap-5 justify-start w-full max-md:px-2 px-4 py-3 '  >
+               {
+                [1,2].map((idx)=> 
+                   <BookingCard  key={idx}  />
+                )
+               } 
+         </div>
+     </div>
+     <div className='grid  max-md:grid-cols-1 grid-cols-2  items-start justify-start w-full gap-3 min-h-100 h-fit  py-2 '  >
+         <div  className='flex flex-col w-full h-100  rounded-md border border-gray-300 shadow' >
+            <RatingComponent/>
+         </div>
+         <div className='flex flex-col w-full  h-100   rounded-md border border-gray-300 shadow ' >
+           <ReviewComponent/>
+         </div>
+     </div>
+       
+        
+     {/*  gallery area code start here ............................. */}
 
-              {
+        <div className=' flex flex-col items-start justify-start w-full gap-3 h-fit shadow-md rounded-md  bg-[rgb(255,255,255)] border border-gray-300 '>
+          <div className=' flex items-center justify-start h-fit w-full max-md:gap-2 px-3  py-1  pb-3 gap-5 border-b border-gray-300' >
+            <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl rounded-lg text-slate-500 py-2 px-5 font-semibold  ${activeTab == "Photos" ? " border-b-2 border-orange-400   " : "border-0 "}  max-md:w-1/2 w-auto cursor-pointer`}
+              onClick={() => handleActiveTab("Photos")}  >Latest Photos</div>
+            <div className={`flex items-center justify-center text-nowrap  max-md:text-base max-lg:text-lg text-xl font-semibold text-slate-500  max-md:w-1/2 w-auto focus:bg-orange-400 py-2 px-5 rounded-lg cursor-pointer ${activeTab == "Videos" ? "border-b-2 border-orange-400  " : "border-0 "} `} onClick={() => handleActiveTab("Videos")}  >Latest Videos</div>
+          </div>
+          <div className=' flex  item-start justify-start w-full  h-fit max-md:gap-2 gap-5 px-3 ' >
 
-                activeTab == "Photos" ?
+            {
 
-                  allPhotos == null ? <p className='w-full text-left mt-5' > Loading..... </p>
-                    :
-                    allPhotos.map((data, idx) => (
-                      <div key={idx} className=' flex items-center justify-center w-full max-md:h-35 h-45 rounded  rounded-tl-xl rounded-br-xl shadow-lg border border-slate-500 ' >
-                        <img src={data} alt="images" className=' w-full h-full object-center object-cover rounded rounded-tl-xl rounded-br-xl '/>
-                      </div>
-                    ))
+              activeTab == "Photos" ?
+
+                allPhotos == null ? <p className='w-full text-left mt-5' > Loading..... </p>
                   :
-                  allVideos.map((data, idx) => (
-                    <div key={idx} className=' flex items-center justify-center w-full h-fit rounded-md border border-slate-500' >
-                      <video src={data}   autoPlay muted className=' h-full w-full rounded-md ' ></video>
-                    </div>
-                  ))
+                <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4 w-full ">
+                  {allPhotos.map((data, index) => (
+                    <img
+                      key={index}
+                      src={data}
+                      alt={`img-${index}`}
+                      className="w-full rounded-lg mb-4 break-inside-avoid"
+                    />
+                  ))}
+                </div>
+                :
+                allVideos.map((data, idx) => (
+                  <div key={idx} className=' flex items-center justify-center w-full h-fit rounded-md border border-slate-500' >
+                    <video src={data} autoPlay muted className=' h-full w-full rounded-md ' ></video>
+                  </div>
+                ))
 
-              }
+                 }
 
-            </div>
-
-            <div>
-
-            </div>
           </div>
 
+          <div>
+
+          </div>
         </div>
-      </div>
+      
+       <div className=' flex flex-col  w-full  items-start justify-center border border-gray-300 rounded-md shadow  gap-3 '  >
+        
+          <div className=' flex items-center  justify-start w-full px-4 py-3 font-semibold text-lg text-gray-600 border-b-2 border-gray-300 bg-white rounded-md'  >
+             Frequently Ask Questions
+         </div>
+
+        <div className='flex p-2 w-full  items-start justify-start' >
+
+         <AccordionTransition/>
+        </div>   
+       
+
+
+       </div>
+  
 
     </div>
   )
