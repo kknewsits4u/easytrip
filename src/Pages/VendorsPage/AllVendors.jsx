@@ -63,8 +63,20 @@ const AllVendors = () => {
     "https://i.pinimg.com/736x/4a/0f/f6/4a0ff6fcf26fb04971d49a392aa3b1c3.jpg",
     "https://i.pinimg.com/736x/d9/55/c3/d955c3eb4744190d4c5a8da373b28a22.jpg",
     "https://i.pinimg.com/736x/df/4d/e0/df4de01e625e83a26444054680fdd696.jpg",
+    "https://i.pinimg.com/736x/38/33/63/383363a8b0ab9e41ff3e5ccfc6831be3.jpg",
+    "https://i.pinimg.com/736x/6f/f4/6c/6ff46c3c7597848a8711d989660ce172.jpg",
+    "https://i.pinimg.com/736x/39/e3/7b/39e37b2d76f1b548cd10373171bc2447.jpg",
     "https://i.pinimg.com/736x/e8/19/98/e81998f29963c01c20dbff17bd6f2b02.jpg",
-    "https://i.pinimg.com/736x/57/58/4e/57584ec187b82b6a4ce93d504ea9bf85.jpg"
+    "https://i.pinimg.com/736x/57/58/4e/57584ec187b82b6a4ce93d504ea9bf85.jpg",
+    "https://i.pinimg.com/736x/a0/9c/a0/a09ca05b42473138d9166f74cb23170c.jpg",
+    "https://i.pinimg.com/736x/98/72/a7/9872a78ce723285d76777ed72ae31dd7.jpg",
+    "https://i.pinimg.com/736x/4a/0f/f6/4a0ff6fcf26fb04971d49a392aa3b1c3.jpg",
+    "https://i.pinimg.com/736x/d9/55/c3/d955c3eb4744190d4c5a8da373b28a22.jpg",
+    "https://i.pinimg.com/736x/df/4d/e0/df4de01e625e83a26444054680fdd696.jpg",
+    "https://i.pinimg.com/736x/38/33/63/383363a8b0ab9e41ff3e5ccfc6831be3.jpg",
+    "https://i.pinimg.com/736x/6f/f4/6c/6ff46c3c7597848a8711d989660ce172.jpg",
+    "https://i.pinimg.com/736x/39/e3/7b/39e37b2d76f1b548cd10373171bc2447.jpg",
+    "https://i.pinimg.com/736x/e8/19/98/e81998f29963c01c20dbff17bd6f2b02.jpg",
   ]
 
 
@@ -218,22 +230,26 @@ const AllVendors = () => {
 
                 allPhotos == null ? <p className='w-full text-left mt-5' > Loading..... </p>
                   :
-                <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4 w-full ">
+                <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 space-y-4 w-full ">
                   {allPhotos.map((data, index) => (
                     <img
                       key={index}
                       src={data}
                       alt={`img-${index}`}
-                      className="w-full rounded-lg mb-4 break-inside-avoid"
+                      className="w-full rounded-lg mb-3 break-inside-avoid"
                     />
                   ))}
                 </div>
                 :
-                allVideos.map((data, idx) => (
-                  <div key={idx} className=' flex items-center justify-center w-full h-fit rounded-md border border-slate-500' >
+                  <div  className=' grid max-md:grid-cols-1 max-lg:grid-cols-2 grid-cols-4 w-full gap-3' >
+                   { allVideos.map((data, idx) => (
+                    <div key={idx} className=' flex items-center justify-center w-full h-fit rounded-md border border-slate-500' >
                     <video src={data} autoPlay muted className=' h-full w-full rounded-md ' ></video>
+                     </div>
+                    ))}
+
                   </div>
-                ))
+                  
 
                  }
 
