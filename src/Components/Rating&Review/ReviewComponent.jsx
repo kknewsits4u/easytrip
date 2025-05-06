@@ -30,7 +30,7 @@ const ReviewComponent = () => {
   return (
     <div className=" flex flex-col w-full gap-3 bg-white shadow-md h-full rounded py-3 px-5 ">
       <div className=" flex w-full  items-center justify-start  text-xs  md:text-sm lg:text-md border-b-2 border-slate-300 h-fit pb-2">
-        <h1 className="font-semibold text-lg text-gray-600">Write a Review </h1>
+        <h1 className="font-semibold max-md:text-lg max-lg:text-lg text-xl text-gray-800">Write a Review </h1>
       </div>
       <div className=" flex flex-col items-start justify-start gap-3 text-left">
       
