@@ -65,7 +65,7 @@ const Footer = () => {
                 className=" w-full h-full object-cover object-top rounded-full"
               />
             </div>
-            <h1 className=" text-white text-3xl ">Aarambhs</h1>
+            <h1 className=" text-white text-3xl ">Aarambh<span className=" text-red-500 ">s</span>.in  </h1>
           </div>
           <p className=" text-white opacity-70 text-sm">
             Call our 24-hour helpline
@@ -80,28 +80,28 @@ const Footer = () => {
             <span className=" mr-2">
               <EmailIcon />
             </span>
-            info.aarambh@help.com
+            info.aarambhs.in@help.com
           </h1>
         </div>
         <div className=" flex items-center md:items-end justify-between flex-col h-fit gap-10  w-full md:w-1/2 ">
           <div className=" flex flex-col h-fit gap-10 w-1/2 items-center justify-between">
             <h1 className=" text-white text-lg">Follow Us</h1>
             <div className=" flex items-end justify-center gap-5 ">
-              <div className=" flex items-center justify-center w-10  lg:w-15 h-10 lg:h-15 shadow-md shadow-blue-500 rounded-full">
+              <div className=" flex items-center justify-center w-10  lg:w-15 h-10 lg:h-15 shadow-md shadow-[rgb(250,129,47)] rounded-full">
                 <img
                   src="/fbicon.png"
                   alt="social icon"
                   className="w-full h-full object-cover object-center rounded-full "
                 />
               </div>
-              <div className=" flex items-center justify-center w-10  lg:w-15 h-10 lg:h-15 shadow-md shadow-blue-500 rounded-full">
+              <div className=" flex items-center justify-center w-10  lg:w-15 h-10 lg:h-15 shadow-md shadow-[rgb(250,129,47)] rounded-full">
                 <img
                   src="/whaicon.png"
                   alt="social icon"
                   className="w-full h-full object-cover object-center rounded-full "
                 />
               </div>
-              <div className=" flex items-center justify-center w-10  lg:w-15 h-10 lg:h-15 shadow-md shadow-blue-500 rounded-full">
+              <div className=" flex items-center justify-center w-10  lg:w-15 h-10 lg:h-15 shadow-md shadow-[rgb(250,129,47)] rounded-full">
                 <img
                   src="/instagramLogo.png"
                   alt="social icon"

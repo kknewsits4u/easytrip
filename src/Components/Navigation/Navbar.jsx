@@ -13,6 +13,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
 import CityData from "./Components/CityData";
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -39,10 +40,10 @@ const Navbar = () => {
       <UpperHeader />
 
       <div
-        className=" flex w-full px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
+        className=" flex w-full max-md:px-3 px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
                shadow-md max-md:bg-[#FA812F] bg-[rgb(127,137,144)]"
       >
-        <div className=" flex items-center justify-center text-blue-500 font-bold z-40 gap-5 ">
+        <div className=" flex items-center justify-center text-blue-500 font-bold z-40 max-md:gap-2 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
             className=" flex  text-[rgb(239,74,107)]  font-extrabold items-center justify-center h-fit w-fit "
@@ -53,7 +54,7 @@ const Navbar = () => {
           </div>
 
           <h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
-            Aarambhs
+            Aarambh <span  className="text-red-500" >s</span>.in
           </h1>
         </div>
 
@@ -100,6 +101,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
         <div
           className=" max-md:flex hidden "
           onClick={() => setCitiesDivOpen(!citiesDivOpen)}
@@ -142,8 +144,15 @@ const Navbar = () => {
         )}
 
         <div className="flex items-center justify-center gap-5 rounded">
+          <div className="max-md:hidden flex items-center justify-center px-2 py-1 rounded  border border-white text-[rgb(250,129,47)] font-semibold tranform transition-all hover:scale-105 cursor-pointer text-nowrap max-md:text-sm max-lg:text-base  bg-white" >List Your Business</div>
           <div
-            className="sm:hidden w-10 h-10 rounded-full cursor-pointer"
+            className="flex w-8 h-8 rounded-full cursor-pointer  bg-white items-center justify-center"
+          >
+           <LocalPhoneIcon  sx={{ color:"rgb(250,129,47)" }}  />
+
+          </div>
+          <div
+            className="flex w-8 h-8 rounded-full cursor-pointer"
             onClick={() => setShowButtons(!showButtons)}
           >
             <img
@@ -152,43 +161,8 @@ const Navbar = () => {
               className="w-full h-full object-cover object-center rounded-full"
             />
           </div>
-          <div className="hidden sm:flex items-center justify-center gap-5 rounded">
-            <Button
-              variant="outlined"
-              className="btn-grad"
-              sx={{ color: "white" }}
-            >
-              Login
-            </Button>
-            <Button
-              variant="outlined"
-              className="btn-grad"
-              sx={{ color: "white", whiteSpace: "nowrap" }}
-            >
-              Join Us
-            </Button>
-          </div>
-
-          {showButtons && (
-            <div className="absolute right-5 top-16 rounded flex flex-col bg-white border border-gray-300 h-30 w-40 p-3 gap-5">
-              <Button
-                variant="outlined"
-                className="btn-grad"
-                sx={{ color: "white" }}
-              >
-                Login
-              </Button>
-              <Button
-                variant="outlined"
-                className="btn-grad"
-                sx={{ color: "white", whiteSpace: "nowrap" }}
-              >
-                Join Us
-              </Button>
-            </div>
-          )}
         </div>
-
+      
         <Drawer
           open={open}
           sx={{ marginTop: "15px" }}

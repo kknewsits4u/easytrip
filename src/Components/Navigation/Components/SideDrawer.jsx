@@ -66,7 +66,7 @@ const SideDrawer = ({handleCloseDrawer}) => {
           alt="menu image"
           className=" w-full h-full object-center object-cover  "
         />
-        <div className=" flex flex-col  items-start justify-end gap-5  w-full h-full absolute top-0 left-0 bg-[rgba(0,0,0,0.356)]  pl-5 p-3">
+        <div className=" flex flex-col  items-start justify-end gap-5  w-full h-full absolute top-0 left-0 bg-gradient-to-t from-black/60 to-transparent  pl-5 p-3">
           <div className=" flex items-center justify-center w-12 h-12 rounded-full ">
             <img
               src="/dummy.png"
@@ -75,10 +75,13 @@ const SideDrawer = ({handleCloseDrawer}) => {
             />
           </div>
           <h1 className=" font-semibold text-white text-xl  ">
-            Aarambhs Wedding
+            Aarambh<span className=' text-red-600' >s</span>.in
           </h1>
         </div>
+       
+
       </div>
+
       <div className="flex w-full items-center justify-between px-5">
         <h1 className=" text-md text-[#FA812F] font-semibold ">City :</h1>
         <div className=" flex items-center justify-center  ">
@@ -132,6 +135,7 @@ const SideDrawer = ({handleCloseDrawer}) => {
           }
         </ul>
       </div>
+
       <div className=" flex w-full  h-fit py-2 ">
         <ul className=" flex flex-col w-full">
           <li className="w-full hover:text-[#FA812F] hover:font-semibold  cursor-pointer hover:bg-white px-5 p-2">
@@ -156,6 +160,7 @@ const SideDrawer = ({handleCloseDrawer}) => {
           </li>
         </ul>
       </div>
+
       <div className="group flex items-center justify-center  w-full  h-fit px-5 py-2  ">
         <Button
           fullWidth
@@ -176,6 +181,7 @@ const SideDrawer = ({handleCloseDrawer}) => {
           List Your Business
         </Button>
       </div>
+
     </div>
   )
 }
