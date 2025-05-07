@@ -63,19 +63,7 @@ const Navbar = () => {
             className="flex h-full  items-center text-[rgb(255,255,255)] justify-between gap-5 lg:gap-10 text-sm lg:text-sm    "
             style={{ fontWeight: "500" }}
           >
-            <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
-              Vendors
-              <div
-                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-14 left-0
-                   opacity-0 translate-y-5 pointer-events-none
-                   group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
-                   transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
-                style={{ backgroundColor: "rgb(255,255,255)" }}
-              >
-                <VendorsDetailsSection />
-
-              </div>
-            </li>
+           
 
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Vanues
@@ -94,6 +82,19 @@ const Navbar = () => {
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Photos
               <PhotosSection />
+            </li>
+            <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
+              Vendors
+              <div
+                className="flex flex-wrap items-start justify-start w-[50vw] h-fit rounded-md absolute top-14 left-0
+                   opacity-0 translate-y-5 pointer-events-none
+                   group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                   transition-all duration-300 ease-in-out z-50 p-5 shadow-xl"
+                style={{ backgroundColor: "rgb(255,255,255)" }}
+              >
+                <VendorsDetailsSection />
+
+              </div>
             </li>
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Corporate Meeting
