@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import ReviewComponent from "../../Components/Rating&Review/ReviewComponent";
 import RatingComponent from "../../Components/Rating&Review/RatingComponent";
 import AccordionTransition from "./Components/FAQs";
-import DetailsCard from "./Components/detailsCard";
+
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 const AllVendors = () => {
@@ -209,7 +209,7 @@ const AllVendors = () => {
 
         <div className="flex flex-col items-center justify-start w-full md:px-5 "   >
           <div className="flex flex-col items-start justify-start w-full rounded-lg  border border-gray-300 h-fit sticky top-5 p-3" >
-            <DetailsCard />
+            
             <div className=" flex items-center justify-between w-full "  >
               <div>
                 <p className=" font-semibold text-base md:text-lg" >Starting Price  <span> 12,000 </span>  </p>
