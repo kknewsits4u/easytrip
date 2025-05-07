@@ -18,8 +18,8 @@ const Homepage = () => {
       <WeddingCategories/>
       <FeaturedVendors/>
       <PopularSearch/>
-      <HPhotoSlider/>
       <PopularVenues/>
+      <HPhotoSlider/>
       <Blogs/>
       </div>
   )
