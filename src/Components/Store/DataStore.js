@@ -571,94 +571,150 @@ export const popularSearch = [
 ]
 
 
+export const businessData = [
+  {
+    image: "https://i.pinimg.com/474x/ff/20/4d/ff204df17bbcbdf85fe2a8b2d3a2953f.jpg",
+    heading: "Radha Mehndi Artists",
+    description: "Traditional and bridal mehndi designs with premium quality henna.",
+    price: "₹3,500",
+    rating: 4.5,
+    verified: true,
+    district: "Jaipur",
+    state: "Rajasthan"
+  },
+  {
+    image: "https://i.pinimg.com/474x/51/29/0d/51290d80c53cc685f0894d95aa1a9b4e.jpg",
+    heading: "Divya Hair Studio",
+    description: "Exclusive bridal hair styling and accessories.",
+    price: "₹5,000",
+    rating: 4,
+    verified: false,
+    district: "Surat",
+    state: "Gujarat"
+  },
+  {
+    image: "https://i.pinimg.com/474x/38/d2/79/38d2792cac49e9761f988109432f53cd.jpg",
+    heading: "Agarwal Wedding Decorators",
+    description: "Elegant wedding decorations tailored to your theme.",
+    price: "₹15,000",
+    rating: 4.7,
+    verified: true,
+    district: "Lucknow",
+    state: "Uttar Pradesh"
+  },
+  {
+    image: "https://i.pinimg.com/474x/8b/c6/0a/8bc60ade553d343d4cbe90d7b767289f.jpg",
+    heading: "Gopal Photo Studio",
+    description: "Candid and traditional photography for all occasions.",
+    price: "₹20,000",
+    rating: 4.8,
+    verified: true,
+    district: "Bhopal",
+    state: "Madhya Pradesh"
+  },
+  {
+    image: "https://i.pinimg.com/474x/f3/f2/06/f3f20627c5069cef632084f854951173.jpg",
+    heading: "Anand Garden Banquet",
+    description: "Spacious wedding venue with beautiful garden setup.",
+    price: "₹18,000",
+    rating: 4.2,
+    verified: false,
+    district: "Nagpur",
+    state: "Maharashtra"
+  },
+  {
+    image: "https://i.pinimg.com/474x/9e/4a/7d/9e4a7dceccf2db4fa47a39cc6aad4554.jpg",
+    heading: "Neha Bridal Makeup",
+    description: "Expert bridal makeup with HD and Airbrush options.",
+    price: "₹8,000",
+    rating: 4.6,
+    verified: true,
+    district: "Chandigarh",
+    state: "Chandigarh"
+  },
+  {
+    image: "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg",
+    heading: "Ravi Sound & DJ",
+    description: "Professional DJ with lighting and dance floor setup.",
+    price: "₹12,000",
+    rating: 4.3,
+    verified: false,
+    district: "Patna",
+    state: "Bihar"
+  },
+  {
+    image: "https://i.pinimg.com/474x/38/d2/79/38d2792cac49e9761f988109432f53cd.jpg",
+    heading: "Agarwal Wedding Decorators",
+    description: "Elegant wedding decorations tailored to your theme.",
+    price: "₹15,000",
+    rating: 4.7,
+    verified: true,
+    district: "Kanpur",
+    state: "Uttar Pradesh"
+  },
+  {
+    image: "https://i.pinimg.com/474x/ce/b2/f8/ceb2f8da24fce1eaadd693442b1512be.jpg",
+    heading: "Sakhi Wedding Cards",
+    description: "Stylish and customizable wedding invitation cards.",
+    price: "₹3,000",
+    rating: 3.9,
+    verified: false,
+    district: "Pune",
+    state: "Maharashtra"
+  },
+  {
+    image: "https://i.pinimg.com/474x/7b/8c/dc/7b8cdc5c5e3dc0dc430da3d44075e92d.jpg",
+    heading: "Shri Catering Services",
+    description: "Delicious multi-cuisine wedding catering.",
+    price: "₹25,000",
+    rating: 4.9,
+    verified: true,
+    district: "Ahmedabad",
+    state: "Gujarat"
+  },
+  {
+    image: "https://i.pinimg.com/474x/27/98/5c/27985c7ad69687f7152689e486685e80.jpg",
+    heading: "Meena Jewels Rental",
+    description: "Bridal jewelry available on rent at affordable prices.",
+    price: "₹4,500",
+    rating: 4.1,
+    verified: false,
+    district: "Amritsar",
+    state: "Punjab"
+  },
+  {
+    image: "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg",
+    heading: "Ravi Sound & DJ",
+    description: "Professional DJ with lighting and dance floor setup.",
+    price: "₹12,000",
+    rating: 4.3,
+    verified: false,
+    district: "Patna",
+    state: "Bihar"
+  },
+  {
+    image: "https://i.pinimg.com/474x/35/c0/1b/35c01b3669099815cd6fd0566f9f548f.jpg",
+    heading: "Royal Entry Cars",
+    description: "Luxury cars and vintage rides for grand wedding entries.",
+    price: "₹10,000",
+    rating: 4.4,
+    verified: true,
+    district: "Delhi",
+    state: "Delhi"
+  },
+  {
+    image: "https://i.pinimg.com/474x/8b/c6/0a/8bc60ade553d343d4cbe90d7b767289f.jpg",
+    heading: "Gopal Photo Studio",
+    description: "Candid and traditional photography for all occasions.",
+    price: "₹20,000",
+    rating: 4.8,
+    verified: true,
+    district: "Bhopal",
+    state: "Madhya Pradesh"
+  }
+];
 
-export const businessData =
-[
-  {
-    "image": "https://i.pinimg.com/474x/ff/20/4d/ff204df17bbcbdf85fe2a8b2d3a2953f.jpg",
-    "heading": "Radha Mehndi Artists",
-    "description": "Traditional and bridal mehndi designs with premium quality henna.",
-    "price": "₹3,500"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/51/29/0d/51290d80c53cc685f0894d95aa1a9b4e.jpg",
-    "heading": "Divya Hair Studio",
-    "description": "Exclusive bridal hair styling and accessories.",
-    "price": "₹5,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/38/d2/79/38d2792cac49e9761f988109432f53cd.jpg",
-    "heading": "Agarwal Wedding Decorators",
-    "description": "Elegant wedding decorations tailored to your theme.",
-    "price": "₹15,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/8b/c6/0a/8bc60ade553d343d4cbe90d7b767289f.jpg",
-    "heading": "Gopal Photo Studio",
-    "description": "Candid and traditional photography for all occasions.",
-    "price": "₹20,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/f3/f2/06/f3f20627c5069cef632084f854951173.jpg",
-    "heading": "Anand Garden Banquet",
-    "description": "Spacious wedding venue with beautiful garden setup.",
-    "price": "₹18,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/9e/4a/7d/9e4a7dceccf2db4fa47a39cc6aad4554.jpg",
-    "heading": "Neha Bridal Makeup",
-    "description": "Expert bridal makeup with HD and Airbrush options.",
-    "price": "₹8,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg",
-    "heading": "Ravi Sound & DJ",
-    "description": "Professional DJ with lighting and dance floor setup.",
-    "price": "₹12,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/38/d2/79/38d2792cac49e9761f988109432f53cd.jpg",
-    "heading": "Agarwal Wedding Decorators",
-    "description": "Elegant wedding decorations tailored to your theme.",
-    "price": "₹15,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/ce/b2/f8/ceb2f8da24fce1eaadd693442b1512be.jpg",
-    "heading": "Sakhi Wedding Cards",
-    "description": "Stylish and customizable wedding invitation cards.",
-    "price": "₹3,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/7b/8c/dc/7b8cdc5c5e3dc0dc430da3d44075e92d.jpg",
-    "heading": "Shri Catering Services",
-    "description": "Delicious multi-cuisine wedding catering.",
-    "price": "₹25,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/27/98/5c/27985c7ad69687f7152689e486685e80.jpg",
-    "heading": "Meena Jewels Rental",
-    "description": "Bridal jewelry available on rent at affordable prices.",
-    "price": "₹4,500"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg",
-    "heading": "Ravi Sound & DJ",
-    "description": "Professional DJ with lighting and dance floor setup.",
-    "price": "₹12,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/35/c0/1b/35c01b3669099815cd6fd0566f9f548f.jpg",
-    "heading": "Royal Entry Cars",
-    "description": "Luxury cars and vintage rides for grand wedding entries.",
-    "price": "₹10,000"
-  },
-  {
-    "image": "https://i.pinimg.com/474x/8b/c6/0a/8bc60ade553d343d4cbe90d7b767289f.jpg",
-    "heading": "Gopal Photo Studio",
-    "description": "Candid and traditional photography for all occasions.",
-    "price": "₹20,000"
-  },
-]
+
 
 export const blogData = 
 [

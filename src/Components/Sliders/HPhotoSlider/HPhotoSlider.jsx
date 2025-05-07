@@ -16,7 +16,7 @@ function HPhotoSlider() {
 
   const data = photoCollection.slice(0, 8).map((data, i) => (
     <div key={i} className="px-2">
-      <div className="rounded-lg shadow-md flex flex-col items-center justify-center text-lg font-semibold text-gray-600 hover:transform transition-all hover:-translate-y-2 cursor-pointer overflow-hidden h-[230px] md:h-[280px] lg:h-[320px]">
+      <div className="rounded-lg shadow-md flex flex-col items-center justify-center text-lg font-semibold text-gray-700 hover:transform transition-all hover:-translate-y-2 cursor-pointer overflow-hidden h-[230px] md:h-[280px] lg:h-[320px]">
         <div className="h-full w-full">
           <img
             src={data.image}

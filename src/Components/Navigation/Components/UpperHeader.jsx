@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CityDetailsSection from './CityDetailsSection';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import LocationPinIcon from '@mui/icons-material/LocationPin';
 
 
 const UpperHeader = () => {
@@ -34,8 +35,10 @@ useEffect(() => {
    
      <div className="max-md:hidden flex items-center justify-start h-fit px-2 2xl:px-10
              bg-orange-400 w-full z-50 p-1 gap-5"   >
-            <h1 className=" text-sm font-semibold text-[rgb(255,255,255)]">
-              Plan your wedding with India's Largest Plateform
+            <h1 className=" text-sm md:text-base  font-semibold text-white">
+              <LocationPinIcon  sx={{
+                 fontSize:"18px"
+              }}  /> Location
             </h1>
     
             <div

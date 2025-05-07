@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import Button from "@mui/material/Button";
 import { venueDetails } from "../Store/DataStore";
 import Rating from "@mui/material/Rating";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -40,7 +36,7 @@ function PopularSearch() {
   const data = venueDetails.slice(1, 20).map((data, i) => (
     <div key={i} className="w-full p-2 ">
       <div
-        className="bg-[rgb(255,255,255)] rounded-lg gap-3 pb-2 flex flex-col items-start justify-between text-lg font-semibold text-gray-600 shadow-md   h-90 hover:bg-gray-100 cursor-pointer  "
+        className="bg-[rgb(255,255,255)] rounded-lg gap-3 pb-2 flex flex-col items-start justify-between text-lg font-semibold text-gray-700 shadow-md   h-90 hover:bg-gray-100 cursor-pointer  "
         onClick={() => handleSearchCity("delhi")}
       >
         <div className=" flex items-center justify-center h-50  w-full">

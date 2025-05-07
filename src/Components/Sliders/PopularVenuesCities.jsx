@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import Button from "@mui/material/Button";
 import { citiesData } from "../Store/DataStore";
 import CommonSlider from "./SliderComponent/CommonSlider";
 
@@ -26,26 +22,32 @@ function PopularVenues() {
     if (width >= 650) return 4.5;
     return 2.75;
   };
+ 
+
+  
+
+
 
   const data = citiesData.slice(1, 10).map((data, i) => (
     <div key={i} className="w-full p-2">
-      <div className=" bg-[rgb(255,255,255)] border border-gray-200 shadow-md rounded-lg gap-3 h-20 md:h-30 lg:h-40 p-2 flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
-        <div className=" flex items-center justify-center h-1/2 w-full overflow-hidden">
+      <div className=" bg-[rgb(255,255,255)] border border-gray-200 shadow-md rounded-lg gap-3 h-20 md:h-30 lg:h-40  flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
+        <div className="relative flex items-center justify-center h-full w-full overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
           <img
-            src={i % 2 == 0 ? "b1.jpg" : "b2.jpg"}
+            src={data.image}
             alt="image"
-            className=" h-full w-auto object-cover object-center transform hover:scale(110) "
+            className=" h-full w-auto object-cover object-center transform hover:scale(110) rounded-lg "
           />
+        <div className="absolute bottom-0 left-0 bg-gradient-to-t from-black/40 to-transparent h-full w-full  pb-1 md:pb-3 flex items-end justify-center text-white text-sm  md:text-base  " >{data.cityName}
         </div>
-        <h1 className=" text-xs lg:text-base">{data.cityName}</h1>
+        </div>
       </div>
     </div>
   ));
 
   return (
     <div className="flex flex-col w-full max-w-7xl mx-auto px-4 pt-25 lg:py-5  ">
-      <div className=" flex items-center justify-between px-2 my-1">
-        <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-3 lg:mb-5">
+      <div className=" flex items-center justify-between my-1">
+        <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-700 mb-3 lg:mb-5">
           Popular Venues City
         </h2>
       </div> 

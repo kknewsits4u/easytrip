@@ -13,7 +13,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
 import CityData from "./Components/CityData";
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import AddIcon from '@mui/icons-material/Add';
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -53,9 +53,9 @@ const Navbar = () => {
             />
           </div>
 
-          <h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
+          <a href="/" ><h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
             Aarambh <span  className="text-red-500" >s</span>.in
-          </h1>
+          </h1></a>
         </div>
 
         <div className="hidden relative md:flex w-full xl:w-2/3  items-start justify-start  gap-5 h-full  px-5">
@@ -144,19 +144,20 @@ const Navbar = () => {
         )}
 
         <div className="flex items-center justify-center gap-5 rounded">
-          <div className="max-md:hidden flex items-center justify-center px-2 py-1 rounded  border border-white text-[rgb(250,129,47)] font-semibold tranform transition-all hover:scale-105 cursor-pointer text-nowrap max-md:text-sm max-lg:text-base  bg-white" >List Your Business</div>
+          <div className="max-md:hidden flex items-center justify-center px-2 py-1 rounded  border border-white text-[rgb(250,129,47)] font-semibold tranform transition-all hover:scale-105 cursor-pointer text-nowrap max-md:text-sm text-base bg-white" ><AddIcon/> List Your Business</div>
           <div
-            className="flex w-8 h-8 rounded-full cursor-pointer  bg-white items-center justify-center"
+            className="flex w-6 h-6 rounded-full cursor-pointer  bg-white items-center justify-center p-1"
           >
-           <LocalPhoneIcon  sx={{ color:"rgb(250,129,47)" }}  />
+           {/* <LocalPhoneIcon  sx={{ color:"rgb(250,129,47)" }}  /> */}
+           <img src="/icons/phone.png" alt="phone-icon" className="w-full h-full object-cover object-center  rounded-full" />
 
           </div>
           <div
-            className="flex w-8 h-8 rounded-full cursor-pointer"
+            className="flex w-6 h-6 rounded-full cursor-pointer bg-white"
             onClick={() => setShowButtons(!showButtons)}
           >
             <img
-              src="/profile.png"
+              src="/icons/user.png"
               alt="user"
               className="w-full h-full object-cover object-center rounded-full"
             />

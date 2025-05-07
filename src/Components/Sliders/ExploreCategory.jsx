@@ -7,39 +7,6 @@ import Button from "@mui/material/Button";
 import { citiesData, popularSearch } from "../Store/DataStore";
 
 function PopularSearch() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const responsive = {
-    0: { items: 1 },
-    768: { items: 3 },
-    1024: { items: 4 },
-    // 1280: { items: 5 },
-  };
-
-  const slidePrev = () => {
-    setActiveIndex((prev) => Math.max(prev - 1, 0));
-  };
-
-  const slideNext = () => {
-    setActiveIndex((prev) => Math.min(prev + 1, items.length - 1));
-  };
-
-  const syncActiveIndex = ({ item }) => setActiveIndex(item);
-
-  const items = popularSearch.slice(1, 10).map((data, i) => (
-    <div key={i} className="w-full p-2 ">
-      <div className=" rounded-lg gap-3 pb-2 h-fit flex flex-col items-center justify-center text-lg font-semibold text-gray-600 shadow-md cursor-pointer bg-[rgb(255,255,255)] hover:bg-slate-100 ">
-        <div className=" flex items-center justify-center h-70 w-full">
-          <img
-            src={data.image}
-            alt="image"
-            className=" h-full w-full object-cover object-center rounded"
-          />
-        </div>
-        <h1>{data.name}</h1>
-      </div>
-    </div>
-  ));
 
   return (
     <div className="flex flex-col w-full max-w-7xl mx-auto px-4 ">
@@ -53,7 +20,7 @@ function PopularSearch() {
         {popularSearch.map((data, i) => (
           <div
             key={i}
-            className="rounded-lg gap-2 pb-4 flex flex-col items-center justify-between text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 h-[140px] md:h-[200px] lg:h-[320px]"
+            className="rounded-lg gap-2 pb-4 flex flex-col items-center justify-between text-gray-600 shadow-md cursor-pointer hover:bg-gray-200 h-[140px] md:h-[200px] lg:h-[320px] transition transform duration-300 ease-in-out hover:scale-105 "
           >
             <div className="w-full h-[85%]">
               <img

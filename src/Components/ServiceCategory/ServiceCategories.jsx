@@ -70,7 +70,7 @@ const WeddingCategories = () => {
   return (
     <div className="flex flex-col w-full max-w-7xl mx-auto px-4 py-3  ">
       <div className="flex justify-between items-center mb-2">
-        <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-600 mb-3 lg:mb-5">
+        <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-700 mb-3 lg:mb-5">
           Wedding Categories
         </h2>
         <a
@@ -87,7 +87,7 @@ const WeddingCategories = () => {
         {categoryData.map((cat, index) => (
           <div key={index} className="w-full ">
             <div
-              className={`rounded-lg p-4 ${cat.color} cursor-pointer flex justify-between items-center  text-left    overflow-hidden relative`}
+              className={`rounded-lg p-4 ${cat.color} cursor-pointer flex justify-between items-center  text-left    overflow-hidden relative hover:shadow-lg shadow-orange-100  `}
               onClick={() => toggleCategory(index)}
             >
               <div>
