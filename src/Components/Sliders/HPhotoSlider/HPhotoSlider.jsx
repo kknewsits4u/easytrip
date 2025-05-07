@@ -21,7 +21,7 @@ function HPhotoSlider() {
           <img
             src={data.image}
             alt="photo"
-            className="h-full w-full object-cover object-center rounded"
+            className="h-full w-full object-cover object-top rounded"
           />
         </div>
       </div>

@@ -536,7 +536,7 @@ export const vendorTypes = [
 
 export const popularSearch = [
   {
-    image:"https://i.pinimg.com/474x/1e/51/1c/1e511cf1a2fa0628b75c11a8caed52bd.jpg",
+    image:"https://i.pinimg.com/736x/76/17/ff/7617ffab39719d456fab807abfeb5758.jpg",
     name:"Bridal Wear",
   },
   {
@@ -556,7 +556,7 @@ export const popularSearch = [
     name:"Decorators",
   },
   {
-    image:"https://i.pinimg.com/474x/db/cd/6a/dbcd6a632b10ada57c6b0e86b74a541e.jpg",
+    image:"https://i.pinimg.com/736x/2a/80/cf/2a80cf3a1bc7cc397cc057331e58f220.jpg",
     name:"Mehndi Artist",
   },
   
@@ -623,7 +623,7 @@ export const businessData = [
     state: "Maharashtra"
   },
   {
-    image: "https://i.pinimg.com/474x/9e/4a/7d/9e4a7dceccf2db4fa47a39cc6aad4554.jpg",
+    image: "https://i.pinimg.com/736x/b7/a5/a4/b7a5a4340d172ed6f8bc51a3aabfffdd.jpg",
     heading: "Neha Bridal Makeup",
     description: "Expert bridal makeup with HD and Airbrush options.",
     price: "₹8,000",
@@ -633,7 +633,7 @@ export const businessData = [
     state: "Chandigarh"
   },
   {
-    image: "https://i.pinimg.com/474x/02/1a/1e/021a1e733af825ac5e34b49c7b0cd6dc.jpg",
+    image: "https://i.pinimg.com/736x/1b/8a/e9/1b8ae95d4b08300b1d18255886883b47.jpg",
     heading: "Ravi Sound & DJ",
     description: "Professional DJ with lighting and dance floor setup.",
     price: "₹12,000",
@@ -673,7 +673,7 @@ export const businessData = [
     state: "Gujarat"
   },
   {
-    image: "https://i.pinimg.com/474x/27/98/5c/27985c7ad69687f7152689e486685e80.jpg",
+    image: "https://i.pinimg.com/736x/4e/7a/00/4e7a00738bd98a99c1e942f444f9f791.jpg",
     heading: "Meena Jewels Rental",
     description: "Bridal jewelry available on rent at affordable prices.",
     price: "₹4,500",

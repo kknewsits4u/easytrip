@@ -179,7 +179,7 @@ const Footer = () => {
 
   return (
     <div className="w-full flex flex-col  items-center justify-between bg-black h-fit shadow-md shadow-gray-300 rounded-sm pt-5 px-5">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 items-center justify-between w-full max-w-[1280px]  h-fit min-h-60  border-b border-gray-500 gap-5 pb-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 items-center justify-between w-full max-w-[1280px]  h-fit min-h-60  border-b border-gray-800 gap-5 pb-3">
       {
         categoriesData.map((data, index)=>
           <div key={index} className=" flex flex-col h-fit items-center md:items-start  text-gray-400 text-md gap-2">
@@ -195,9 +195,9 @@ const Footer = () => {
 
       </div>
 
-      <div className=" flex flex-col md:flex-row items-end justify-between h-fit bg-black w-full border-b border-gray-500 gap-5 py-5 max-w-[1280px] max-md:divide-y divide-gray-100">
+      <div className=" flex flex-col md:flex-row items-start justify-between h-fit bg-black w-full border-b border-gray-800 gap-5 py-3 max-w-[1280px] max-md:divide-y divide-slate-800">
 
-        <div className="  flex flex-col w-full md:w-auto items-center md:items-start justify-start gap-2 pb-4 ">
+        <div className="  flex flex-col w-full md:w-auto items-center md:items-start justify-start gap-2 max-md:pb-4 ">
           <div className=" flex items-center justify-start gap-5 ">
             <a href="/"><h1 className=" text-white text-3xl ">Aarambh<span className=" text-red-500 ">s</span>.in  </h1></a>
           </div>
@@ -218,7 +218,7 @@ const Footer = () => {
           </h1>
         </div>
 
-        <div className=" flex items-start  justify-center flex-col h-fit gap-10  w-full md:w-auto pb-4 ">
+        <div className=" flex items-start  justify-center flex-col h-fit gap-10  w-full md:w-auto max-md:pb-4">
           <div className=" flex flex-col h-fit gap-5 w-full max-md:items-center items-start  justify-between">
             <h1 className=" text-white text-lg">Connect</h1>
             <div className=" flex items-end justify-center gap-5 ">
@@ -241,7 +241,7 @@ const Footer = () => {
         </div>
         
         <div className=" flex items-start  justify-center flex-col h-fit gap-10  w-full md:w-auto ">
-          <div className=" flex flex-col h-fit gap-3 w-full items-start justify-between">
+          <div className=" flex flex-col h-fit gap-3 w-full max-md:items-center items-start justify-between">
             <h1 className=" text-white text-lg">Subscribe </h1>
             <div className=" flex items-end justify-center rounded-md w-full h-8 md:h-10 border border-orange-400 ">
               <input type="email" placeholder="Enter email" className=" h-full w-7/10 items-center px-3 focus:outline-0  bg-white text-gray-800  font-medium text-base rounded-tl-md rounded-bl-md"  />

@@ -26,7 +26,7 @@ function PopularSearch() {
               <img
                 src={data.image}
                 alt="image"
-                className="w-full h-full object-cover object-center rounded-t"
+                className="w-full h-full object-cover object-top rounded-t"
               />
             </div>
             <h1 className="w-full text-center text-[10px] md:text-[12px] lg:text-[16px] h-[15%] flex items-center justify-center font-semibold">

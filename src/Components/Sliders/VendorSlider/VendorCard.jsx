@@ -11,7 +11,7 @@ const VendorCard = ({ data }) => {
         <img
           src={data.image}
           alt="image"
-          className="h-full w-full object-cover object-center rounded-t-lg"
+          className="h-full w-full object-cover object-top rounded-t-lg"
         />
       </div>
 

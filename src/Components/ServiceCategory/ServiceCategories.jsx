@@ -73,14 +73,7 @@ const WeddingCategories = () => {
         <h2 className="text-md lg:text-xl xl:text-2xl text-left font-bold text-slate-700 mb-3 lg:mb-5">
           Wedding Categories
         </h2>
-        <a
-          href="#"
-          className="max-md:hidden block  text-[#FF512F] font-medium hover:underline"
-        >
-          <div className="flex items-center justify-center px-2 py-1 border border-[#FF512F] rounded">
-            View All
-          </div>
-        </a>
+     
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -91,10 +84,10 @@ const WeddingCategories = () => {
               onClick={() => toggleCategory(index)}
             >
               <div>
-                <h3 className="font-semibold  text-md text-slate-700 ">
+                <h3 className="font-semibold  text-md text-slate-900 ">
                   {cat.title} <span className="text-sm">▾</span>
                 </h3>
-                <p className="text-[10px] md:text-[12px] lg:text-[15px]  text-gray-600">{cat.description}</p>
+                <p className="text-[10px] md:text-[12px] lg:text-[15px] text-gray-700">{cat.description}</p>
               </div>
               <img
                 src={cat.image}
@@ -108,11 +101,11 @@ const WeddingCategories = () => {
                 <div className="absolute top-[-5px] left-5 w-0 h-0 border-l-8 border-r-8 border-b-8 border-transparent border-b-white"></div>
 
                 <div className="bg-white  p-4 rounded   text-left shadow-md">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2 text-slate-700 text-sm">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2  text-sm">
                     {cat.subcategories.map((item, i) => (
                       <li
                         key={i}
-                        className="hover:text-pink-500, hover:font-semibold cursor-pointer "
+                        className=" text-slate-800 hover:text-orange-500 hover:font-medium cursor-pointer "
                       >
                         {item}
                       </li>
