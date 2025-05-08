@@ -1,7 +1,7 @@
 
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}", 
+    "./src/**/*.{js,ts,jsx,tsx,html}", 
     "./public/index.html"
   ],
   theme: {
@@ -9,6 +9,9 @@ module.exports = {
       colors: {
      
         primary: "#EF4A6B",
+      },
+      screens: {
+        xs: '475px', 
       },
     },
   },

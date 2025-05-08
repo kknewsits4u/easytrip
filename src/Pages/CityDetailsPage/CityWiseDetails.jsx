@@ -172,7 +172,7 @@ const CityWiseDetails = () => {
                 <img
                   src={d.image}
                   alt="hotel-image"
-                  className="w-full h-full object-cover object-center rounded-md  "
+                  className="w-full h-full object-cover object-top rounded-md  "
                 />
               </div>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center rounded-md">
@@ -202,7 +202,7 @@ const CityWiseDetails = () => {
                 <img
                   src={d.image}
                   alt="hotel-image"
-                  className="w-full h-full object-cover object-center rounded-md  "
+                  className="w-full h-full object-cover object-top rounded-md  "
                 />
               </div>
               <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center rounded-md">

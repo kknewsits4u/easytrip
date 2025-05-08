@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { citiesData } from "../Store/DataStore";
 import CommonSlider from "./SliderComponent/CommonSlider";
+import { useNavigate } from "react-router-dom";
+
 
 function PopularVenues() {
+
   const [activeIndex, setActiveIndex] = useState(0);
+   
 
   const responsive = {
     0: { items: 3 },
@@ -23,14 +27,17 @@ function PopularVenues() {
     return 2.75;
   };
  
+  const navigate = useNavigate();
 
-  
 
+  const handleCitySearch = (city)=>{
+    navigate(`/${city}`)
+  }
 
 
   const data = citiesData.slice(1, 10).map((data, i) => (
     <div key={i} className="w-full p-2">
-      <div className=" bg-[rgb(255,255,255)] border border-gray-200 shadow-md rounded-lg gap-3 h-20 md:h-30 lg:h-40  flex flex-col items-center justify-center text-lg font-semibold text-gray-600">
+      <div className=" bg-[rgb(255,255,255)] border border-gray-200 shadow-md rounded-lg gap-3 h-20 md:h-30 lg:h-40  flex flex-col items-center justify-center text-lg font-semibold text-gray-600"  onClick={()=> handleCitySearch(data.cityName) }   >
         <div className="relative flex items-center justify-center h-full w-full overflow-hidden rounded-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
           <img
             src={data.image}

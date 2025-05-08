@@ -12,9 +12,9 @@ const MainCarousel = () => {
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 8000,
     fade: true,             
-    speed: 4000,
+    speed: 3000,
     cssEase: "linear",
   };
 

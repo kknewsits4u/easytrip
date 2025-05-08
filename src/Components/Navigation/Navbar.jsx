@@ -13,7 +13,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
 import CityData from "./Components/CityData";
-import AddIcon from '@mui/icons-material/Add';
+import AddIcon from "@mui/icons-material/Add";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
     setTotalTopCities(totalTopCities);
   };
 
-  //  city search 
+  //  city search
   const [searchQuery, setSearchQuery] = useState("");
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -41,30 +41,30 @@ const Navbar = () => {
 
       <div
         className=" flex w-full max-md:px-3 px-5 2xl:px-10 h-16 lg:h-14 items-center justify-between z-40 
-               shadow-md max-md:bg-[#FA812F] bg-[rgb(127,137,144)]"
+               shadow-md max-md:bg-[#FA812F] bg-[rgb(127,137,144)] sticky top-0 left-0 "
       >
         <div className=" flex items-center justify-center text-blue-500 font-bold z-40 max-md:gap-2 gap-5 ">
           <div
             onClick={toggleDrawer(true)}
-            className=" flex  text-[rgb(239,74,107)]  font-extrabold items-center justify-center h-fit w-fit "
+            className="flex md:hidden text-[rgb(239,74,107)]  font-extrabold items-center justify-center h-fit w-fit "
           >
             <DensityMediumIcon
               sx={{ fontWeight: "700", fontSize: "25px", color: "white" }}
             />
           </div>
 
-          <a href="/" ><h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
-            Aarambh <span  className="text-red-500" >s</span>.in
-          </h1></a>
+          <a href="/">
+            <h1 className="text-xl lg:text-2xl flex items-center justify-center  text-white ">
+              Aarambh <span className="text-red-500">s</span>.in
+            </h1>
+          </a>
         </div>
 
         <div className="hidden relative md:flex w-full xl:w-2/3  items-start justify-start  gap-5 h-full  px-5">
           <ul
-            className="flex h-full  items-center text-[rgb(255,255,255)] justify-between gap-5 lg:gap-10 text-sm lg:text-sm    "
+            className="flex h-full  items-center text-[rgb(255,255,255)] justify-between gap-5  text-sm lg:text-sm    "
             style={{ fontWeight: "500" }}
           >
-           
-
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
               Vanues
               <VenueListSection />
@@ -93,7 +93,6 @@ const Navbar = () => {
                 style={{ backgroundColor: "rgb(255,255,255)" }}
               >
                 <VendorsDetailsSection />
-
               </div>
             </li>
             <li className="group  overflow-visible cursor-pointer flex  h-full items-center  hover:border-b-4 hover:border-b-white ">
@@ -117,7 +116,6 @@ const Navbar = () => {
         </div>
         {citiesDivOpen && (
           <div className=" w-full bg-white h-[100vh] fixed inset-0 top-0 left-0 z-50  overflow-y-auto ">
-
             <div className="flex flex-col w-full items-center justify-center gap-5  h-30  bg-[#FA812F] px-5 ">
               <div
                 className=" flex  w-full items-center justify-start "
@@ -145,13 +143,15 @@ const Navbar = () => {
         )}
 
         <div className="flex items-center justify-center gap-5 rounded">
-          <div className="max-md:hidden flex items-center justify-center px-2 py-1 rounded  border border-white text-[rgb(250,129,47)] font-semibold tranform transition-all hover:scale-105 cursor-pointer text-nowrap max-md:text-sm text-base bg-white" ><AddIcon/> List Your Business</div>
-          <div
-            className="flex w-6 h-6 rounded-full cursor-pointer  bg-white items-center justify-center p-1"
-          >
-           {/* <LocalPhoneIcon  sx={{ color:"rgb(250,129,47)" }}  /> */}
-           <img src="/icons/phone.png" alt="phone-icon" className="w-full h-full object-cover object-center  rounded-full" />
-
+          <div className="max-md:hidden flex items-center justify-center px-2 py-1 rounded  border border-white text-[rgb(250,129,47)] font-semibold tranform transition-all hover:scale-105 cursor-pointer text-nowrap max-md:text-sm text-base bg-white">
+            <AddIcon /> List Your Business
+          </div>
+          <div className="flex w-6 h-6 rounded-full cursor-pointer  bg-white items-center justify-center p-1">
+            <img
+              src="/icons/phone.png"
+              alt="phone-icon"
+              className="w-full h-full object-cover object-center  rounded-full"
+            />
           </div>
           <div
             className="flex w-6 h-6 rounded-full cursor-pointer bg-white"
@@ -164,7 +164,7 @@ const Navbar = () => {
             />
           </div>
         </div>
-      
+
         <Drawer
           open={open}
           sx={{ marginTop: "15px" }}
@@ -172,7 +172,6 @@ const Navbar = () => {
           PaperProps={{
             sx: {
               backgroundColor: "rgb(245,245,245)",
-              // backdropFilter: "blur(20px)",
               width: 250,
               height: "calc(100%)",
             },
@@ -186,9 +185,7 @@ const Navbar = () => {
           }}
         >
           <SideDrawer handleCloseDrawer={() => setOpen(false)} />
-
         </Drawer>
-
       </div>
     </>
   );

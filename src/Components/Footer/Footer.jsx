@@ -256,7 +256,7 @@ const Footer = () => {
 
     <div className=" flex items-center justify-center h-fit bg-black w-full rounded-bl-md  rounded-br-md p-5">
         <p className=" w-full text-white text-md ">
-          @Aarambh <span className=" text-red-500 ">2025</span>, All Rights
+          @Aarambh<span className=" text-red-500 ">s</span>.in 2025, All Rights
           Reserved.{" "}
         </p>
       </div>
